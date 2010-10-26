@@ -1,0 +1,69 @@
+urxvt*urlLauncher:      firefox
+urxvt*geometry: 110x35
+urxvt*externalBorder:   0
+urxvt*internalBorder:   0
+!urxvt*foreground:       #44aadd # Pretty Sky Blue
+urxvt*foreground:       yellow
+urxvt*depth:      32
+urxvt*background:   rgba:0000/0000/0000/dddd
+urxvt*fading:   25
+!urxvt*tintColor:        #aaaaaa
+urxvt*shading:  35
+urxvt*inheritPixmap:    true
+!urxvt*inheritPixmapforce: false
+urxvt*scrollBar:        false
+urxvt*saveLines:        10000
+urxvt*cursorBlink:      true
+!urxvt*font:     xft:inconsolata:pixelsize=15:antialias=false:hinting=false
+!urxvt*font:     xft:terminus:pixelsize=10:encoding=is:antialias=true:hinting=true
+!urxvt*font:      -*-fixed-*-*-*-*-12-*-*-*-*-*-iso10646-*
+urxvt*font:			xft:envy code r:size=10:encoding=is:antialias=true:hinting=false
+urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
+urxvt*pastableTabs:     true
+urxvt*urgentOnBell:     true
+XTerm*faceName: inconsolata:pixelsize=15
+XTerm*background:  #222222
+XTerm*foreground:  #00dd00
+XTerm*cursorColor: #cdc092
+
+
+! Possible Tango Theme
+!urxvt*background:    #000000
+!urxvt*foreground:    #babdb6
+!urxvt*cursorColor:   #729fcf
+!urxvt*pointerColorBackground:  #2e3436
+!urxvt*pointerColorForeground:  #eeeeec
+!urxvt*color0:      #2e3436
+!urxvt*color1:      #cc0000
+!urxvt*color2:      #4e9a06
+!urxvt*color3:      #c4a000
+!urxvt*color4:      #3465a4
+!urxvt*color5:      #75507b
+!urxvt*color6:      #06989a
+!urxvt*color7:      #d3d7cf
+!urxvt*color8:      #555753
+!urxvt*color9:      #ef2929
+!urxvt*color10:     #8ae234
+!urxvt*color11:     #fce94f
+!urxvt*color12:     #729fcf
+!urxvt*color13:     #ad7fa8
+!urxvt*color14:     #34e2e2
+!urxvt*color15:     #eeeeec
+
+! Another Possible Tango Theme
+!urxvt.color0: #2E3436
+!urxvt.color1: #CC0000
+!urxvt.color2: #4E9A06
+!urxvt.color3: #C4A000
+!urxvt.color4: #3465A4
+!urxvt.color5: #75507B
+!urxvt.color6: #06989A
+!urxvt.color7: #D3D7CF
+!urxvt.color8: #555753
+!urxvt.color9: #EF2929
+!urxvt.color10: #8AE234
+!urxvt.color11: #FCE94F
+!urxvt.color12: #729FCF
+!urxvt.color13: #AD7FA8
+!urxvt.color14: #34E2E2
+!urxvt.color15: #EEEEEC
