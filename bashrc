@@ -1,11 +1,12 @@
 alias p='mpc toggle'
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto' # Doesn't work on Mac.
+alias ls='ls -GFbT' # Mac version of ^that^.
 alias vi='vim'
 #alias netcfg='sudo netcfg2'
 alias sshPubSUN='ssh s1585915@10.3.105.10'
 alias gemset='rvm gemset'
 alias w='wicd-curses'
-eval `dircolors -b`
+#eval `dircolors -b`
 alias telinit='echo no'
 
 export GREP_COLOR="1;33"
