@@ -29,8 +29,10 @@ function get_branch {
 	fi
 }
 	
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-alias gemset='rvm gemset'
+if [ -s $HOME/.rvm/scripts/rvm ]; then
+ 	source $HOME/.rvm/scripts/rvm
+	alias gemset='rvm gemset'
+fi
 
 
 # colored prompt
@@ -44,7 +46,15 @@ if [ "`tput colors`" = "256" ]; then
   Y="\e[0;33m"
 fi
 
+# Function from Steve Losh's article on zsh prompt customization
+# [here](http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/#repository-types)
+function repo_char {
+    git branch >/dev/null 2>/dev/null && echo '±' && return
+    hg root >/dev/null 2>/dev/null && echo '☿' && return
+    echo '○'
+}
 
 W="\e[0m"
 PROMPT_COMMAND="get_branch; $PROMT_COMMAND"
 PS1="\[$B\]┌─\[$W\][ \[$Y\]\A \[$W\]][ \[$G\]\h:\${BRANCH}\W \[$W\]]\n\[$B\]└─\[$Y\]> \[$W\]"
+

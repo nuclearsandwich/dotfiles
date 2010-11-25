@@ -1,3 +1,9 @@
 [ui]
-editor=vim
-username=Steven! Lorenzen <steven@nuclearsandwich.com>
+editor = vim
+username = Steven! Lorenzen <steven@nuclearsandwich.com>
+verbose = true
+
+[extensions]
+hgext.bookmarks =
+hggit = 
+hg-prompt = hg-prompt/prompt.py

@@ -8,3 +8,4 @@ gemdoc() {
 }
 		 
 		complete -W '$(`which ls` $GEMDIR/doc)' gemdoc
+export VIM_APP_DIR='/Users/steven/Applications/'
