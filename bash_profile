@@ -1,6 +1,7 @@
 PATH=$PATH:$HOME/bin
 . $HOME/.bashrc
 
+export EDITOR=vim
  
 gemdoc() {
   local gems=(`gem env gemdir`/doc/$1*/rdoc/index.html)

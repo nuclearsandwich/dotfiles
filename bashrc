@@ -9,6 +9,10 @@ alias w='wicd-curses'
 #eval `dircolors -b`
 alias telinit='echo no'
 
+# Map vim exit commands to bash since I will try them anyway.
+alias :q='exit'
+alias ZZ='exit'
+
 export GREP_COLOR="1;33"
 alias grep='grep --color=auto'
 #alias urxvt='urxvt +sb -sh 35'
