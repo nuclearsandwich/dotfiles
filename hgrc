@@ -6,4 +6,4 @@ verbose = true
 [extensions]
 hgext.bookmarks =
 hggit = 
-hg-prompt = hg-prompt/prompt.py
+hg-prompt = $HOME/.dotfiles/hg-prompt/prompt.py

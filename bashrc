@@ -1,10 +1,9 @@
 alias p='mpc toggle'
-#alias ls='ls --color=auto' # Doesn't work on Mac.
-alias ls='ls -GFbT' # Mac version of ^that^.
+alias ls='ls --color=auto' # Doesn't work on Mac.
+#alias ls='ls -GFbT' # Mac version of ^that^.
 alias vi='vim'
 #alias netcfg='sudo netcfg2'
 alias sshPubSUN='ssh s1585915@10.3.105.10'
-alias gemset='rvm gemset'
 alias w='wicd-curses'
 #eval `dircolors -b`
 alias telinit='echo no'
@@ -41,9 +40,12 @@ fi
 
 # colored prompt
 if [ "`tput colors`" = "256" ]; then
+	D="\e[37m"
   B="\e[0;38;5;67m"
+	FG="\e[168;255;96m"
   G="\e[0;38;5;114m"
   Y="\e[0;38;5;214m"
+  R="\e[0;38;5;214m"
  else
   B="\e[0;34m"
   G="\e[0;32m"
@@ -58,7 +60,26 @@ function repo_char {
     echo '○'
 }
 
+hg_ps1() {
+	hg prompt "{status}{update}" 2>/dev/null
+}
+
+git_ps1() {
+	__git_ps1 "%s"
+}
+
+last_status() {
+	s=$?
+	if [ s = "0" ]; then
+		echo "\[\e[0;32m\]${s}" && return
+	fi
+	echo "\[\e[0;22m\]${s}"
+}
+
 W="\e[0m"
 PROMPT_COMMAND="get_branch; $PROMT_COMMAND"
-PS1="\[$B\]┌─\[$W\][ \[$Y\]\A \[$W\]][ \[$G\]\h:\${BRANCH}\W \[$W\]]\n\[$B\]└─\[$Y\]> \[$W\]"
+export PS1="\[$B\]┌─\[$W\][ \[$R\]\$?\[$W\] ][ \[$D\]\$(repo_char)\$(hg_ps1)\$ \[$W\]][ \[$Y\]\A \[$W\]][ \[$G\]\h:\${BRANCH}\W \[$W\]]\n\[$B\]└─\[$Y\]> \[$W\]"
+
+# ┌─[ 15:49 ][ ○!$ ][ swordfish:default@.dotfiles ]
+# └─>
 
