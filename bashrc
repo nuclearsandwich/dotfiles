@@ -7,6 +7,8 @@ alias sshPubSUN='ssh s1585915@10.3.105.10'
 alias w='wicd-curses'
 #eval `dircolors -b`
 alias telinit='echo no'
+alias Syu='sudo powerpill -Syu'
+alias :e='$EDITOR'
 
 # Map vim exit commands to bash since I will try them anyway.
 alias :q='exit'

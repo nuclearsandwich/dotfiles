@@ -1,9 +1,26 @@
 [ui]
 editor = vim
-username = Steven! Lorenzen <steven@nuclearsandwich.com>
+username = Steven! Ragnarök <steven@nuclearsandwich.com>
 verbose = true
+commitsubrepos = false
 
 [extensions]
-hgext.bookmarks =
-hggit = 
+hggit = $HOME/.dotfiles/hg-git/hggit
 hg-prompt = $HOME/.dotfiles/hg-prompt/prompt.py
+
+[color]
+status.modified = cyan
+status.added = green
+status.removed = red
+status.deleted = yellow bold underline
+status.unknown = magenta bold underline
+status.ignored = black bold
+diff.diffline = none
+diff.extended = cyan
+diff.file_a = red
+diff.file_b = green
+diff.hunk = yellow bold
+diff.deleted = red
+diff.inserted = green
+diff.changed = white
+diff.trailingwhitespace = white_background

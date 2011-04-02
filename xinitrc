@@ -6,9 +6,13 @@
 # Executed by startx (run your window manager from here)
 #
 #DEFAULT_SESSION=$HOME/bin/startbfkiosk
-DEFAULT_SESSION=$HOME/bin/dwmrc
+DEFAULT_SESSION=/usr/bin/awesome
+
+exec $DEFAULT_SESSION
 
 case $1 in
+awesome)
+	exec /usr/bin/awesome
 dwm)
 	exec $HOME/bin/dwmrc
 	;;

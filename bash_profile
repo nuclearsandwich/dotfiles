@@ -9,4 +9,6 @@ gemdoc() {
 }
 		 
 		complete -W '$(`which ls` $GEMDIR/doc)' gemdoc
-export VIM_APP_DIR='/Users/steven/Applications/'
+#export VIM_APP_DIR='/Users/steven/Applications/' # OSX
+export _JAVA_AWT_WM_NONREPARENTING=1
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
