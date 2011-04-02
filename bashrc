@@ -40,20 +40,6 @@ if [ -s $HOME/.rvm/scripts/rvm ]; then
 fi
 
 
-# colored prompt
-if [ "`tput colors`" = "256" ]; then
-	D="\e[37m"
-  B="\e[0;38;5;67m"
-	FG="\e[168;255;96m"
-  G="\e[0;38;5;114m"
-  Y="\e[0;38;5;214m"
-  R="\e[0;38;5;214m"
- else
-  B="\e[0;34m"
-  G="\e[0;32m"
-  Y="\e[0;33m"
-fi
-
 # Function from Steve Losh's article on zsh prompt customization
 # [here](http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/#repository-types)
 function repo_char {
@@ -78,9 +64,28 @@ last_status() {
 	echo "\[\e[0;22m\]${s}"
 }
 
-W="\e[0m"
+
+# Solarized colors
+BLACK="\e[30m"
+RED="\e[31m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+BLUE="\e[34m"
+MAGENTA="\e[35m"
+CYAN="\e[36m"
+WHITE="\e[37m"
+
+LINE=$BLUE
+BRKT=$BLUE
+REPO=$WHITE
+STAT=$RED
+DATE=$GREEN
+CDIR=$CYAN
+PCHR=$GREEN
+NORM=$MAGENTA
+
 PROMPT_COMMAND="get_branch; $PROMT_COMMAND"
-export PS1="\[$B\]┌─\[$W\][ \[$R\]\$?\[$W\] ][ \[$D\]\$(repo_char)\$(hg_ps1)\$ \[$W\]][ \[$Y\]\A \[$W\]][ \[$G\]\h:\${BRANCH}\W \[$W\]]\n\[$B\]└─\[$Y\]> \[$W\]"
+export PS1="\[$LINE\]┌─\[$BRKT\][ \[$STAT\]\$?\[$BRKT\] ][ \[$REPO\]\$(repo_char)\$(hg_ps1)\$ \[$BRKT\]][ \[$DATE\]\A \[$BRKT\]][ \[$CDIR\]\h:\${BRANCH}\W \[$BRKT\]]\n\[$LINE\]└─\[$PCHR\]> \[$NORM\]"
 
 # ┌─[ 15:49 ][ ○!$ ][ swordfish:default@.dotfiles ]
 # └─>
