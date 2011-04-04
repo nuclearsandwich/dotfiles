@@ -15,9 +15,9 @@ urxvt*scrollBar:        false
 urxvt*saveLines:        10000
 urxvt*cursorBlink:      true
 !urxvt*font:     xft:inconsolata:pixelsize=15:antialias=false:hinting=false
-!urxvt*font:     xft:terminus:pixelsize=10:encoding=is:antialias=true:hinting=true
+urxvt*font:     xft:terminus:size=8:encoding=is:antialias=true:hinting=true
 !urxvt*font:      -*-fixed-*-*-*-*-12-*-*-*-*-*-iso10646-*
-urxvt*font:      xft:envy code r:size=11:encoding=is:antialias=true:hinting=false
+!urxvt*font:      xft:envy code r:size=11:encoding=is:antialias=true:hinting=false
 urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 urxvt*pastableTabs:     true
 urxvt*urgentOnBell:     true
