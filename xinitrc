@@ -10,33 +10,37 @@
 xrdb -merge ~/.Xresources
 
 #DEFAULT_SESSION=$HOME/bin/startbfkiosk
-DEFAULT_SESSION=/usr/bin/awesome
+DEFAULT_SESSION=xmonad
 exec $DEFAULT_SESSION
 
 case $1 in
-awesome)
-	exec /usr/bin/awesome
-dwm)
-	exec $HOME/bin/dwmrc
-	;;
-wmii)
-	exec $HOME/bin/wmiirc
-	;;
-e17)
-	exec ck-launch-session enlightenment_start
-	;;
-kde)
-	exec ck-launch-session startkde
-	;;
-xfce)
-	exec ck-launch-session startxfce4
-	;;
-gnome)
-	exec ck-launch-session gnome-session
-	;;
-*)
-	exec $DEFAULT_SESSION
-	;;
+	xmonad)
+		exec /usr/bin/xmonad
+		;;
+	awesome)
+		exec /usr/bin/awesome
+		;;
+	dwm)
+		exec $HOME/bin/dwmrc
+		;;
+	wmii)
+		exec $HOME/bin/wmiirc
+		;;
+	e17)
+		exec ck-launch-session enlightenment_start
+		;;
+	kde)
+		exec ck-launch-session startkde
+		;;
+	xfce)
+		exec ck-launch-session startxfce4
+		;;
+	gnome)
+		exec ck-launch-session gnome-session
+		;;
+	*)
+		exec $DEFAULT_SESSION
+		;;
 esac
 
 # exec $HOME/bin/dwmrc

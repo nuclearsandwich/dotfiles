@@ -3,17 +3,16 @@ urxvt*geometry: 110x35
 urxvt*externalBorder:   0
 urxvt*internalBorder:   0
 urxvt*depth:      32
-urxvt*background:   rgba:0000/0000/0000
+urxvt*background:   rgba:0000/0000/0000/0000
 urxvt*fading:   25
 urxvt*shading:  35
 urxvt*inheritPixmap:    true
 urxvt*scrollBar:        false
 urxvt*saveLines:        10000
 urxvt*cursorBlink:      true
-<<<<<<< local
-urxvt*font:     xft:inconsolata:size=15:antialias=false:hinting=false
+!urxvt*font:     xft:inconsolata:size=15:antialias=false:hinting=false
 !urxvt*font:     xft:terminus:pixelsize=10:encoding=is:antialias=true:hinting=true
-!urxvt*font:     xft:terminus:size=8:encoding=is:antialias=false:hinting=false
+urxvt*font:     xft:terminus:size=8:encoding=is:antialias=false:hinting=false
 !urxvt*font:      xft:envy code r:size=11:encoding=is:antialias=true:hinting=false
 urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 urxvt*pastableTabs:     true
