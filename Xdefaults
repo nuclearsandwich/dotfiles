@@ -14,8 +14,7 @@ urxvt*inheritPixmap:    true
 urxvt*scrollBar:        false
 urxvt*saveLines:        10000
 urxvt*cursorBlink:      true
-!urxvt*font:     xft:inconsolata:pixelsize=15:antialias=false:hinting=false
-urxvt*font:     xft:terminus:size=8:encoding=is:antialias=true:hinting=true
+urxvt*font:     xft:terminus:size=8:encoding=is:antialias=false:hinting=false
 !urxvt*font:      -*-fixed-*-*-*-*-12-*-*-*-*-*-iso10646-*
 !urxvt*font:      xft:envy code r:size=11:encoding=is:antialias=true:hinting=false
 urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
@@ -26,5 +25,7 @@ urxvt*urgentOnBell:     true
 !XTerm*foreground:  #00dd00
 !XTerm*cursorColor: #cdc092
 
-
-
+! Bind keys for font size bump.
+URxvt.keysym.C-0: command:\033]710;-*-dina-medium-r-normal--13-*-*-*-*-*-*-*\007
+URxvt.keysym.C-minus: command:\033]710;-*-dina-medium-r-normal--15-*-*-*-*-*-*-*\007
+URxvt.keysym.C-equal: command:\033]710;-*-dina-medium-r-normal--16-*-*-*-*-*-*-*\007

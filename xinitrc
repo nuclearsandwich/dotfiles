@@ -5,9 +5,12 @@
 #
 # Executed by startx (run your window manager from here)
 #
+
+# Load my Xresources file every time.
+xrdb -merge ~/.Xresources
+
 #DEFAULT_SESSION=$HOME/bin/startbfkiosk
 DEFAULT_SESSION=/usr/bin/awesome
-
 exec $DEFAULT_SESSION
 
 case $1 in
