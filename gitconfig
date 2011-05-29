@@ -42,3 +42,7 @@
 	co = checkout
 	ci = commit
 	st = status
+	blowup = reset --hard origin/master
+  cleanup = clean -df
+  bu = blowup
+  cu = cleanup

@@ -1,3 +1,4 @@
+PATH=$PATH:$HOME/bin
 alias p='mpc toggle'
 alias ls='ls --color=auto' # Doesn't work on Mac.
 #alias ls='ls -GFbT' # Mac version of ^that^.
