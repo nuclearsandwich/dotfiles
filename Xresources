@@ -34,7 +34,8 @@
 #define S_violet #6c71c4
 #define S_blue #268bd2
 #define S_cyan #2aa198
-#define S_green #859900
+!#define S_green #859900 ! Original
+#define S_green #719e07 ! Experimental
 
 *background: S_base03
 *foreground: S_base00
