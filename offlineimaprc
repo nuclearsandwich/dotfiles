@@ -1,0 +1,20 @@
+# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
+# suit to get started fast.
+
+[general]
+accounts = nuclearsandwich
+
+[Account nuclearsandwich]
+localrepository = nslocal
+remoterepository = nsremote
+
+[Repository nslocal]
+type = Maildir
+localfolders = ~/.maildirs/nuclearsandwich
+
+[Repository nsremote]
+type = IMAP
+ssl = yes
+remotehost = mail.nuclearsandwich.com
+remoteport = 993
+remoteuser = steven@nuclearsandwich.com
