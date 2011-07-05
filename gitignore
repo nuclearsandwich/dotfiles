@@ -2,4 +2,4 @@
 *.swo
 .rvmrc
 .vimrc
-
+.redcar/*

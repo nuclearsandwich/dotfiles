@@ -43,6 +43,9 @@
 	ci = commit
 	st = status
 	blowup = reset --hard origin/master
-  cleanup = clean -df
-  bu = blowup
-  cu = cleanup
+	cleanup = clean -df
+	bu = blowup
+	cu = cleanup
+[github]
+	user = nuclearsandwich
+	token = 26df4a1bbc399f4398fc7812f628f37c

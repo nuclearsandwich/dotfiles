@@ -1,7 +1,7 @@
-PATH=$PATH:$HOME/bin
+PATH=/usr/local/bin:$PATH:$HOME/bin
 alias p='mpc toggle'
-alias ls='ls --color=auto' # Doesn't work on Mac.
-#alias ls='ls -GFbT' # Mac version of ^that^.
+#alias ls='ls --color=auto' # Doesn't work on Mac.
+alias ls='ls -GFbT' # Mac version of ^that^.
 alias vi='vim'
 #alias netcfg='sudo netcfg2'
 alias sshPubSUN='ssh s1585915@10.3.105.10'
@@ -91,3 +91,4 @@ export PS1="\[$LINE\]┌─\[$BRKT\][ \[$STAT\]\$?\[$BRKT\] ][ \[$REPO\]\$(repo_
 # ┌─[ 15:49 ][ ○!$ ][ swordfish:default@.dotfiles ]
 # └─>
 
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
