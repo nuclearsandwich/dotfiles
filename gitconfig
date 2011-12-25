@@ -37,15 +37,33 @@
 	pager = less -FRSX
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	excludesfile = ~/.gitignore
+	autocrlf = input
+	safecrlf = true
 
 [alias]
 	co = checkout
 	ci = commit
 	st = status
-	blowup = reset --hard origin/master
+	df = diff
+	lg = log
+	rl = reflog
+	sh = show
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	blowup = reset --hard github/master
 	cleanup = clean -df
-	bu = blowup
-	cu = cleanup
+
 [github]
 	user = nuclearsandwich
 	token = 26df4a1bbc399f4398fc7812f628f37c
+
+[merge]
+	tool = threesome
+
+[mergetool "threesome"]
+	cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+	trustExitCode = true
+
+
