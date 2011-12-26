@@ -1,1 +1,2 @@
 hg-prompt = http://bitbucket.org/sjl/hg-prompt/
+nvm = [git]git://github.com/creationix/nvm.git

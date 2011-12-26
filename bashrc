@@ -1,15 +1,17 @@
-PATH=$PATH:$HOME/bin
+PATH=/usr/local/bin:$PATH:$HOME/bin
+PATH=/usr/local/lib/luarocks/bin:$PATH
 alias p='mpc toggle'
-alias ls='ls --color=auto' # Doesn't work on Mac.
-#alias ls='ls -GFbT' # Mac version of ^that^.
+#alias ls='ls --color=auto' # Doesn't work on Mac.
+alias ls='ls -GFbT' # Mac version of ^that^.
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias vi='vim'
 #alias netcfg='sudo netcfg2'
-alias sshPubSUN='ssh s1585915@10.3.105.10'
 alias w='wicd-curses'
 #eval `dircolors -b`
 alias telinit='echo no'
 alias Syu='sudo powerpill -Syu'
 alias :e='$EDITOR'
+alias redcar='r_redcar'
 
 # Map vim exit commands to bash since I will try them anyway.
 alias :q='exit'
@@ -17,7 +19,11 @@ alias ZZ='exit'
 
 export GREP_COLOR="1;33"
 alias grep='grep --color=auto'
+
+alias cuke='cucumber'
 #alias urxvt='urxvt +sb -sh 35'
+
+export VIM_APP_DIR='/Applications'
 
 # Fun with prompt strings.
 
@@ -28,7 +34,7 @@ alias grep='grep --color=auto'
 function get_branch {
 	if [ -d .git ]; then
 		BRANCH="$(git branch | awk '/\*/ { print $2 }')@"
-	elif [ -d .hg ]; then	
+	elif [ -d .hg ]; then
 		BRANCH="$(hg branch)@"
 	else
 		BRANCH=''
@@ -38,6 +44,10 @@ function get_branch {
 if [ -s $HOME/.rvm/scripts/rvm ]; then
  	source $HOME/.rvm/scripts/rvm
 	alias gemset='rvm gemset'
+fi
+
+if [ -s $HOME/.nvm/nvm.sh ]; then
+	source $HOME/.nvm/nvm.sh
 fi
 
 
@@ -91,3 +101,4 @@ export PS1="\[$LINE\]┌─\[$BRKT\][ \[$STAT\]\$?\[$BRKT\] ][ \[$REPO\]\$(repo_
 # ┌─[ 15:49 ][ ○!$ ][ swordfish:default@.dotfiles ]
 # └─>
 
+if test -s "/Users/steven/.profile" ; then . "/Users/steven/.profile" ; fi
