@@ -1,4 +1,4 @@
-Config { font         = "xft:Inconsolata-16"
+Config { font         = "xft:Inconsolata-11"
 	, bgColor      = "#002b36" -- Solarized Base 03
 		, fgColor      = "#93a1a1" -- Solarized Base 1
 		, position =  Bottom
@@ -7,7 +7,7 @@ Config { font         = "xft:Inconsolata-16"
 		, Run Cpu ["<cpu0>/<cpu1>","-L","3","-H","50","-l","green","--normal","orange","--high","red"]   40
 		, Run Cpu ["<cpu0>","-L","3","-H","50","-l","reen","--normal","orange","--high","red"]  40
 		, Run Memory ["-t","Mem: <usedratio>%", "-l", "green", "--normal","orange","--high","red"] 40
-		, Run Date "%a %b %_d %H:%M" "date" 60
+		, Run Date "%a %b %_d %r" "date" 60
 		, Run CpuFreq ["-t","Freq: <cpu0> | <cpu1> GHz","-L","0","-H","2","-l","green","-n","orange","-h","red"] 50
 		, Run StdinReader
 		]

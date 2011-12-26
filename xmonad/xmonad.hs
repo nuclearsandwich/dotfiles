@@ -1,5 +1,8 @@
-import XMonad
+import XMonad hiding (Tall)
+import XMonad.Layout.HintedTile
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.EwmhDesktops
+import XMonad.Layout.LayoutHints
 import System.Exit
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -18,16 +21,18 @@ myPP = xmobarPP { ppCurrent = xmobarColor s_orange "" . wrap "<" ">" }
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
 
 myConfig = defaultConfig
-		{
-				terminal					 = "urxvt"
-			, modMask            = mod4Mask
-			, borderWidth        = 1
-			, workspaces         = workspaces'
+    {
+        terminal           = "urxvt"
+      , modMask            = mod4Mask
+      , borderWidth        = 1
+      , workspaces         = workspaces'
       , normalBorderColor  = s_blue
       , focusedBorderColor = s_base3
+      --, handleEventHook    = fullscreenEventHook
       -- key bindings
       , keys               = keys'
-		}
+      , layoutHook = layout'
+    }
 
 -- The default number of workspaces (virtual screens) and their names.
 -- By default we use numeric strings, but any string may be used as a
@@ -39,7 +44,16 @@ myConfig = defaultConfig
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
 workspaces' = ["sys","www","dev","com","mail","pro","bonus","status","nine"]
- 
+
+-- Layout Configs
+layout' = hintedTile Tall ||| hintedTile Wide ||| Full
+  where
+    hintedTile = HintedTile nmaster delta ratio TopLeft
+    nmaster = 1
+    ratio = 1/2
+    delta = 3/100
+
+
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
 keys' conf@(XConfig {XMonad.modMask = modm}) = M.fromList $ 
@@ -47,7 +61,7 @@ keys' conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
  
     -- launch dmenu
-    , ((modm,               xK_space     ),			spawn dmenu_cmd)
+    , ((modm,               xK_space     ),     spawn dmenu_cmd)
  
     -- launch gmrun
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
@@ -111,7 +125,7 @@ keys' conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
  
     -- Restart xmonad
     , ((modm              , xK_q     ),
-				spawn "xmonad --recompile; xmonad --restart")
+        spawn "xmonad --recompile; xmonad --restart")
     ]
     ++
  
@@ -136,7 +150,7 @@ keys' conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 -- Commands
 dmenu_cmd = "dmenu_run -nb '" ++ s_base03 ++ "' -nf '" ++ s_base1 ++ "' -sf '"
-						++ s_base2 ++"' -sb '" ++ s_green ++ "'"
+            ++ s_base2 ++"' -sb '" ++ s_green ++ "'"
 
 -- Solarized colors
 s_base03 = "#002b36"

@@ -8,6 +8,7 @@
 
 # Load my Xresources file every time.
 xrdb -merge ~/.Xresources
+xmodmap .capscontrol
 
 #DEFAULT_SESSION=$HOME/bin/startbfkiosk
 DEFAULT_SESSION=xmonad
