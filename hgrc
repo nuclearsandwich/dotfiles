@@ -5,7 +5,6 @@ verbose = true
 commitsubrepos = false
 
 [extensions]
-hggit = /usr/lib/python2.7/site-packages/hggit/
 hg-prompt = $HOME/.dotfiles/hg-prompt/prompt.py
 
 [color]
