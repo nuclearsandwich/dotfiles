@@ -12,13 +12,9 @@ urxvt*saveLines:        10000
 urxvt*cursorBlink:      true
 !urxvt*font:     xft:inconsolata:size=12:antialias=false:hinting=false
 !urxvt*font:     xft:terminus:pixelsize=10:encoding=is:antialias=true:hinting=true
-urxvt*font:     xft:terminus:size=8:encoding=is:antialias=false:hinting=false
+urxvt*font:     xft:terminus:pixelsize=8:encoding=is:antialias=false:hinting=false
 !urxvt*font:      xft:envy code r:size=11:encoding=is:antialias=true:hinting=false
 urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 urxvt*pastableTabs:     true
 urxvt*urgentOnBell:     true
 
-! Bind keys for font size bump.
-URxvt.keysym.C-0: command:\033]710;-*-dina-medium-r-normal--13-*-*-*-*-*-*-*\007
-URxvt.keysym.C-minus: command:\033]710;-*-dina-medium-r-normal--15-*-*-*-*-*-*-*\007
-URxvt.keysym.C-equal: command:\033]710;-*-dina-medium-r-normal--16-*-*-*-*-*-*-*\007

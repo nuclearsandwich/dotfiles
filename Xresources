@@ -1,3 +1,11 @@
+urxvt*font:     xft:terminus:pixelsize=8:encoding=is:antialias=false:hinting=false
+
+!! Change font size with keystroke using https://github.com/noah/urxvt-font !!
+urxvt.perl-lib:                     $HOME/bin/urxvt_font
+urxvt.keysym.Control-Shift-Up:      perl:font:increment
+urxvt.keysym.Control-Shift-Down:    perl:font:decrement
+urxvt.perl-ext-common:              
+
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB

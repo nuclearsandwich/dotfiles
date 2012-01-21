@@ -49,6 +49,7 @@
 	rl = reflog
 	sh = show
 	br = branch
+	cn = clone
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
@@ -67,3 +68,5 @@
 	trustExitCode = true
 
 
+[init]
+	templatedir = ~/.git_template

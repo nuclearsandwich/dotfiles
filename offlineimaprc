@@ -18,3 +18,11 @@ ssl = yes
 remotehost = mail.nuclearsandwich.com
 remoteport = 993
 remoteuser = steven@nuclearsandwich.com
+
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"

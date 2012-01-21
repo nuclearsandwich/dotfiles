@@ -1,9 +1,8 @@
 PATH=/usr/local/bin:$PATH:$HOME/bin
 PATH=/usr/local/lib/luarocks/bin:$PATH
 alias p='mpc toggle'
-#alias ls='ls --color=auto' # Doesn't work on Mac.
-alias ls='ls -GFbT' # Mac version of ^that^.
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias ls='ls --color=auto' # Doesn't work on Mac.
+#alias ls='ls -GFbT' # Mac version of ^that^.
 alias vi='vim'
 #alias netcfg='sudo netcfg2'
 alias w='wicd-curses'
@@ -11,7 +10,6 @@ alias w='wicd-curses'
 alias telinit='echo no'
 alias Syu='sudo powerpill -Syu'
 alias :e='$EDITOR'
-alias redcar='r_redcar'
 
 # Map vim exit commands to bash since I will try them anyway.
 alias :q='exit'
@@ -22,6 +20,8 @@ alias grep='grep --color=auto'
 
 alias cuke='cucumber'
 #alias urxvt='urxvt +sb -sh 35'
+
+alias open='xdg-open'
 
 export VIM_APP_DIR='/Applications'
 
@@ -42,7 +42,7 @@ function get_branch {
 }
 	
 if [ -s $HOME/.rvm/scripts/rvm ]; then
- 	source $HOME/.rvm/scripts/rvm
+	source $HOME/.rvm/scripts/rvm
 	alias gemset='rvm gemset'
 fi
 
@@ -54,9 +54,9 @@ fi
 # Function from Steve Losh's article on zsh prompt customization
 # [here](http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/#repository-types)
 function repo_char {
-    git branch >/dev/null 2>/dev/null && echo '±' && return
-    hg root >/dev/null 2>/dev/null && echo '☿' && return
-    echo '○'
+	git branch >/dev/null 2>/dev/null && echo '±' && return
+	hg root >/dev/null 2>/dev/null && echo '☿' && return
+	echo '○'
 }
 
 hg_ps1() {
