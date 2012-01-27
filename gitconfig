@@ -45,6 +45,7 @@
 	ci = commit
 	st = status
 	df = diff
+	dfx = diff --cached
 	lg = log
 	rl = reflog
 	sh = show
