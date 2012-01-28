@@ -4,7 +4,7 @@ urxvt*font:     xft:terminus:pixelsize=8:encoding=is:antialias=false:hinting=fal
 urxvt.perl-lib:                     $HOME/bin/urxvt_font
 urxvt.keysym.Control-Shift-Up:      perl:font:increment
 urxvt.keysym.Control-Shift-Down:    perl:font:decrement
-urxvt.perl-ext-common:              
+urxvt.perl-ext-common:
 
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
