@@ -76,7 +76,9 @@ last_status() {
 }
 
 
-# Solarized colors
+# ANSI Escape Sequences
+# I gave up trying to keep custom colors everywhere, I now just
+# redifine the ANSI colors in my Xresources.
 BLACK="\e[30m"
 RED="\e[31m"
 GREEN="\e[32m"
@@ -86,16 +88,17 @@ MAGENTA="\e[35m"
 CYAN="\e[36m"
 WHITE="\e[37m"
 
-LINE=$BLUE
-BRKT=$BLUE
+LINE=$CYAN
+BRKT=$GREEN
 REPO=$WHITE
 STAT=$RED
-DATE=$GREEN
-CDIR=$CYAN
-PCHR=$GREEN
-NORM=$MAGENTA
+DATE=$MAGENTA
+CDIR=$BLUE
+PCHR=$YELLOW
+NORM=$WHITE
 
 PROMPT_COMMAND="get_branch; $PROMT_COMMAND"
+
 export PS1="\[$LINE\]┌─\[$BRKT\][ \[$STAT\]\$?\[$BRKT\] ][ \[$REPO\]\$(repo_char)\$(hg_ps1)\$ \[$BRKT\]][ \[$DATE\]\A \[$BRKT\]][ \[$CDIR\]\h:\${BRANCH}\W \[$BRKT\]]\n\[$LINE\]└─\[$PCHR\]> \[$NORM\]"
 
 # ┌─[ 15:49 ][ ○!$ ][ swordfish:default@.dotfiles ]

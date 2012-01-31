@@ -1,0 +1,75 @@
+! Black: 0, 0, 0
+! Red: 229, 34, 34
+! Green: 166, 227, 45
+! Yellow: 252, 149, 30
+! Blue: 196, 141, 255
+! Magenta: 250, 37, 115
+! Cyan: 103, 217, 240
+! White: 242, 242, 242
+
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+#define M_black   #000000
+#define M_red     #e52222
+#define M_green   #a6e32d
+#define M_yellow  #fc951e
+#define M_blue    #c48dff
+#define M_magenta #fa2573
+#define M_cyan    #67d9f0
+#define M_white   #f2f2f2
+
+*background:            M_black
+*foreground:            M_white
+*fading:                40
+*fadeColor:             M_white
+*cursorColor:           M_white
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
+
+!! black dark/light
+*color0:                S_base02
+*color8:                S_base03
+
+!! red dark/light
+*color1:                M_red
+*color9:                M_red
+
+!! green dark/light
+*color2:                M_green
+*color10:               M_green
+
+!! yellow dark/light
+*color3:                M_yellow
+*color11:               M_yellow
+
+!! blue dark/light
+*color4:                M_blue
+*color12:               M_blue
+
+!! magenta dark/light
+*color5:                M_magenta
+*color13:               M_magenta
+
+!! cyan dark/light
+*color6:                M_cyan
+*color14:               M_cyan
+
+!! white dark/light
+*color7:                M_white
+*color15:               M_white
+
