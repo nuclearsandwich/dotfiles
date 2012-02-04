@@ -15,7 +15,7 @@ myBar = "xmobar"
 
 -- Custom PP, configure it as you like. It determines what's being written to
 -- the bar.
-myPP = xmobarPP { ppCurrent = xmobarColor s_orange "" . wrap "<" ">" }
+myPP = xmobarPP { ppCurrent = xmobarColor m_orange "" . wrap "<" ">" }
 
 -- Keybinding to toggle the gap for the bar.
 toggleStrutsKey XConfig {XMonad.modMask = modMask} = (modMask, xK_b)
@@ -26,8 +26,8 @@ myConfig = defaultConfig
       , modMask            = mod4Mask
       , borderWidth        = 1
       , workspaces         = workspaces'
-      , normalBorderColor  = s_blue
-      , focusedBorderColor = s_base3
+      , normalBorderColor  = m_blue
+      , focusedBorderColor = n_green
       --, handleEventHook    = fullscreenEventHook
       -- key bindings
       , keys               = keys'
@@ -56,7 +56,7 @@ layout' = hintedTile Tall ||| hintedTile Wide ||| Full
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
-keys' conf@(XConfig {XMonad.modMask = modm}) = M.fromList $ 
+keys' conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
  
@@ -149,8 +149,18 @@ keys' conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 -- Commands
-dmenu_cmd = "dmenu_run -nb '" ++ s_base03 ++ "' -nf '" ++ s_base1 ++ "' -sf '"
-            ++ s_base2 ++"' -sb '" ++ s_green ++ "'"
+dmenu_cmd = "dmenu_run -nb '#333333' -nf '" ++ m_green ++ "' -sf '"
+            ++ m_white ++"' -sb '" ++ m_magenta ++ "'"
+
+-- Monokai colors
+m_black   =  "#000000"
+m_red     =  "#e52222"
+m_green   =  "#a6e32d"
+m_yellow  =  "#fc951e"
+m_blue    =  "#c48dff"
+m_magenta =  "#fa2573"
+m_cyan    =  "#67d9f0"
+m_white   =  "#f2f2f2"
 
 -- Solarized colors
 s_base03 = "#002b36"

@@ -2,7 +2,7 @@ PATH=$PATH:$HOME/bin
 source $HOME/.bashrc
 
 export EDITOR='vim'
-export VISUAL='mvim -f'
+export VISUAL='vim'
 export HGEDITOR=$VISUAL
 
 
