@@ -11,6 +11,9 @@ gemdoc() {
   chromium ${gems[@]: -1}
 }
 
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true \
+-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
+
 export VIM_APP_DIR='/Users/steven/Applications/' # OSX
 export _JAVA_AWT_WM_NONREPARENTING=1
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
