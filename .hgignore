@@ -2,6 +2,7 @@ syntax: glob
 
 *.swp
 mutt/cache/**/*
+mutt/mailboxes
 xmonad/*
 
 .secrets.yml
