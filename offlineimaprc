@@ -5,19 +5,20 @@
 accounts = nuclearsandwich
 
 [Account nuclearsandwich]
-localrepository = nslocal
-remoterepository = nsremote
+localrepository = nuclearsandwich_local
+remoterepository = nuclearsandwich_remote
 
-[Repository nslocal]
+[Repository nuclearsandwich_local]
 type = Maildir
 localfolders = ~/.maildirs/nuclearsandwich
 
-[Repository nsremote]
+[Repository nuclearsandwich_remote]
 type = IMAP
 ssl = yes
 remotehost = mail.nuclearsandwich.com
 remoteport = 993
 remoteuser = steven@nuclearsandwich.com
+remotepassfile = ~/.imappass
 
 [mbnames]
 enabled = yes
