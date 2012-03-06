@@ -59,13 +59,13 @@
 
 [github]
 	user = nuclearsandwich
-	token = 26df4a1bbc399f4398fc7812f628f37c
+	token = {{github_access_token}}
 
 [merge]
 	tool = threesome
 
 [mergetool "threesome"]
-	cmd = "mvim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
+	cmd = "vim $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
 	trustExitCode = true
 
 
