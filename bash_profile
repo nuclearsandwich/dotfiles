@@ -3,7 +3,8 @@ source $HOME/.bashrc
 
 export EDITOR='vim'
 export VISUAL='vim'
-export HGEDITOR=$VISUAL
+export HGEDITOR=$EDITOR
+eval `ssh-agent`
 
 
 gemdoc() {
