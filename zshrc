@@ -12,3 +12,5 @@ autoload -Uz compinit
 compinit
 alias wicd='wicd-curses'
 # End of lines added by compinstall
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
