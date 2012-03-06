@@ -1,0 +1,14 @@
+"1.0rc1
+
+loadplugins '\.(js|penta)$'
+group user
+set defsearch=duckduckgo
+
+command Instapaper :open instapaper
+command Github -nargs=1 :tabopen https://github.com/<args>
+
+
+set passkeys+=trello.com:asdfcv><l1234567890
+
+" vim: set ft=pentadactyl:
+
