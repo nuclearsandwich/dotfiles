@@ -27,7 +27,7 @@ myConfig = defaultConfig
       , borderWidth        = 1
       , workspaces         = workspaces'
       , normalBorderColor  = m_blue
-      , focusedBorderColor = n_green
+      , focusedBorderColor = m_green
       --, handleEventHook    = fullscreenEventHook
       -- key bindings
       , keys               = keys'
@@ -149,8 +149,7 @@ keys' conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
         , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 -- Commands
-dmenu_cmd = "dmenu_run -nb '#333333' -nf '" ++ m_green ++ "' -sf '"
-            ++ m_white ++"' -sb '" ++ m_magenta ++ "'"
+dmenu_cmd = "dmenu_run"
 
 -- Monokai colors
 m_black   =  "#000000"

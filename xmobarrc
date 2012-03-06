@@ -1,4 +1,4 @@
-Config { font         = "xft:Droid Sans Mono-11"
+Config { font         = "xft:Envy Code R Next-8"
 	, bgColor      = "#333333" -- A nice Grey
 		, fgColor      = "#c48dff" -- Monokai Blue
 		, position =  Bottom
