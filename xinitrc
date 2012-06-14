@@ -7,10 +7,12 @@
 #
 
 # Load my Xresources file every time.
+xset +fp /usr/share/fonts/local
+xset fp rehash
+
 xrdb -merge ~/.Xresources
 xmodmap .capscontrol
 
-#DEFAULT_SESSION=$HOME/bin/startbfkiosk
 DEFAULT_SESSION=xmonad
 exec $DEFAULT_SESSION
 

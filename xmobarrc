@@ -1,17 +1,17 @@
-Config { font         = "xft:Inconsolata-11"
-	, bgColor      = "#002b36" -- Solarized Base 03
-		, fgColor      = "#93a1a1" -- Solarized Base 1
+Config { font         = "xft:Envy Code R Next-8"
+	, bgColor      = "#333333" -- A nice Grey
+		, fgColor      = "#c48dff" -- Monokai Blue
 		, position =  Bottom
 		, lowerOnStart = False
 		, commands     = [ Run Network "wlan0" ["-L","0","-H","32","-l", "green", "--normal","orange","--high","red"] 40
 		, Run Cpu ["<cpu0>/<cpu1>","-L","3","-H","50","-l","green","--normal","orange","--high","red"]   40
-		, Run Cpu ["<cpu0>","-L","3","-H","50","-l","reen","--normal","orange","--high","red"]  40
+		, Run Cpu ["<cpu0>","-L","3","-H","50","-l","green","--normal","orange","--high","red"]  40
 		, Run Memory ["-t","Mem: <usedratio>%", "-l", "green", "--normal","orange","--high","red"] 40
 		, Run Date "%a %b %_d %r" "date" 60
-		, Run CpuFreq ["-t","Freq: <cpu0> | <cpu1> GHz","-L","0","-H","2","-l","green","-n","orange","-h","red"] 50
+		, Run CpuFreq ["-t","Freq: <cpu0> <fc=#e52222>|</fc> <cpu1> GHz","-L","0","-H","2","-l","green","-n","orange","-h","red"] 50
 		, Run StdinReader
 		]
 		, sepChar      = "%"
 		, alignSep     = "}{"
-		, template = " %StdinReader% }{ %cpu% @ %cpufreq% <fc=#0033FF>|</fc>  %memory% <fc=#0033FF>|</fc> %wlan0% <fc=#0033FF>|</fc> %date%             "
+		, template = " %StdinReader% }{ %cpu% @ %cpufreq% <fc=#e52222>|</fc>  %memory% <fc=#e52222>|</fc> %wlan0% <fc=#e52222>|</fc> %date%             "
 }

@@ -2,14 +2,18 @@ PATH=$PATH:$HOME/bin
 source $HOME/.bashrc
 
 export EDITOR='vim'
-export VISUAL='mvim -f'
-export HGEDITOR=$VISUAL
+export VISUAL='vim'
+export HGEDITOR=$EDITOR
+eval `ssh-agent`
 
 
 gemdoc() {
   local gems=(`gem env gemdir`/doc/$1*/rdoc/index.html)
   chromium ${gems[@]: -1}
 }
+
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true \
+-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
 
 export VIM_APP_DIR='/Users/steven/Applications/' # OSX
 export _JAVA_AWT_WM_NONREPARENTING=1

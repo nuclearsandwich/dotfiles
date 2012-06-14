@@ -10,6 +10,8 @@ alias w='wicd-curses'
 alias telinit='echo no'
 alias Syu='sudo powerpill -Syu'
 alias :e='$EDITOR'
+alias cd..='cd ..' # Just shyaddupaboudit
+alias git='hub'
 
 # Map vim exit commands to bash since I will try them anyway.
 alias :q='exit'
@@ -105,3 +107,5 @@ export PS1="\[$LINE\]┌─\[$BRKT\][ \[$STAT\]\$?\[$BRKT\] ][ \[$REPO\]\$(repo_
 # └─>
 
 if test -s "/Users/steven/.profile" ; then . "/Users/steven/.profile" ; fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
