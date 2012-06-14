@@ -1,3 +1,1 @@
-:sources:
-- http://rubygems.org
-- http://rubygems.torquebox.org
+gem: --no-ri --no-rdoc

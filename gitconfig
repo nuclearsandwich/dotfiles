@@ -71,3 +71,7 @@
 
 [init]
 	templatedir = ~/.git_template
+[hub]
+	protocol = https
+[credential]
+	helper = osxkeychain
