@@ -1,8 +1,8 @@
 PATH=/usr/local/bin:$PATH:$HOME/bin
 PATH=/usr/local/lib/luarocks/bin:$PATH
 alias p='mpc toggle'
-alias ls='ls --color=auto' # Doesn't work on Mac.
-#alias ls='ls -GFbT' # Mac version of ^that^.
+#alias ls='ls --color=auto' # Doesn't work on Mac.
+alias ls='ls -GFbT' # Mac version of ^that^.
 alias vi='vim'
 #alias netcfg='sudo netcfg2'
 alias w='wicd-curses'
@@ -36,21 +36,21 @@ export VIM_APP_DIR='/Applications'
 function get_branch {
 	if [ -d .git ]; then
 		BRANCH="$(git branch | awk '/\*/ { print $2 }')@"
-	elif [ -d .hg ]; then
-		BRANCH="$(hg branch)@"
+#	elif [ -d .hg ]; then
+#		BRANCH="$(hg branch)@"
 	else
 		BRANCH=''
 	fi
 }
 	
-if [ -s $HOME/.rvm/scripts/rvm ]; then
-	source $HOME/.rvm/scripts/rvm
-	alias gemset='rvm gemset'
-fi
-
-if [ -s $HOME/.nvm/nvm.sh ]; then
-	source $HOME/.nvm/nvm.sh
-fi
+#if [ -s $HOME/.rvm/scripts/rvm ]; then
+#	source $HOME/.rvm/scripts/rvm
+#	alias gemset='rvm gemset'
+#fi
+#
+#if [ -s $HOME/.nvm/nvm.sh ]; then
+#	source $HOME/.nvm/nvm.sh
+#fi
 
 
 # Function from Steve Losh's article on zsh prompt customization
@@ -101,7 +101,7 @@ NORM=$WHITE
 
 PROMPT_COMMAND="get_branch; $PROMT_COMMAND"
 
-export PS1="\[$LINE\]┌─\[$BRKT\][ \[$STAT\]\$?\[$BRKT\] ][ \[$REPO\]\$(repo_char)\$(hg_ps1)\$ \[$BRKT\]][ \[$DATE\]\A \[$BRKT\]][ \[$CDIR\]\h:\${BRANCH}\W \[$BRKT\]]\n\[$LINE\]└─\[$PCHR\]> \[$NORM\]"
+export PS1="\[$LINE\]┌─\[$BRKT\][ \[$STAT\]\$?\[$BRKT\] ][ \[$REPO\]\$(repo_char)\$ \[$BRKT\]][ \[$DATE\]\A \[$BRKT\]][ \[$CDIR\]\h:\${BRANCH}\W \[$BRKT\]]\n\[$LINE\]└─\[$PCHR\]> \[$NORM\]"
 
 # ┌─[ 15:49 ][ ○!$ ][ swordfish:default@.dotfiles ]
 # └─>

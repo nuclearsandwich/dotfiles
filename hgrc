@@ -8,7 +8,7 @@ commitsubrepos = false
 hg-prompt = $HOME/.dotfiles/hg-prompt/prompt.py
 color =
 convert =
-hg-git = /usr/lib/python2.7/site-packages/hggit
+hggit =
 
 [color]
 status.modified = cyan
