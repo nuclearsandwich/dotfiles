@@ -1,3 +1,6 @@
+[submodule "direnv"]
+	path = direnv
+	url = git://github.com/zimbatm/direnv.git
 [submodule "tomorrow"]
 	path = tomorrow
 	url = git://github.com/chriskempson/tomorrow-theme.git
