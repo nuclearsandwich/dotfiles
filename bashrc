@@ -12,6 +12,7 @@ alias Syu='sudo powerpill -Syu'
 alias :e='$EDITOR'
 alias cd..='cd ..' # Just shyaddupaboudit
 alias git='hub'
+alias pushit='git push'
 
 # Map vim exit commands to bash since I will try them anyway.
 alias :q='exit'
@@ -109,3 +110,9 @@ export PS1="\[$LINE\]┌─\[$BRKT\][ \[$STAT\]\$?\[$BRKT\] ][ \[$REPO\]\$(repo_
 if test -s "/Users/steven/.profile" ; then . "/Users/steven/.profile" ; fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+# Source Direnv if present. https://github.com/zimbatm/direnv
+if [ -d "$HOME/.direnv" ]; then
+	PATH="$HOME/.direnv/bin":$PATH
+	eval `$HOME/.direnv/bin/direnv hook $0`
+fi
