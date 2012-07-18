@@ -4,7 +4,7 @@ source ~/.mutt/stevecolors.muttrc # Load colors.
 
 set realname='Steven!'
 set from='steven@nuclearsandwich.com'
-set sendmail='/usr/bin/msmtp'
+set sendmail='msmtp'
 set header_cache        = ~/.mutt/cache/headers
 set message_cachedir    = ~/.mutt/cache/bodies
 set mailcap_path        = ~/.mutt/mailcap
@@ -15,12 +15,15 @@ set spoolfile = +INBOX
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 
+# Use tactless for contacts
+set query_command="tactless mutt '%s'"
+
 # Index View Options
 set sort = threads
 set sort_aux = reverse-last-date-received
 set uncollapse_jump
 set postponed = +INBOX.Drafts
-set record = +INBOX.Sent
+set record = +INBOX.sent
 
 ## Key Bindings ##
 
