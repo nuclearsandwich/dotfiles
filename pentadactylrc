@@ -6,10 +6,16 @@ set defsearch=duckduckgo
 
 command Instapaper :open instapaper
 command Github -nargs=1 :tabopen https://github.com/<args>
+command Github! -nargs=1 :open https://github.com/<args>
+command Stafftools -nargs=1 :tabopen https://github.com/stafftoolsTNG/<args>
+command Stafftools! -nargs=1 :open https://github.com/stafftoolsTNG/<args>
 command GistDeck :open javascript:(function(){var%20s=document.createElement('script');s.setAttribute('src','https://gistdeck.herokuapp.com/gistdeck.js');document.getElementsByTagName('head')[0].appendChild(s);})();
+command PinThis :open javascript:if(document.getSelection){s=document.getSelection();}else{s='';};document.location='https://pinboard.in/add?next=same&url='+encodeURIComponent(location.href)+'&description='+encodeURIComponent(s)+'&title='+encodeURIComponent(document.title)
 
 
 set passkeys+=trello.com:asdfcv><l1234567890
+set passkeys+=halp.githubapp.com:?/!Sjk<space>oilquhcrRsh
 
 " vim: set ft=pentadactyl:
 
+set editor='mvim -f +<line> +"sil! call cursor(0, <column>)" <file>'

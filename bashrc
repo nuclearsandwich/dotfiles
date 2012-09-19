@@ -24,7 +24,7 @@ alias grep='grep --color=auto'
 alias cuke='cucumber'
 #alias urxvt='urxvt +sb -sh 35'
 
-alias open='xdg-open'
+which xdg-open && alias open='xdg-open'
 
 export VIM_APP_DIR='/Applications'
 

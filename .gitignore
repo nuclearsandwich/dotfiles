@@ -1,0 +1,7 @@
+*.swp
+mutt/cache
+mutt/temp
+mutt/mailboxes
+xmonad/*
+
+.secrets.yml
