@@ -22,4 +22,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 #[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh" # Load NVM into a shell.
 if test -s "/Users/steven/.bashrc" ; then . "/Users/steven/.bashrc" ; fi
 
-remind ~/.reminders
+if [ -d "$HOME/.android_sdk" ]; then
+	export ANDROID_HOME="$HOME/.android_sdk"
+	PATH=$PATH:"$ANDROID_HOME/tools":"$ANDROID_HOME/platform-tools"
+fi

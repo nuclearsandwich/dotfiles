@@ -22,6 +22,7 @@ export GREP_COLOR="1;33"
 alias grep='grep --color=auto'
 
 alias cuke='cucumber'
+alias be='bundle exec'
 #alias urxvt='urxvt +sb -sh 35'
 
 which xdg-open && alias open='xdg-open'
@@ -111,8 +112,12 @@ if test -s "/Users/steven/.profile" ; then . "/Users/steven/.profile" ; fi
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
+export JAVA_HOME=`/usr/libexec/java_home`
+
 # Source Direnv if present. https://github.com/zimbatm/direnv
 if [ -d "$HOME/.direnv" ]; then
 	PATH="$HOME/.direnv/bin":$PATH
 	eval `$HOME/.direnv/bin/direnv hook $0`
 fi
+
+remind ~/.reminders
