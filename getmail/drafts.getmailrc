@@ -1,0 +1,15 @@
+[retriever]
+type = SimpleIMAPSSLRetriever
+server = mail.nuclearsandwich.com
+port = 993
+username = steven@nuclearsandwich.com
+password = hammer278
+mailboxes = ("INBOX.Drafts", )
+
+[destination]
+type = Maildir
+path = ~/.maildirs/getmail/INBOX.Drafts/
+
+[options]
+read_all = NO
+

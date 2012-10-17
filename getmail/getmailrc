@@ -1,0 +1,17 @@
+[retriever]
+type = SimpleIMAPSSLRetriever
+server = mail.nuclearsandwich.com
+port = 993
+username = steven@nuclearsandwich.com
+password = hammer278
+mailboxes = ("INBOX", "INBOX.Archive", "INBOX.Spam", "INBOX.Sent")
+
+[destination]
+type = MultiDestination
+destinations = ("~/.maildirs/getmail/INBOX/",
+	"~/.maildirs/getmail/INBOX.Archive/",
+	"~/.maildirs/getmail/INBOX.Spam/",
+	"~/.maildirs/getmail/INBOX.Sent/")
+
+[options]
+read_all = NO

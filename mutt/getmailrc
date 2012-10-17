@@ -1,7 +1,6 @@
-
-source ~/.mutt/mailboxes  # Load mailboxes from offlineimap.
 source ~/.mutt/stevecolors.muttrc # Load colors.
 
+mailboxes "+getmail/INBOX" "+getmail/INBOX.Archive" "+getmail/INBOX.Drafts" "+getmail/INBOX.Sent" "+getmail/INBOX.Spam"
 set realname='Steven!'
 set from='steven@nuclearsandwich.com'
 set sendmail='msmtp'
@@ -10,21 +9,20 @@ set message_cachedir    = ~/.mutt/cache/bodies
 set mailcap_path        = ~/.mutt/mailcap
 set signature           = ~/.mutt/sig
 set tmpdir              = ~/.mutt/temp
-set folder = ~/.maildirs/nuclearsandwich
+set folder = ~/.maildirs/getmail
 set spoolfile = +INBOX
-# set maildir_trash = yes
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 
 # Use tactless for contacts
-set query_command="tactless mutt '%s'"
+set query_command="/Users/steven/code/tactless/bin/tactless mutt '%s'"
 
 # Index View Options
 set sort = threads
 set sort_aux = reverse-last-date-received
 set uncollapse_jump
 set postponed = +INBOX.Drafts
-set record = +INBOX.sent
+set record = +INBOX.Sent
 
 ## Key Bindings ##
 
@@ -52,4 +50,5 @@ bind index G        last-entry
 bind index,pager R  group-reply
 bind index \Cp      recall-message
 bind index <space>  collapse-thread
+
 
