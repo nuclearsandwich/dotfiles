@@ -4,9 +4,6 @@
 [submodule "hg-git"]
 	path = hg-git
 	url = git://github.com/schacon/hg-git
-[submodule "tomorrow"]
-	path = tomorrow
-	url = git://github.com/chriskempson/tomorrow-theme.git
 [submodule "base16-builder"]
 	path = base16-builder
 	url = https://github.com/chriskempson/base16-builder.git
