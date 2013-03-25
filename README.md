@@ -9,5 +9,3 @@ This contains all my dotfiles for various things.
 Notable are my Xdefaults, gitconfig, and hgconfig.
 They are nice but not my original creations. In fact they are mostly
 pinched from Tim Pope and Steve Losh.
-
-![](https://upload.wikimedia.org/wikipedia/en/c/ce/SVG-logo.svg)
