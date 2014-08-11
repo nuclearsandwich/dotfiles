@@ -60,15 +60,8 @@
 
 [github]
 	user = nuclearsandwich
-	token = {{github_access_token}}
 
 [merge]
-	tool = threesome
-
-[mergetool "threesome"]
-	cmd = "vim $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
-	trustExitCode = true
-
 
 [init]
 	templatedir = ~/.git_template
