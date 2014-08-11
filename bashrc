@@ -1,17 +1,15 @@
 PATH=/usr/local/bin:$PATH:$HOME/bin
 PATH=/usr/local/lib/luarocks/bin:$PATH
 alias p='mpc toggle'
-#alias ls='ls --color=auto' # Doesn't work on Mac.
-alias ls='ls -GFbT' # Mac version of ^that^.
-alias vi='vim'
-#alias netcfg='sudo netcfg2'
-alias w='wicd-curses'
+alias ls='ls --color=auto' # Doesn't work on Mac.
+#alias ls='ls -GFbT' # Mac version of ^that^.
+#alias vi='vim'
 #eval `dircolors -b`
 alias telinit='echo no'
 alias Syu='sudo powerpill -Syu'
 alias :e='$EDITOR'
 alias cd..='cd ..' # Just shyaddupaboudit
-alias git='hub'
+#alias git='hub'
 alias pushit='git push'
 
 # Map vim exit commands to bash since I will try them anyway.
@@ -21,13 +19,7 @@ alias ZZ='exit'
 export GREP_COLOR="1;33"
 alias grep='grep --color=auto'
 
-alias cuke='cucumber'
-alias be='bundle exec'
-#alias urxvt='urxvt +sb -sh 35'
-
-which xdg-open && alias open='xdg-open'
-
-export VIM_APP_DIR='/Applications'
+which xdg-open > /dev/null && alias open='xdg-open'
 
 # Fun with prompt strings.
 
@@ -44,23 +36,13 @@ function get_branch {
 		BRANCH=''
 	fi
 }
-	
-#if [ -s $HOME/.rvm/scripts/rvm ]; then
-#	source $HOME/.rvm/scripts/rvm
-#	alias gemset='rvm gemset'
-#fi
-#
-#if [ -s $HOME/.nvm/nvm.sh ]; then
-#	source $HOME/.nvm/nvm.sh
-#fi
-
 
 # Function from Steve Losh's article on zsh prompt customization
 # [here](http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/#repository-types)
 function repo_char {
-	git branch >/dev/null 2>/dev/null && echo '±' && return
-	hg root >/dev/null 2>/dev/null && echo '☿' && return
-	echo '○'
+	git branch >/dev/null 2>/dev/null && echo 'Â±' && return
+	hg root >/dev/null 2>/dev/null && echo 'â¿' && return
+	echo 'â'
 }
 
 hg_ps1() {
@@ -79,7 +61,6 @@ last_status() {
 	echo "\[\e[0;22m\]${s}"
 }
 
-
 # ANSI Escape Sequences
 # I gave up trying to keep custom colors everywhere, I now just
 # redifine the ANSI colors in my Xresources.
@@ -91,6 +72,7 @@ BLUE="\e[34m"
 MAGENTA="\e[35m"
 CYAN="\e[36m"
 WHITE="\e[37m"
+RESET="\e[0m"
 
 LINE=$CYAN
 BRKT=$GREEN
@@ -99,18 +81,10 @@ STAT=$RED
 DATE=$MAGENTA
 CDIR=$BLUE
 PCHR=$YELLOW
-NORM=$WHITE
+NORM=$RESET
 
 PROMPT_COMMAND="get_branch; $PROMT_COMMAND"
-
 export PS1="\[$LINE\]┌─\[$BRKT\][ \[$STAT\]\$?\[$BRKT\] ][ \[$REPO\]\$(repo_char)\$ \[$BRKT\]][ \[$DATE\]\A \[$BRKT\]][ \[$CDIR\]\h:\${BRANCH}\W \[$BRKT\]]\n\[$LINE\]└─\[$PCHR\]> \[$NORM\]"
-
-# ┌─[ 15:49 ][ ○!$ ][ swordfish:default@.dotfiles ]
-# └─>
-
-if test -s "/Users/steven/.profile" ; then . "/Users/steven/.profile" ; fi
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export JAVA_HOME=`/usr/libexec/java_home`
 
@@ -118,6 +92,15 @@ export JAVA_HOME=`/usr/libexec/java_home`
 if [ -d "$HOME/.direnv" ]; then
 	PATH="$HOME/.direnv/bin":$PATH
 	eval `$HOME/.direnv/bin/direnv hook $0`
+fi
+
+if [ -f "$HOME/tablet.sh" ]; then
+	source $HOME/tablet.sh
+fi
+
+if [ -d "$HOME/.fuckpython" ]; then
+	PATH="$HOME/.fuckpython/bin":$PATH
+	source "$HOME/.fuckpython/fuckpython.sh"
 fi
 
 remind ~/.reminders
