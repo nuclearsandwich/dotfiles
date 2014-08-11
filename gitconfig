@@ -51,7 +51,7 @@
 	sh = show
 	br = branch
 	cn = clone
-	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	l = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
 	blowup = reset --hard github/master
