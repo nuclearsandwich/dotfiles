@@ -69,3 +69,5 @@
 	protocol = https
 [credential]
 	helper = osxkeychain
+[push]
+	default = simple
