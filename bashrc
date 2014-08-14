@@ -94,8 +94,12 @@ if [ -d "$HOME/.direnv" ]; then
 	eval `$HOME/.direnv/bin/direnv hook $0`
 fi
 
-if [ -f "$HOME/tablet.sh" ]; then
-	source $HOME/tablet.sh
+if [ -f "$HOME/.tablet.sh" ]; then
+	source $HOME/.tablet.sh
+fi
+
+if [ -f "$HOME/.owlman.sh" ]; then
+	source $HOME/.owlman.sh
 fi
 
 if [ -d "$HOME/.fuckpython" ]; then
