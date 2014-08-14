@@ -12,7 +12,7 @@ xset fp rehash
 
 
 xrdb -merge ~/.Xresources
-compton -Cb -i 0.5 --detect-transient --detect-client-leader
+#compton -Cb -i 0.5 --detect-transient --detect-client-leader
 xmodmap .capscontrol
 synclient PalmDetect=1
 synclient MaxTapTime=0
