@@ -1,7 +1,8 @@
-Xft.dpi: 150
+Xft.dpi: 120
 
 !*.font: xft:"Source Sans Pro":size=10
 urxvt.font: xft:Source Code Pro:size=20
+urxvt.scrollBar: false
 
 XCursor.theme: Oxygen Black
 XCursor.size: 128
