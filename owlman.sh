@@ -1,0 +1,5 @@
+OWLMAN_AUR_HOME="$HOME/.owl"
+OWLMAN_ABS_HOME="$HOME/.owl"
+export OWLMAN_AUR_HOME OWLMAN_ABS_HOME
+
+alias owl=owlman
