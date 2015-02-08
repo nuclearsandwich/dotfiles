@@ -1,7 +1,10 @@
 *.swp
-mutt/cache
-mutt/temp
-mutt/mailboxes
-xmonad/*
-
 .secrets.yml
+config/chromium/
+config/dconf/
+config/GitHub\ Chat/
+config/pulse/
+mutt/cache
+mutt/mailboxes
+mutt/temp
+xmonad/*
