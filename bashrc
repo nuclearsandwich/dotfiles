@@ -1,5 +1,7 @@
-PATH=/usr/local/bin:$PATH:$HOME/bin
-PATH=/usr/local/lib/luarocks/bin:$PATH
+. $HOME/.dotfiles/paths.sh
+prepend_path $HOME/bin
+prepend_path $HOME/code/xtools
+
 alias p='mpc toggle'
 alias ls='ls --color=auto' # Doesn't work on Mac.
 #alias ls='ls -GFbT' # Mac version of ^that^.
@@ -14,7 +16,6 @@ alias pushit='git push'
 
 # Map vim exit commands to bash since I will try them anyway.
 alias :q='exit'
-alias ZZ='exit'
 
 export GREP_COLOR="1;33"
 alias grep='grep --color=auto'
@@ -84,9 +85,10 @@ PCHR=$YELLOW
 NORM=$RESET
 
 PROMPT_COMMAND="get_branch; $PROMT_COMMAND"
-export PS1="\[$LINE\]┌─\[$BRKT\][ \[$STAT\]\$?\[$BRKT\] ][ \[$REPO\]\$(repo_char)\$ \[$BRKT\]][ \[$DATE\]\A \[$BRKT\]][ \[$CDIR\]\h:\${BRANCH}\W \[$BRKT\]]\n\[$LINE\]└─\[$PCHR\]> \[$NORM\]"
+# PS1="\[$LINE\]\[$BRKT\][ \[$STAT\]\$?\[$BRKT\] ][ \[$REPO\]\$(repo_char)\$ \[$BRKT\]][ \[$DATE\]\A \[$BRKT\]][ \[$CDIR\]\h:\${BRANCH}\W \[$BRKT\]]\n\[$LINE\]└─\[$PCHR\]> \[$NORM\]"
+PS1="[$?] $ "
+export PS1
 
-export JAVA_HOME=`/usr/libexec/java_home`
 
 # Source Direnv if present. https://github.com/zimbatm/direnv
 if [ -d "$HOME/.direnv" ]; then
@@ -107,4 +109,3 @@ if [ -d "$HOME/.fuckpython" ]; then
 	source "$HOME/.fuckpython/fuckpython.sh"
 fi
 
-remind ~/.reminders
