@@ -1,0 +1,32 @@
+#!/bin/sh
+
+### Housekeeping
+# Load new fonts.
+xset +fp /usr/share/fonts/local
+xset fp rehash
+# Merge xresources defaults.
+xrdb -merge ~/.Xresources
+# 🚫 caps lock.
+xmodmap .capscontrol
+nitrogen --restore &
+###
+
+### Daemons
+#compton -Cb -i 0.5 --detect-transient --detect-client-leader
+#synclient PalmDetect=1
+#synclient MaxTapTime=0
+#synclient VertScrollDelta=-127
+# natural scrolling
+compton &
+touchegg &
+$HOME/bin/w3d &
+autokey-gtk &
+start-pulseaudio-x11 &
+cmst &
+###
+
+### Applications
+urxvt -title root-terminal -e sudo -s &
+$HOME/bin/ghchat &
+telegram &
+
