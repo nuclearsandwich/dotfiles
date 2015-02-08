@@ -16,9 +16,6 @@ set spoolfile = +INBOX
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 
-# Use tactless for contacts
-set query_command="tactless mutt '%s'"
-
 # Index View Options
 set sort = threads
 set sort_aux = reverse-last-date-received
