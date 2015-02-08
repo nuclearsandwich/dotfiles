@@ -1,0 +1,8 @@
+MaildirStore nuclearsandwich
+AltMap yes
+Inbox ~/.maildirs/steven@nuclearsandwich.com
+
+IMAPAccount steven@nuclearsandwich.com
+Host mail.nuclearsandwich.com
+User steven@nuclearsandwich.com
+PassCmd "cat .imappass"
