@@ -17,12 +17,14 @@ nitrogen --restore &
 #synclient MaxTapTime=0
 #synclient VertScrollDelta=-127
 # natural scrolling
-compton &
-touchegg &
-$HOME/bin/w3d &
-autokey-gtk &
-start-pulseaudio-x11 &
-cmst &
+compton & # Compositing
+touchegg & # Multitouch
+$HOME/bin/w3d & # CSS and JavaScript override server
+autokey-gtk & # Text expansion
+start-pulseaudio-x11 & # Audio
+cmst & # Network
+twmnd & # Notifications
+
 ###
 
 ### Applications
