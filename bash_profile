@@ -1,14 +1,16 @@
 PATH=$PATH:$HOME/bin
 source $HOME/.bashrc
 
-export EDITOR='vim'
-export VISUAL='vim'
-export PAGER='less'
-export HGEDITOR=$EDITOR
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true \
--Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
+EDITOR='vim'
+VISUAL='vim'
+PAGER='less'
+HGEDITOR=$EDITOR
 
-export _JAVA_AWT_WM_NONREPARENTING=1
+_JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true \
+-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel"
+_JAVA_AWT_WM_NONREPARENTING=1
+
+export EDITOR VISUAL PAGER HGEDITOR _JAVA_OPTIONS _JAVA_AWT_WM_NONREPARENTING
 
 if [ -d "$HOME/.android_sdk" ]; then
 	export ANDROID_HOME="$HOME/.android_sdk"

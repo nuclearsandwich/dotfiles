@@ -19,11 +19,13 @@ nitrogen --restore &
 # natural scrolling
 compton & # Compositing
 touchegg & # Multitouch
+sxhkd & # Hotkeys
 $HOME/bin/w3d & # CSS and JavaScript override server
 autokey-gtk & # Text expansion
 start-pulseaudio-x11 & # Audio
 cmst & # Network
 twmnd & # Notifications
+blueman-applet & # Bluetoof
 
 ###
 
