@@ -9,7 +9,12 @@ set $hyperfuse-purple #773d83
 set $hyperfuse-light #b7b7b9
 set $hyperfuse-dark #627075
 
-set $dmenu_settings -z -fn 'terminus-8:normal' -sb \#627075 -sf \#6bd7c4 -nb \#b7b7b9 -nf \#773d83
+set $giantdays-yellow #ffdc00
+set $giantdays-red #af1f24
+set $giantdays-orange #f3a51e
+set $giantdays-khaki #4b3a36
+
+set $dmenu_settings -fn 'terminus-8:normal' -sb \#f3a51e -sf \#af1f24 -nb \#4b3a36 -nf \#ffdc00
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -152,21 +157,22 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 	colors {
-		background $hyperfuse-dark
-		statusline $hyperfuse-cyan
-		focused_workspace $hyperfuse-dark $hyperfuse-cyan $hyperfuse-purple
-		active_workspace $hyperfuse-dark $hyperfuse-purple $hyperfuse-light
-		inactive_workspace $hyperfuse-dark $hyperfuse-dark $hyperfuse-cyan
-		urgent_workspace $hyperfuse-light $hyperfuse-light $hyperfuse-purple
+		background $giantdays-orange
+		statusline $giantdays-khaki
+#                       border           background         text
+		focused_workspace $giantdays-yellow $giantdays-yellow $giantdays-red
+		active_workspace $giantdays-khaki $giantdays-khaki $giantdays-red
+		inactive_workspace $giantdays-orange $giantdays-orange $giantdays-khaki
+		urgent_workspace $giantdays-red $giantdays-red $giantdays-yellow
 	}
 }
 
 
 # ELEMENT                 BORDER            BACKGROUND            TEXT         INDICATOR    
-client.focused	          $hyperfuse-dark $hyperfuse-dark $hyperfuse-cyan $hyperfuse-cyan
-client.focused_inactive	  $hyperfuse-light $hyperfuse-light $hyperfuse-purple $hyperfuse-cyan
-client.unfocused	  $hyperfuse-light $hyperfuse-light $hyperfuse-purple $hyperfuse-cyan
-client.urgent   	  $hyperfuse-purple $hyperfuse-cyan $hyperfuse-purple $hyperfuse-cyan
+client.focused	          $giantdays-yellow $giantdays-yellow $giantdays-red $giantdays-red
+client.focused_inactive	  $giantdays-orange $giantdays-orange $giantdays-khaki $giantdays-khaki
+client.unfocused	  $giantdays-khaki $giantdays-khaki $giantdays-red $giantdays-red
+client.urgent   	  $giantdays-red $giantdays-red $giantdays-yellow $giantdays-yellow
 
 assign [class="Ghchat"] 3
 assign [class="Telegram"] 3
