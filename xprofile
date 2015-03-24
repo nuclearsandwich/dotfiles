@@ -32,5 +32,6 @@ blueman-applet & # Bluetoof
 ### Applications
 urxvt -title root-terminal -e sudo -s &
 $HOME/bin/ghchat &
+slk &
 telegram &
 
