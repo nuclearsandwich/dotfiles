@@ -1,0 +1,22 @@
+super + Return
+ urxvt
+
+super + shift + BackSpace
+ i3lock -ti $HOME/Images/giantdays-blank-surface.png
+
+super + space
+ dmenu_run -fn 'terminus-8:normal' -sb \#627075 -sf \#6bd7c4 -nb \#b7b7b9 -nf \#773d83
+
+XF86AudioLowerVolume
+ pamixer --decrease 5 && \
+ twmnc -t Volume -c "`pamixer --get-volume`"%
+
+XF86AudioRaiseVolume
+ pamixer --increase 5 && \
+ twmnc -t Volume -c "`pamixer --get-volume`"%
+
+XF86AudioMute
+ pamixer --toggle-mute && \
+ twmnc -t Volume -c "toggle mute"
+
+
