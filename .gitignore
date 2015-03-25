@@ -1,9 +1,6 @@
 *.swp
 .secrets.yml
-config/chromium/
-config/dconf/
-config/GitHub\ Chat/
-config/pulse/
+config/**/*
 mutt/cache
 mutt/mailboxes
 mutt/temp
