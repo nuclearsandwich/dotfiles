@@ -2,13 +2,6 @@
 	email = steven@nuclearsandwich.com
 	name = Steven! Ragnarök
 
-[giggle]
-	main-window-maximized = false
-	main-window-geometry = 1916x1057+0+19
-	history-view-vpane-position = 650
-	file-view-vpane-position = 80
-	main-window-view = HistoryView
-
 [color]
 	diff = auto
 	status = auto
@@ -36,9 +29,10 @@
 [core]
 	pager = less -FRSX
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore
+	excludesfile = /opt/boxen/config/git/gitignore
 	autocrlf = input
 	safecrlf = true
+	editor = vim
 
 [alias]
 	co = checkout
@@ -52,26 +46,28 @@
 	br = branch
 	cn = clone
 	l = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	ll = log --pretty=format:\"%h %ad | %s%d [%an]\" --date=short
 	type = cat-file -t
 	dump = cat-file -p
 	blowup = reset --hard github/master
 	cleanup = clean -df
 	prmerge = merge --no-ff
 
-[github]
-	user = nuclearsandwich
-
 [merge]
 
-[init]
-	templatedir = ~/.git_template
 [hub]
 	protocol = https
+
 [credential]
+	helper = /opt/boxen/bin/boxen-git-credential
+
 [push]
 	default = simple
-[filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
+
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
 	required = true
 
+[github]
+	user = nuclearsandwich
