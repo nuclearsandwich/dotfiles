@@ -4,15 +4,15 @@
 
 set $mod Mod4
 
-set $hyperfuse-cyan #6bd7c4
-set $hyperfuse-purple #773d83
-set $hyperfuse-light #b7b7b9
-set $hyperfuse-dark #627075
-
-set $giantdays-yellow #ffdc00
-set $giantdays-red #af1f24
-set $giantdays-orange #f3a51e
-set $giantdays-khaki #4b3a36
+# set $hyperfuse-cyan #6bd7c4
+# set $hyperfuse-purple #773d83
+# set $hyperfuse-light #b7b7b9
+# set $hyperfuse-dark #627075
+# 
+# set $giantdays-yellow #ffdc00
+# set $giantdays-red #af1f24
+# set $giantdays-orange #f3a51e
+# set $giantdays-khaki #4b3a36
 
 set $dmenu_settings -fn 'terminus-8:normal' -sb \#f3a51e -sf \#af1f24 -nb \#4b3a36 -nf \#ffdc00
 # Font for window titles. Will also be used by the bar unless a different font
@@ -20,7 +20,7 @@ set $dmenu_settings -fn 'terminus-8:normal' -sb \#f3a51e -sf \#af1f24 -nb \#4b3a
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:Source Code Pro 11
-font pango:Terminus 16
+font pango:Hack 14
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -149,31 +149,27 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Colors
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-
-bar {
-        status_command i3status
-	colors {
-		background $giantdays-orange
-		statusline $giantdays-khaki
-#                       border           background         text
-		focused_workspace $giantdays-yellow $giantdays-yellow $giantdays-red
-		active_workspace $giantdays-khaki $giantdays-khaki $giantdays-red
-		inactive_workspace $giantdays-orange $giantdays-orange $giantdays-khaki
-		urgent_workspace $giantdays-red $giantdays-red $giantdays-yellow
-	}
-}
-
-
-# ELEMENT                 BORDER            BACKGROUND            TEXT         INDICATOR    
-client.focused	          $giantdays-yellow $giantdays-yellow $giantdays-red $giantdays-red
-client.focused_inactive	  $giantdays-orange $giantdays-orange $giantdays-khaki $giantdays-khaki
-client.unfocused	  $giantdays-khaki $giantdays-khaki $giantdays-red $giantdays-red
-client.urgent   	  $giantdays-red $giantdays-red $giantdays-yellow $giantdays-yellow
-
 assign [class="Ghchat"] 3
 assign [class="Telegram"] 3
 assign [title="root-terminal"] 10
+
+bar {
+    output            eDP1
+    status_command    i3status
+    position          top
+    mode              dock
+    workspace_buttons yes
+    tray_output       none
+
+    font pango:Hack 24
+
+    colors {
+        background #000000
+        statusline #ffffff
+
+        focused_workspace  #ffffff #285577
+        active_workspace   #ffffff #333333
+        inactive_workspace #888888 #222222
+        urgent_workspace   #ffffff #900000
+    }
+}
