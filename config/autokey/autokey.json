@@ -1,47 +1,49 @@
 {
-    "folders": [
-        "/home/steven/.hotkeys"
-    ], 
-    "toggleServiceHotkey": {
-        "hotKey": "k", 
-        "modifiers": [
-            "<shift>", 
-            "<super>"
-        ], 
-        "enabled": false
-    }, 
     "settings": {
-        "showTrayIcon": true, 
-        "sortByUsageCount": true, 
-        "scriptGlobals": {}, 
-        "undoUsingBackspace": true, 
-        "notificationIcon": "autokey-status", 
-        "enableQT4Workaround": false, 
-        "promptToSave": false, 
-        "menuTakesFocus": false, 
-        "interfaceType": "XRecord", 
-        "windowDefaultSize": [
-            2156, 
-            1408
-        ], 
-        "showToolbar": true, 
-        "serviceRunning": true, 
+        "notificationIcon": "autokey-status",
+        "serviceRunning": true,
+        "interfaceType": "XRecord",
+        "workAroundApps": ".*VirtualBox.*|krdc.Krdc",
+        "isFirstRun": true,
+        "promptToSave": false,
+        "undoUsingBackspace": true,
+        "hPanePosition": 267,
+        "scriptGlobals": {},
+        "menuTakesFocus": false,
         "columnWidths": [
-            150, 
-            50, 
+            150,
+            50,
             100
-        ], 
-        "workAroundApps": ".*VirtualBox.*|krdc.Krdc", 
-        "hPanePosition": 542, 
-        "isFirstRun": true
-    }, 
-    "userCodeDir": null, 
-    "version": "0.90.4", 
+        ],
+        "showTrayIcon": true,
+        "sortByUsageCount": true,
+        "enableQT4Workaround": false,
+        "windowDefaultSize": [
+            1062,
+            1752
+        ],
+        "showToolbar": true
+    },
+    "folders": [
+        "/home/steven/.hotkeys",
+        "/home/steven/.autokey/github"
+    ],
+    "version": "0.90.4",
     "configHotkey": {
-        "hotKey": "k", 
+        "enabled": true,
         "modifiers": [
+            "<alt>",
             "<super>"
-        ], 
-        "enabled": false
-    }
+        ],
+        "hotKey": "w"
+    },
+    "toggleServiceHotkey": {
+        "enabled": true,
+        "modifiers": [
+            "<shift>",
+            "<super>"
+        ],
+        "hotKey": "a"
+    },
+    "userCodeDir": null
 }
