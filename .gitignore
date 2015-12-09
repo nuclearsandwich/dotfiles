@@ -1,7 +1,9 @@
 *.swp
 .secrets.yml
-config/**/*
 mutt/cache
 mutt/mailboxes
 mutt/temp
-xmonad/*
+xmonad/*.o
+xmonad/*-linux
+xmonad/*.hi
+xmonad/*.errors
