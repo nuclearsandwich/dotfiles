@@ -11,30 +11,19 @@ $HOME/bin/xrr
 # 🚫 caps lock.
 xmodmap .capscontrol
 #xmodmap .modswap
-#nitrogen --restore &
+nitrogen --restore &
 ###
 
 ### Daemons
-#compton -Cb -i 0.5 --detect-transient --detect-client-leader
 synclient PalmDetect=1
 synclient MaxTapTime=0
-synclient VertScrollDelta=-127
-# natural scrolling
-#compton & # Compositing
-#touchegg & # Multitouch
+synclient VertScrollDelta=-127 # natural scrolling
+bard -c $HOME/.config/bard &
+rescuetime & # time tracking
+compton & # Compositing
+touchegg & # Multitouch
 sxhkd & # Hotkeys
 #$HOME/bin/w3d & # CSS and JavaScript override server
-#autokey-gtk & # Text expansion
-#start-pulseaudio-x11 & # Audio
-#cmst & # Network
-#twmnd & # Notifications
-#blueman-applet & # Bluetoof
-
-###
-
-### Applications
-#urxvt -title root-terminal -e sudo -s &
-#$HOME/bin/ghchat &
-#slk &
-#telegram &
+autokey-gtk & # Text expansion
+start-pulseaudio-x11 & # Audio
 

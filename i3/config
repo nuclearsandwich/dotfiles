@@ -20,7 +20,7 @@ set $dmenu_settings -fn 'terminus-8:normal' -sb \#f3a51e -sf \#af1f24 -nb \#4b3a
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:Source Code Pro 11
-font pango:Hack 14
+font pango:Hack 8
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
@@ -149,19 +149,20 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-assign [class="Ghchat"] 3
+assign [class="chat"] 3
+assign [class="slack"] 3
+assign [class="Telegram"] 3
 assign [class="Telegram"] 3
 assign [title="root-terminal"] 10
 
 bar {
     output            eDP1
-    status_command    i3status
     position          top
     mode              dock
     workspace_buttons yes
     tray_output       none
 
-    font pango:Hack 24
+    font pango:Hack 8
 
     colors {
         background #000000
