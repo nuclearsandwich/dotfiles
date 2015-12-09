@@ -12,6 +12,5 @@ if [ -f $HOME/.xprofile ]; then
 fi
 
 
-urxvt &
-DEFAULT_SESSION=i3
-exec $DEFAULT_SESSION
+exec i3
+#exec urxvt -name "X11 Console"
