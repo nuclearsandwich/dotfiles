@@ -1,0 +1,25 @@
+GitHub Chat/
+QtProject.conf
+RescueTime.com/
+Slack/
+autokey/*.log*
+autostart/
+chromium/
+configstore/
+dconf/
+enchant/
+epiphany/
+evolution/
+gconf/
+gtk-2.0/
+lxqt/
+menus/
+pulse/
+spotify/
+tox/
+
+Trolltech.conf
+hub
+monitors.xml
+pavucontrol.ini
+yakuakerc
