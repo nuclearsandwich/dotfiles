@@ -11,12 +11,15 @@ enchant/
 epiphany/
 evolution/
 gconf/
+google-chrome/
 gtk-2.0/
 lxqt/
 menus/
 pulse/
+ranger/
 spotify/
 tox/
+vlc/
 
 Trolltech.conf
 hub
