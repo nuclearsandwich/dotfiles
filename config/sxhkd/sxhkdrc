@@ -2,7 +2,7 @@ super + ctrl + Escape
   pkill -USR1 -x sxhkd
 
 super + Return
- urxvt
+ termite
 
 super + shift + BackSpace
  i3lock -ti $HOME/Images/giantdays-blank-surface.png
@@ -12,14 +12,11 @@ super + space
 
 XF86AudioLowerVolume
  pamixer --decrease 5 && \
- twmnc -t Volume -c "`pamixer --get-volume`"%
 
 XF86AudioRaiseVolume
  pamixer --increase 5 && \
- twmnc -t Volume -c "`pamixer --get-volume`"%
 
 XF86AudioMute
  pamixer --toggle-mute && \
  twmnc -t Volume -c "toggle mute"
-
 
