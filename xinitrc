@@ -12,5 +12,4 @@ if [ -f $HOME/.xprofile ]; then
 fi
 
 
-exec i3
-#exec urxvt -name "X11 Console"
+exec bspwm

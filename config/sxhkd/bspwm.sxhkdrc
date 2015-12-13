@@ -1,0 +1,14 @@
+super + {1-9,0}
+  bspc desktop -f \^{1-9,10}
+
+super {_,shift} + {h,j,k,l}
+  bspc window -{f,s} {left, down, up, right}
+
+super + {comma,period}
+	bspc window -f {prev,next}
+
+super + Tab
+  bspc desktop -f last
+
+super + b
+	bspc window -s biggest
