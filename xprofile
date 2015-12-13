@@ -22,7 +22,7 @@ bard -c $HOME/.config/bard &
 rescuetime & # time tracking
 compton & # Compositing
 touchegg & # Multitouch
-sxhkd & # Hotkeys
+sxhkd -c $HOME/.config/sxhkd/sxhkdrc $HOME/.config/sxhkd/bspwm.sxhkdrc & # Hotkeys
 #$HOME/bin/w3d & # CSS and JavaScript override server
 autokey-gtk & # Text expansion
 start-pulseaudio-x11 & # Audio
