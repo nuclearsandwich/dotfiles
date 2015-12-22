@@ -23,10 +23,10 @@ iconchar() {
 		root)
 			echo -en "\uf292"
 			;;
-		eDP1)
+		eDP1|eDP-1)
 			echo -en "\uf109"
 			;;
-		HDMI1)
+		HDMI1|HDMI-1|DP-1)
 			echo -en "\uf263"
 			;;
 		M)
