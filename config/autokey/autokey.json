@@ -1,49 +1,49 @@
 {
+    "userCodeDir": null,
+    "folders": [
+        "/home/steven/.hotkeys",
+        "/home/steven/.autokey/github"
+    ],
+    "toggleServiceHotkey": {
+        "hotKey": "a",
+        "enabled": true,
+        "modifiers": [
+            "<shift>",
+            "<super>"
+        ]
+    },
+    "version": "0.90.4",
     "settings": {
-        "notificationIcon": "autokey-status",
-        "serviceRunning": true,
-        "interfaceType": "XRecord",
-        "workAroundApps": ".*VirtualBox.*|krdc.Krdc",
-        "isFirstRun": true,
-        "promptToSave": false,
-        "undoUsingBackspace": true,
-        "hPanePosition": 267,
-        "scriptGlobals": {},
-        "menuTakesFocus": false,
         "columnWidths": [
             150,
             50,
             100
         ],
+        "hPanePosition": 175,
+        "interfaceType": "XRecord",
+        "enableQT4Workaround": false,
+        "undoUsingBackspace": true,
+        "scriptGlobals": {},
+        "menuTakesFocus": false,
+        "notificationIcon": "autokey-status",
+        "isFirstRun": true,
         "showTrayIcon": true,
         "sortByUsageCount": true,
-        "enableQT4Workaround": false,
+        "serviceRunning": true,
         "windowDefaultSize": [
-            1062,
-            1752
+            697,
+            710
         ],
-        "showToolbar": true
+        "showToolbar": true,
+        "workAroundApps": ".*VirtualBox.*|krdc.Krdc",
+        "promptToSave": false
     },
-    "folders": [
-        "/home/steven/.hotkeys",
-        "/home/steven/.autokey/github"
-    ],
-    "version": "0.90.4",
     "configHotkey": {
+        "hotKey": "w",
         "enabled": true,
         "modifiers": [
             "<alt>",
             "<super>"
-        ],
-        "hotKey": "w"
-    },
-    "toggleServiceHotkey": {
-        "enabled": true,
-        "modifiers": [
-            "<shift>",
-            "<super>"
-        ],
-        "hotKey": "a"
-    },
-    "userCodeDir": null
+        ]
+    }
 }
