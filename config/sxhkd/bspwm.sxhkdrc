@@ -1,5 +1,5 @@
 super + {1-9,0}
-  bspc desktop -f \^{1-9,10}
+  bspc desktop -f {term, www, chat, dev, mail, bonus, 5000, eight, nine, root}
 
 super {_,shift} + {h,j,k,l}
   bspc window -{f,s} {left, down, up, right}
