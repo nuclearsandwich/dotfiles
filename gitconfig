@@ -13,18 +13,18 @@
 [color "branch"]
 	current = yellow reverse
 	local = yellow
-	remote = green
+	remote = magenta
 
 [color "diff"]
-	meta = yellow bold
+	meta = bold
 	frag = magenta bold
 	old = red bold
-	new = green bold
+	new = cyan bold
 
 [color "status"]
-	added = yellow
-	changed = green
-	untracked = cyan
+	added = blue
+	changed = cyan
+	untracked = magenta
 
 [core]
 	pager = less -FRSX

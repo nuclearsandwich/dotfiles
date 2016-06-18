@@ -1,14 +1,23 @@
-super + {1-9,0}
-  bspc desktop -f {term, www, chat, dev, mail, bonus, 5000, eight, nine, root}
+super + {_,shift} {1-9,0}
+  bspc {desktop -f,node -d} {term, www, chat, dev, mail, bonus, 5000, extra, nine, root}
+
+super + m
+  bspc desktop -l monocle
+
+super + t
+  bspc desktop -l tiled
 
 super {_,shift} + {h,j,k,l}
-  bspc window -{f,s} {left, down, up, right}
+  bspc node -{f,s} {left, down, up, right}
 
 super + {comma,period}
-	bspc window -f {prev,next}
+	bspc node -f {prev,next}
 
 super + Tab
   bspc desktop -f last
 
 super + b
-	bspc window -s biggest
+	bspc node -s biggest
+
+super + shift + c
+	bspc node --close

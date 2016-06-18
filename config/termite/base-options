@@ -1,0 +1,7 @@
+[options]
+font = Hack
+geometry = 1000x500
+mouse_autohide = true
+scrollback_lines = 10000
+
+

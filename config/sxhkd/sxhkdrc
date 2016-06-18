@@ -11,12 +11,12 @@ super + space
  rofi -show run -font 'Monoid 18'
 
 XF86AudioLowerVolume
- pamixer --decrease 5 && \
+ pamixer --decrease 5
 
 XF86AudioRaiseVolume
- pamixer --increase 5 && \
+ pamixer --increase 5
 
 XF86AudioMute
- pamixer --toggle-mute && \
- twmnc -t Volume -c "toggle mute"
+ pamixer --toggle-mute
+
 
