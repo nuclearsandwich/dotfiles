@@ -26,7 +26,7 @@ iconchar() {
 		eDP1|eDP-1)
 			echo -en "\uf109"
 			;;
-		HDMI1|HDMI-1|DP-1)
+		HDMI1|HDMI-1|DP1|DP-1)
 			echo -en "\uf263"
 			;;
 		M)

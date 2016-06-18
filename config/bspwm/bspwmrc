@@ -6,11 +6,21 @@ bspc config window-gap 6
 bspc config split_ratio 0.52
 bspc config bottom_padding 20
 bspc config status_prefix ""
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
 
-if bspc query -M | grep "HDM1" > /dev/null; then
-	$HOME/bin/dualmon.sh
-	bspc monitor eDP1 -d term chat mail root
-	bspc monitor HDMI1 -d www dev bonus 5000
-else
-	bspc monitor -d term www chat dev mail bonus 5000 extra nine root
-fi
+bspc rule -a Firefox desktop=www
+bspc rule -a Telegram desktop=chat
+
+case $(hostname) in
+	tauntaun)
+		if xrandr | grep "^DP1 connected" > /dev/null; then
+			$HOME/bin/dualmon.sh
+		else
+			$HOME/bin/solomon.sh
+		fi
+		;;
+	totoro)
+		;;
+esac
+

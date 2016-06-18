@@ -12,4 +12,4 @@ if [ -f $HOME/.xprofile ]; then
 fi
 
 
-exec bspwm
+exec $HOME/bin/startbspwm
