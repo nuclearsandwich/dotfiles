@@ -12,3 +12,8 @@ end
 #source "$HOME/.config/fish/functions/chruby_auto.fish"
 status --is-interactive; and . (rbenv init -|psub)
 status --is-interactive; and . (nodenv init -|psub)
+
+if which direnv > /dev/null
+	eval (direnv hook fish)
+end
+

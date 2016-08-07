@@ -1,2 +1,3 @@
-urxvt.scrollBar: false
+URxvt.scrollBar: false
+URxvt.font: "xft:Fantasque Sans Mono=pixesize:11"
 
