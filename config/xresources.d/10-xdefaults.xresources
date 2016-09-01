@@ -1,3 +1,3 @@
-*.font: "xft:Fantasque Sans Mono-9"
+*.font: "xft:Courier Sans Code-9"
 !xterm.font: xft:Monoid 9
 
