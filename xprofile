@@ -6,7 +6,7 @@ xset +fp /usr/share/fonts/local
 xset fp rehash
 
 # Merge xresources defaults.
-$HOME/bin/xrr
+xrdb -load "$HOME/.config/xresources.d/xdefaults.xresources"
 
 # 🚫 caps lock.
 xmodmap .capscontrol
@@ -21,7 +21,7 @@ synclient VertScrollDelta=-127 # natural scrolling
 #rescuetime & # time tracking
 compton & # Compositing
 #touchegg & # Multitouch
-sxhkd -c $HOME/.config/sxhkd/sxhkdrc $HOME/.config/sxhkd/bspwm.sxhkdrc & # Hotkeys
+sxhkd -c $HOME/.config/sxhkd/sxhkdrc & # Hotkeys
 #$HOME/bin/w3d & # CSS and JavaScript override server
 #autokey-gtk & # Text expansion
 start-pulseaudio-x11 & # Audio

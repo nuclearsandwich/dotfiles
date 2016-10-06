@@ -1,0 +1,8 @@
+urxvt.scrollBar: false
+urxvt.font: xft:hack:size=9
+urxvt.letterSpace: -1
+
+urxvt.perl-ext-common: default,matcher
+urxvt.url-launcher: /usr/bin/xdg-open
+urxvt.matcher.button: 1
+

@@ -1,0 +1,7 @@
+#include "./colorpalette.xresources"
+#include "./colors.xresources"
+#include "./font.xresources"
+#include "./urxvt.xresources"
+#include "./rofi.xresources"
+#include "./rofi.xresources"
+
