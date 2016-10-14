@@ -29,7 +29,7 @@
 [core]
 	pager = less -FRSX
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = ~/.gitignore
 	autocrlf = input
 	safecrlf = true
 	editor = vim
