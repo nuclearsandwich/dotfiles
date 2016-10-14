@@ -1,51 +1,24 @@
--- local xresources = require("beautiful.xresources")
 
--- local xcolors = xresources.get_current_theme()
-
--- local xcolors_to_base16 = function (x)
--- 	return base16 = {
--- 		foreground = x.foreground,
--- 		background = x.background,
--- 		base00 = x.color0,
--- 		base01 = x.color18,
--- 		base02 = x.color19,
--- 		base03 = x.color8,
--- 		base04 = x.color20,
--- 		base05 = x.color7,
--- 		base06 = x.color21,
--- 		base07 = x.color15,
--- 		base08 = x.color9,
--- 		base09 = x.color16
--- 		base0A = x.color3,
--- 		base0B = x.color10,
--- 		base0C = x.color14,
--- 		base0D = x.color12,
--- 		base0E = x.color13,
--- 		base0F = x.color17,
--- 	}
--- end
-
-
--- local base16 = xcolors_to_base16(xcolors)
-
-
-local base16 = {
-	base00 = "#131513",
-	base01 = "#242924",
-	base02 = "#5e6e5e",
-	base03 = "#687d68",
-	base04 = "#809980",
-	base05 = "#8ca68c",
-	base06 = "#cfe8cf",
-	base07 = "#f4fbf4",
-	base08 = "#e6193c",
-	base09 = "#87711d",
-	base0A = "#98981b",
-	base0B = "#29a329",
-	base0C = "#1999b3",
-	base0D = "#3d62f5",
-	base0E = "#ad2bee",
-	base0F = "#e619c3",
+local colors = {
+	foreground = "#e5f5e5",
+	background = "#2d2d2d",
+	cursor = "#e5f5e5",
+	color0 = "#45474a",
+	color1 = "#ff037e",
+	color2 = "#00de7f",
+	color3 = "#ff8c0a",
+	color4 = "#4fa7ff",
+	color5 = "#e600e6",
+	color6 = "#44cced",
+	color7 = "#d3d0c8",
+	color8 = "#747369",
+	color9 = "#ff80bb",
+	color10 = "#a6ffa6",
+	color11 = "#ffa552",
+	color12 = "#6699cc",
+	color13 = "#d052df",
+	color14 = "#adadff",
+	color15 = "#f2f0ec",
 }
 
 theme = {}
@@ -53,19 +26,21 @@ theme = {}
 theme.font          = "Noto Mono 11"
 theme.useless_gap_width = 10
 
-theme.bg_normal     = base16.base05
-theme.bg_focus      = base16.base07
+theme.bg_normal     = colors.color8
+theme.bg_focus      = colors.color2
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = base16.base01
-theme.fg_focus      = base16.base0D
-theme.fg_urgent     = base16.base0F
-theme.fg_minimize   = base16.base07
+theme.fg_normal     = colors.foreground
+theme.fg_focus      = colors.color0
+theme.fg_urgent     = colors.color8
+theme.fg_minimize   = colors.color7
 
 theme.border_width  = 2
 theme.border_normal = theme.bg_normal
 theme.border_focus  = theme.bg_focus
-theme.border_marked = base16.base08
+theme.border_marked = colors.color8
+
+theme.asset_root = "/home/steven/.config/awesome/themes/sammich/"
 
 -- There are other variable sets
 -- overriding the default one when
@@ -79,12 +54,12 @@ theme.border_marked = base16.base08
 --theme.taglist_bg_focus = "#ff0000"
 
 -- Display the taglist squares
-theme.taglist_squares_sel   = "/usr/share/awesome/themes/default/taglist/squarefw.png"
-theme.taglist_squares_unsel = "/usr/share/awesome/themes/default/taglist/squarew.png"
+theme.taglist_squares_sel   = theme.asset_root .. "taglist/squarefw.png"
+theme.taglist_squares_unsel = theme.asset_root .. "taglist/squarew.png"
 -- Variables set for theming the menu:
 -- menu_[bg|fg]_[normal|focus]
 -- menu_[border_color|border_width]
-theme.menu_submenu_icon = "/usr/share/awesome/themes/default/submenu.png"
+theme.menu_submenu_icon = theme.asset_root .. "submenu.png"
 theme.menu_height = 15
 theme.menu_width  = 100
 
@@ -94,47 +69,47 @@ theme.menu_width  = 100
 --theme.bg_widget = "#cc0000"
 
 -- Define the image to load
-theme.titlebar_close_button_normal = "/usr/share/awesome/themes/default/titlebar/close_normal.png"
-theme.titlebar_close_button_focus  = "/usr/share/awesome/themes/default/titlebar/close_focus.png"
+theme.titlebar_close_button_normal = theme.asset_root .. "titlebar/close_normal.png"
+theme.titlebar_close_button_focus  = theme.asset_root .. "titlebar/close_focus.png"
 
-theme.titlebar_ontop_button_normal_inactive = "/usr/share/awesome/themes/default/titlebar/ontop_normal_inactive.png"
-theme.titlebar_ontop_button_focus_inactive  = "/usr/share/awesome/themes/default/titlebar/ontop_focus_inactive.png"
-theme.titlebar_ontop_button_normal_active = "/usr/share/awesome/themes/default/titlebar/ontop_normal_active.png"
-theme.titlebar_ontop_button_focus_active  = "/usr/share/awesome/themes/default/titlebar/ontop_focus_active.png"
+theme.titlebar_ontop_button_normal_inactive = theme.asset_root .. "titlebar/ontop_normal_inactive.png"
+theme.titlebar_ontop_button_focus_inactive  = theme.asset_root .. "titlebar/ontop_focus_inactive.png"
+theme.titlebar_ontop_button_normal_active = theme.asset_root .. "titlebar/ontop_normal_active.png"
+theme.titlebar_ontop_button_focus_active  = theme.asset_root .. "titlebar/ontop_focus_active.png"
 
-theme.titlebar_sticky_button_normal_inactive = "/usr/share/awesome/themes/default/titlebar/sticky_normal_inactive.png"
-theme.titlebar_sticky_button_focus_inactive  = "/usr/share/awesome/themes/default/titlebar/sticky_focus_inactive.png"
-theme.titlebar_sticky_button_normal_active = "/usr/share/awesome/themes/default/titlebar/sticky_normal_active.png"
-theme.titlebar_sticky_button_focus_active  = "/usr/share/awesome/themes/default/titlebar/sticky_focus_active.png"
+theme.titlebar_sticky_button_normal_inactive = theme.asset_root .. "titlebar/sticky_normal_inactive.png"
+theme.titlebar_sticky_button_focus_inactive  = theme.asset_root .. "titlebar/sticky_focus_inactive.png"
+theme.titlebar_sticky_button_normal_active = theme.asset_root .. "titlebar/sticky_normal_active.png"
+theme.titlebar_sticky_button_focus_active  = theme.asset_root .. "titlebar/sticky_focus_active.png"
 
-theme.titlebar_floating_button_normal_inactive = "/usr/share/awesome/themes/default/titlebar/floating_normal_inactive.png"
-theme.titlebar_floating_button_focus_inactive  = "/usr/share/awesome/themes/default/titlebar/floating_focus_inactive.png"
-theme.titlebar_floating_button_normal_active = "/usr/share/awesome/themes/default/titlebar/floating_normal_active.png"
-theme.titlebar_floating_button_focus_active  = "/usr/share/awesome/themes/default/titlebar/floating_focus_active.png"
+theme.titlebar_floating_button_normal_inactive = theme.asset_root .. "titlebar/floating_normal_inactive.png"
+theme.titlebar_floating_button_focus_inactive  = theme.asset_root .. "titlebar/floating_focus_inactive.png"
+theme.titlebar_floating_button_normal_active = theme.asset_root .. "titlebar/floating_normal_active.png"
+theme.titlebar_floating_button_focus_active  = theme.asset_root .. "titlebar/floating_focus_active.png"
 
-theme.titlebar_maximized_button_normal_inactive = "/usr/share/awesome/themes/default/titlebar/maximized_normal_inactive.png"
-theme.titlebar_maximized_button_focus_inactive  = "/usr/share/awesome/themes/default/titlebar/maximized_focus_inactive.png"
-theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/default/titlebar/maximized_normal_active.png"
-theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/default/titlebar/maximized_focus_active.png"
+theme.titlebar_maximized_button_normal_inactive = theme.asset_root .. "titlebar/maximized_normal_inactive.png"
+theme.titlebar_maximized_button_focus_inactive  = theme.asset_root .. "titlebar/maximized_focus_inactive.png"
+theme.titlebar_maximized_button_normal_active = theme.asset_root .. "titlebar/maximized_normal_active.png"
+theme.titlebar_maximized_button_focus_active  = theme.asset_root .. "titlebar/maximized_focus_active.png"
 
 theme.wallpaper = "/home/steven/bg/color.jpg"
 
 -- You can use your own layout icons like this:
-theme.layout_uselesstile   = "/usr/share/awesome/themes/default/layouts/tilew.png"
-theme.layout_uselessspiral  = "/usr/share/awesome/themes/default/layouts/spiralw.png"
-theme.layout_uselessfair = "/usr/share/awesome/themes/default/layouts/fairhw.png"
-theme.layout_fairh = "/usr/share/awesome/themes/default/layouts/fairhw.png"
-theme.layout_fairv = "/usr/share/awesome/themes/default/layouts/fairvw.png"
-theme.layout_floating  = "/usr/share/awesome/themes/default/layouts/floatingw.png"
-theme.layout_magnifier = "/usr/share/awesome/themes/default/layouts/magnifierw.png"
-theme.layout_max = "/usr/share/awesome/themes/default/layouts/maxw.png"
-theme.layout_fullscreen = "/usr/share/awesome/themes/default/layouts/fullscreenw.png"
-theme.layout_tilebottom = "/usr/share/awesome/themes/default/layouts/tilebottomw.png"
-theme.layout_tileleft   = "/usr/share/awesome/themes/default/layouts/tileleftw.png"
-theme.layout_tile = "/usr/share/awesome/themes/default/layouts/tilew.png"
-theme.layout_tiletop = "/usr/share/awesome/themes/default/layouts/tiletopw.png"
-theme.layout_spiral  = "/usr/share/awesome/themes/default/layouts/spiralw.png"
-theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
+theme.layout_uselesstile   = "layouts/tilew.png"
+theme.layout_uselessspiral  = "layouts/spiralw.png"
+theme.layout_uselessfair = "layouts/fairhw.png"
+theme.layout_fairh = "layouts/fairhw.png"
+theme.layout_fairv = "layouts/fairvw.png"
+theme.layout_floating  = "layouts/floatingw.png"
+theme.layout_magnifier = "layouts/magnifierw.png"
+theme.layout_max = "layouts/maxw.png"
+theme.layout_fullscreen = "layouts/fullscreenw.png"
+theme.layout_tilebottom = "layouts/tilebottomw.png"
+theme.layout_tileleft   = "layouts/tileleftw.png"
+theme.layout_tile = "layouts/tilew.png"
+theme.layout_tiletop = "layouts/tiletopw.png"
+theme.layout_spiral  = "layouts/spiralw.png"
+theme.layout_dwindle = "layouts/dwindlew.png"
 
 theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
 

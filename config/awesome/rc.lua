@@ -12,13 +12,34 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local lain_layouts = require("lain/layout")
 
+naughty.config.defaults.position = "bottom_left"
+
+function update_battery(battery_statuses)
+	local total_batlevel = 0
+	local battery_buffer = {}
+	for i, status in ipairs(battery_statuses) do
+		total_batlevel = total_batlevel + status.level
+		battery_buffer[#battery_buffer + 1] = status.state .. ":" .. status.level .. "%"
+	end
+
+	if total_batlevel <= 20 then
+		naughty.notify({
+			title = "BATTERY WARNING",
+			text = "Battery level critical. Find power soon"
+		})
+	end
+	mybatterystatus:set_text(table.concat(battery_buffer, " | ") .. " || ")
+end
+
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
 if awesome.startup_errors then
 	naughty.notify({ preset = naughty.config.presets.critical,
 	title = "Oops, there were errors during startup!",
-	text = awesome.startup_errors })
+	text = awesome.startup_errors,
+	position = "bottom_left"
+})
 end
 
 local debug_notification = function (msg)
@@ -74,11 +95,11 @@ local layouts =
 -- }}}
 
 -- {{{ Wallpaper
-if beautiful.wallpaper then
-	for s = 1, screen.count() do
-		gears.wallpaper.maximized(beautiful.wallpaper, s, true)
-	end
-end
+-- if beautiful.wallpaper then
+-- 	for s = 1, screen.count() do
+-- 		gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+-- 	end
+-- end
 -- }}}
 
 -- {{{ Tags
