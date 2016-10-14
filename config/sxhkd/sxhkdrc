@@ -2,7 +2,7 @@ super + ctrl + Escape
   pkill -USR1 -x sxhkd
 
 super + Return
- termite
+ urxvt
 
 super + shift + BackSpace
  i3lock -ti $HOME/Images/giantdays-blank-surface.png
