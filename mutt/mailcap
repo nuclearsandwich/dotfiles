@@ -1,2 +1,3 @@
 text/html;  links %s;  nametemplate=%s.html
 text/html;  links -dump %s;  nametemplate=%s.html;  copiousoutput
+application/pdf;  evince %s; nametemplate=%s.pdf;

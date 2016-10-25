@@ -1,39 +1,31 @@
 
-source ~/.mutt/mailboxes  # Load mailboxes from offlineimap.
 source ~/.mutt/stevecolors.muttrc # Load colors.
 
 set realname='Steven!'
 set from='steven@nuclearsandwich.com'
 set sendmail='msmtp'
-set header_cache        = ~/.mutt/cache/headers
-set message_cachedir    = ~/.mutt/cache/bodies
+#set header_cache        = ~/.mutt/cache/headers
+#set message_cachedir    = ~/.mutt/cache/bodies
 set mailcap_path        = ~/.mutt/mailcap
 set signature           = ~/.mutt/sig
 set tmpdir              = ~/.mutt/temp
-set folder = ~/.maildirs/nuclearsandwich
-set spoolfile = +INBOX
+set folder = ~/.maildirs/steven@nuclearsandwich.com
+set spoolfile = +inbox
 # set maildir_trash = yes
 auto_view text/html
 alternative_order text/plain text/enriched text/html
+# Set attachment keyword for testing neomutt.
+set attach_keyword = "\\<(attach|attached|attachments?)\\>"
+set abort_noattach = yes
 
 # Index View Options
 set sort = threads
 set sort_aux = reverse-last-date-received
 set uncollapse_jump
-set postponed = +INBOX.Drafts
-set record = +INBOX.sent
+#set postponed = +INBOX.Drafts
+#set record = +INBOX.sent
 
 ## Key Bindings ##
-
-# Archive message instead of deleting it. Also supports archiving tagged
-# messages.
-macro index d ";s+INBOX.Archive<enter><enter>" "Move to Message Archive"
-# Archive message, but from pager (opened email)
-macro pager d "s+INBOX.Archive<enter><enter>" "Move to Message Archive"
-
-# Move Spam until I get a good spam filter working.
-macro index y ";s+INBOX.Spam<enter><enter>" "Move to Spam Archive"
-macro pager y "s+INBOX.Spam<enter><enter>" "Move to Spam Archive"
 
 bind index <tab>    sync-mailbox
 bind index k        previous-entry
