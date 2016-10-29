@@ -2,13 +2,13 @@ super + ctrl + Escape
   pkill -USR1 -x sxhkd
 
 super + Return
- gnome-terminal
+ urxvt
 
 super + shift + BackSpace
  i3lock -ti $HOME/Images/giantdays-blank-surface.png
 
 super + space
- rofi -show run -font 'Fantasque Sans Mono 18'
+ rofi -show run
 
 XF86AudioLowerVolume
  pamixer --decrease 5

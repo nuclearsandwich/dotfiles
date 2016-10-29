@@ -1,8 +1,22 @@
-MaildirStore nuclearsandwich
+MaildirStore steven-nuclearsandwich
 AltMap yes
-Inbox ~/.maildirs/steven@nuclearsandwich.com
+Inbox ~/.maildirs/steven@nuclearsandwich.com/inbox
+Path ~/.maildirs/steven@nuclearsandwich.com/
 
 IMAPAccount steven@nuclearsandwich.com
 Host mail.nuclearsandwich.com
 User steven@nuclearsandwich.com
-PassCmd "cat .imappass"
+Port 993
+PassCmd "cat $HOME/.imappass"
+SSLType IMAPS
+SSLVersions TLSv1.2
+
+IMAPStore steven-nuclearsandwich-inbox
+Account steven@nuclearsandwich.com
+
+Channel steven@nuclearsandwich.com
+Master :steven-nuclearsandwich-inbox:
+Slave :steven-nuclearsandwich:
+MaxMessages 255
+ExpireUnread yes
+Create Slave

@@ -1,0 +1,13 @@
+! background, foreground, background alt, highlight background, highlight foreground
+! normal                bg,     fg, bg alt,  hi bg,  hi fg
+rofi.color-normal: COLOR_BACKGROUND,COLOR_FOREGROUND,COLOR8,COLOR6,COLOR8
+
+! urgent                bg,     fg, bg alt,  hi bg,  hi fg
+rofi.color-urgent: COLOR1,  COLOR3, COLOR9, COLOR4, COLOR0
+
+! active                bg,     fg, bg alt,  hi bg,  hi fg
+rofi.color-active: COLOR_BACKGROUND,COLOR_FOREGROUND,COLOR8,COLOR6,COLOR8
+
+! window                bg,border,separator
+rofi.color-window: COLOR_BACKGROUND, COLOR8, COLOR12
+
