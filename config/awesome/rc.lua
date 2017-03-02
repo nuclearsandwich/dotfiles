@@ -10,19 +10,20 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
-local lain_layouts = require("lain/layout")
 
 naughty.config.defaults.position = "bottom_left"
 
 function update_battery(battery_statuses)
 	local total_batlevel = 0
 	local battery_buffer = {}
+	local draining = false
 	for i, status in ipairs(battery_statuses) do
+		draining = draining or status.state == "D"
 		total_batlevel = total_batlevel + status.level
 		battery_buffer[#battery_buffer + 1] = status.state .. ":" .. status.level .. "%"
 	end
 
-	if total_batlevel <= 20 then
+	if total_batlevel <= 20 and draining then
 		naughty.notify({
 			title = "BATTERY WARNING",
 			text = "Battery level critical. Find power soon"
@@ -83,8 +84,6 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 local layouts =
 {
-	lain_layouts.uselesstile,
-	lain_layouts.uselessfair,
 	awful.layout.suit.spiral,
 	awful.layout.suit.spiral.dwindle,
 	awful.layout.suit.max,

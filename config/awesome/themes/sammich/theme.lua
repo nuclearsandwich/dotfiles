@@ -22,8 +22,7 @@ local colors = {
 
 theme = {}
 
-theme.font          = "Noto Mono 11"
-theme.useless_gap_width = 10
+theme.font          = "Noto Mono 8"
 
 theme.bg_normal     = colors.color8
 theme.bg_focus      = colors.color2
