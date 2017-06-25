@@ -18,11 +18,10 @@
 #define COLOR14 #adadff
 #define COLOR15 #f2f0ec
 
-! arbitrary light scheme.
+! ! arbitrary light scheme.
 !#define COLOR_FOREGROUND #4f5b66
 !#define COLOR_BACKGROUND #eff1f5
 !#define COLOR_CURSOR #4f5b66
-!
 !#define COLOR0 #2b303b
 !#define COLOR1 #65737e
 !#define COLOR2 #bf616a
@@ -40,3 +39,24 @@
 !#define COLOR14 #c0c5ce
 !#define COLOR15 #eff1f5
 
+! ! hopscotch light
+! #define COLOR_FOREGROUND #2d2d2d
+! #define COLOR_BACKGROUND #e5f5e5
+! #define COLOR_CURSOR #2d2d2d
+!
+! #define COLOR0       #45474a
+! #define COLOR1       #ff037e
+! #define COLOR2       #00de75
+! #define COLOR3       #ff8c0a
+! #define COLOR4       #4db2ff
+! #define COLOR5       #e600e6
+! #define COLOR6       #adadff
+! #define COLOR7       #d3d0c8
+! #define COLOR8       #747369
+! #define COLOR9       #ff037e
+! #define COLOR10      #00de75
+! #define COLOR11      #ff8c0a
+! #define COLOR12      #4db2ff
+! #define COLOR13      #d052df
+! #define COLOR14      #adadff
+! #define COLOR15      #f2f0ec
