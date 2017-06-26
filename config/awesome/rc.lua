@@ -2,6 +2,7 @@
 local gears = require("gears")
 local awful = require("awful")
 awful.rules = require("awful.rules")
+awful.remote = require("awful.remote")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
@@ -10,6 +11,8 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
+
+local lain = require("lain")
 
 naughty.config.defaults.position = "bottom_left"
 
@@ -43,7 +46,7 @@ if awesome.startup_errors then
 })
 end
 
-local debug_notification = function (msg)
+function debug_notification(msg)
 	naughty.notify({
 		title = "Debug!",
 		text = msg,
@@ -84,19 +87,21 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 local layouts =
 {
+	lain.layout.termfair,
 	awful.layout.suit.spiral,
 	awful.layout.suit.spiral.dwindle,
 	awful.layout.suit.max,
 	awful.layout.suit.max.fullscreen,
-	awful.layout.suit.magnifier,
-	awful.layout.suit.floating,
+	lain.layout.centerwork,
+	--awful.layout.suit.magnifier,
+	--awful.layout.suit.floating,
 }
 -- }}}
 
 -- {{{ Wallpaper
 if beautiful.wallpaper then
 	for s = 1, screen.count() do
-		gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+		-- gears.wallpaper.maximized(beautiful.wallpaper, s, true)
 	end
 end
 -- }}}

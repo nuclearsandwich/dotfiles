@@ -10,3 +10,6 @@
 [submodule "ext/gruvbox"]
 	path = ext/gruvbox
 	url = https://github.com/morhetz/gruvbox-contrib
+[submodule "config/awesome/lain"]
+	path = config/awesome/lain
+	url = https://github.com/copycat-killer/lain

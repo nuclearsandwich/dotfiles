@@ -20,23 +20,28 @@ local colors = {
 	color15 = "#f2f0ec",
 }
 
+local xresources = require("beautiful.xresources")
+xcolors = xresources.get_current_theme()
+
 theme = {}
 
 theme.font          = "Noto Mono 8"
 
-theme.bg_normal     = colors.color8
-theme.bg_focus      = colors.color2
+theme.bg_normal     = xcolors.background
+theme.bg_focus      = xcolors.color2
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = colors.foreground
-theme.fg_focus      = colors.color0
-theme.fg_urgent     = colors.color8
-theme.fg_minimize   = colors.color7
+theme.fg_normal     = xcolors.foreground
+theme.fg_focus      = xcolors.color0
+theme.fg_urgent     = xcolors.color8
+theme.fg_minimize   = xcolors.color7
+
+theme.useless_gap = 30
 
 theme.border_width  = 2
 theme.border_normal = theme.bg_normal
 theme.border_focus  = theme.bg_focus
-theme.border_marked = colors.color8
+theme.border_marked = xcolors.color8
 
 theme.asset_root = "/home/steven/.config/awesome/themes/sammich/"
 
@@ -90,7 +95,7 @@ theme.titlebar_maximized_button_focus_inactive  = "/usr/share/awesome/themes/def
 theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "/home/steven/bg/color.jpg"
+theme.wallpaper = "/home/steven/bg/transparent.png"
 
 -- You can use your own layout icons like this:
 theme.layout_uselesstile   = "/usr/share/awesome/themes/default/layouts/tilew.png"
