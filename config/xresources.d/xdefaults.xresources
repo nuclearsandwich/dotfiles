@@ -1,4 +1,4 @@
-#include "./colorpalette.xresources"
+#include "./colorpalettes.xresources"
 #include "./colors.xresources"
 #include "./font.xresources"
 #include "./urxvt.xresources"

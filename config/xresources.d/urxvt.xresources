@@ -1,8 +1,19 @@
 urxvt.scrollBar: false
-urxvt.font: xft:Hack:size=8
+urxvt.font: xft:Hack:pixelsize=10
 urxvt.letterSpace: -1
+urxvt.secondaryScreen: 1
+urxvt.secondaryScroll: 0
+urxvt.background.border: false
+! if borderLess is true awesome does not manage the window.
+urxvt.borderLess: false
+urxvt.internalBorder: 0
+urxvt.scrollColor: COLOR_BACKGROUND
+urxvt.troughColor: COLOR_BACKGROUND
+urxvt.borderColor: COLOR_BACKGROUND
+urxvt.saveLines: 10000000000
 
-urxvt.perl-ext-common: default,matcher
+urxvt.perl-ext-common: default,matcher,resize-font,reload-color
 urxvt.url-launcher: /usr/bin/xdg-open
-urxvt.matcher.button: 1
-
+urxvt.keysym.C-equal: perl:resize-font:bigger
+urxvt.keysym.C-minus: perl:resize-font:smaller
+urxvt.keysym.C-0: perl:resize-font:reset
