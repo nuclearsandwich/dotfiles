@@ -1,6 +1,6 @@
 ! background, foreground, background alt, highlight background, highlight foreground
 ! normal                bg,     fg, bg alt,  hi bg,  hi fg
-rofi.color-normal: COLOR_BACKGROUND,COLOR_FOREGROUND,COLOR8,COLOR6,COLOR8
+rofi.color-normal: COLOR_BACKGROUND,COLOR_FOREGROUND,COLOR_BACKGROUND,COLOR_FOREGROUND,COLOR8
 
 ! urgent                bg,     fg, bg alt,  hi bg,  hi fg
 rofi.color-urgent: COLOR1,  COLOR3, COLOR9, COLOR4, COLOR0
