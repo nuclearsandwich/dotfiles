@@ -1,3 +1,4 @@
-*.font: Hack 9
-xterm.font: xft:hack 9
+!*.font: Hack 9
+!xterm.font: xft:hack 9
 
+*.font: Iosevka Term 11

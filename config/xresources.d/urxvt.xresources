@@ -1,5 +1,5 @@
 urxvt.scrollBar: false
-urxvt.font: xft:Hack:pixelsize=10
+urxvt.font: xft:Iosevka Term:size=11
 urxvt.letterSpace: -1
 urxvt.secondaryScreen: 1
 urxvt.secondaryScroll: 0
