@@ -1,4 +1,4 @@
-#!/usr/bin/fish
+#!/bin/sh
 
 ### Housekeeping
 # Load new fonts.
@@ -6,25 +6,30 @@ xset +fp /usr/share/fonts/local
 xset fp rehash
 
 # Merge xresources defaults.
-xrdb -load "$HOME/.config/xresources.d/xdefaults.xresources"
+~/bin/chxtheme isotope
 
-# 🚫 caps lock.
-xmodmap .capscontrol
-#xmodmap .modswap
-nitrogen --restore &
-###
+# Skip most operations within KDE
+if [ "$XDG_SESSION_DESKTOP" != "KDE" ]; then
+	echo "continuing" >> xprofile.wtf
+	# 🚫 caps lock.
+	xmodmap .capscontrol
+	#xmodmap .modswap
+	nitrogen --restore &
+	###
 
-### Daemons
-synclient PalmDetect=1
-synclient MaxTapTime=0
-synclient VertScrollDelta=-127 # natural scrolling
-#rescuetime & # time tracking
-compton & # Compositing
-#touchegg & # Multitouch
-sxhkd -c $HOME/.config/sxhkd/sxhkdrc & # Hotkeys
-#$HOME/bin/w3d & # CSS and JavaScript override server
-#autokey-gtk & # Text expansion
-start-pulseaudio-x11 & # Audio
-bard -c $HOME/.config/bard >> .wtfbard &
-xss-lock -- i3lock -nt &
+	### Daemons
+	synclient PalmDetect=1
+	synclient MaxTapTime=0
+	synclient VertScrollDelta=-127 # natural scrolling
+	#rescuetime & # time tracking
+	compton & # Compositing
+	#touchegg & # Multitouch
+	sxhkd -c $HOME/.config/sxhkd/sxhkdrc & # Hotkeys
+	#$HOME/bin/w3d & # CSS and JavaScript override server
+	#autokey-gtk & # Text expansion
+	start-pulseaudio-x11 & # Audio
+	awesome-bat.fish &
+	xss-lock -- i3lock -nt &
+fi
+
 
