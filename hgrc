@@ -5,14 +5,12 @@ verbose = true
 commitsubrepos = false
 
 [extensions]
-hg-prompt = $HOME/.dotfiles/hg-prompt/prompt.py
 color =
 convert =
-hggit =
 
 [color]
 status.modified = cyan
-status.added = green
+status.added = blue
 status.removed = red
 status.deleted = yellow bold underline
 status.unknown = magenta bold underline
@@ -20,18 +18,12 @@ status.ignored = black bold
 diff.diffline = none
 diff.extended = cyan
 diff.file_a = red
-diff.file_b = green
+diff.file_b = cyan
 diff.hunk = yellow bold
 diff.deleted = red
-diff.inserted = green
-diff.changed = white
+diff.inserted = cyan
+diff.changed = blue
 diff.trailingwhitespace = white_background
-
-[merge-tools]
-threesome.executable = vim
-threesome.args = -f $base $local $other $output -c 'ThreesomeInit'
-threesome.premerge = keep
-threesome.priority = 1
 
 [alias]
 lg = log
