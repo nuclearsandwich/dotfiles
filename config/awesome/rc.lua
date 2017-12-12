@@ -12,15 +12,13 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 
-local lain = require("lain")
-
 naughty.config.defaults.position = "bottom_left"
 
 function update_battery(battery_statuses)
 	local total_batlevel = 0
 	local battery_buffer = {}
 	local draining = false
-	for i, status in ipairs(battery_statuses) do
+	for _, status in ipairs(battery_statuses) do
 		draining = draining or status.state == "D"
 		total_batlevel = total_batlevel + status.level
 		battery_buffer[#battery_buffer + 1] = status.state .. ":" .. status.level .. "%"
@@ -73,9 +71,56 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init("/home/steven/.config/awesome/themes/sammich/theme.lua")
 
-terminal = "gnome-terminal"
+terminal = "urxvt"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
+
+-- controls for window swallowing.
+rio = {
+	swallowing_enabled = false,
+	terminal_classes = { "URxvt" },
+	terminal_windows = {},
+	swallowed_windows = {},
+	manage_hook = function (c)
+		if not rio.swallowing_enabled then
+			return
+		end
+		for _, tclass in ipairs(rio.terminal_classes) do
+			if tclass == c.class then
+				rio.terminal_windows[c.pid] = c
+				break
+			end
+		end
+		local ppids = io.popen("/home/steven/bin/awesome-ppids " .. c.pid)
+		local ppids_result = ppids:read()
+		ppds_result = nil
+		ppids:close()
+		ppids = {}
+		if not ppids_result then return end
+		for ppid in string.gmatch(ppids_result, "%S+") do
+			ppid = tonumber(ppid)
+			if rio.terminal_windows[ppid] then
+				local parent_window = rio.terminal_windows[ppid]
+				rio.swallowed_windows[c.pid] = parent_window
+				parent_window:swap(c)
+				parent_window.hidden = true
+			end
+		end
+	end,
+	unmanage_hook = function (c, is_valid)
+		if not rio.swallowing_enabled then
+			return
+		end
+
+		if rio.swallowed_windows[c.pid] then
+			local parent_window = rio.swallowed_windows[c.pid]
+			rio.swallowed_windows[c.pid] = nil
+			parent_window.hidden = false
+			-- This line causes awesome to fail.
+			if is_valid then c:swap(parent_window) end
+		end
+	end,
+}
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -87,12 +132,12 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 local layouts =
 {
-	lain.layout.termfair,
+	awful.layout.suit.tile,
 	awful.layout.suit.spiral,
 	awful.layout.suit.spiral.dwindle,
 	awful.layout.suit.max,
 	awful.layout.suit.max.fullscreen,
-	lain.layout.centerwork,
+	awful.layout.suit.corner.se,
 	--awful.layout.suit.magnifier,
 	--awful.layout.suit.floating,
 }
@@ -133,7 +178,7 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibox
 -- Create a textclock widget
-mytextclock = awful.widget.textclock("%F %H:%M %Z ")
+mytextclock = wibox.widget.textclock("%F %H:%M %Z ")
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -148,6 +193,7 @@ awful.button({ modkey }, 3, awful.client.toggletag),
 awful.button({ }, 4, function(t) awful.tag.viewnext(awful.tag.getscreen(t)) end),
 awful.button({ }, 5, function(t) awful.tag.viewprev(awful.tag.getscreen(t)) end)
 )
+
 mytasklist = {}
 mytasklist.buttons = awful.util.table.join(
 awful.button({ }, 1, function (c)
@@ -204,7 +250,7 @@ for s = 1, screen.count() do
 	-- Create a tasklist widget
 
 	-- Create the wibox
-	mywibox[s] = awful.wibox({ position = "bottom", screen = s })
+	mywibox[s] = awful.wibar({ position = "bottom", screen = s })
 
 	-- Widgets that are aligned to the left
 	local left_layout = wibox.layout.fixed.horizontal()
@@ -421,7 +467,7 @@ client.connect_signal("manage", function (c, startup)
 	if not startup then
 		-- Set the windows at the slave,
 		-- i.e. put it at the end of others instead of setting it master.
-		-- awful.client.setslave(c)
+			-- awful.client.setslave(c)
 
 		-- Put windows in a smart way, only if they does not set an initial position.
 		if not c.size_hints.user_position and not c.size_hints.program_position then
@@ -432,6 +478,9 @@ client.connect_signal("manage", function (c, startup)
 		-- Prevent clients from being unreachable after screen count change
 		awful.placement.no_offscreen(c)
 	end
+
+	-- rio "Plan 9" style swallowing of terminal windows by graphical children.
+	rio.manage_hook(c)
 
 	local titlebars_enabled = false
 	if titlebars_enabled and (c.type == "normal" or c.type == "dialog") then
@@ -453,6 +502,8 @@ client.connect_signal("manage", function (c, startup)
 		local left_layout = wibox.layout.fixed.horizontal()
 		left_layout:add(awful.titlebar.widget.iconwidget(c))
 		left_layout:buttons(buttons)
+		left_layout:buttons(buttons)
+		left_layout:add(awful.widget.tasklist(s, awful.widget.tasklist.filter.currenttags, mytasklist.buttons))
 
 		-- Widgets that are aligned to the right
 		local right_layout = wibox.layout.fixed.horizontal()
@@ -479,10 +530,13 @@ client.connect_signal("manage", function (c, startup)
 	end
 end)
 
+client.connect_signal("unmanage", function (c, is_valid)
+	rio.unmanage_hook(c, is_valid)
+end)
+
 for s = 1, screen.count() do
-	awful.screen.padding(screen[s], {top = 5, left = 5, right = 5, bottom = 5})
+	screen[s].padding = {top = 5, left = 5, right = 5, bottom = 5}
 end
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
--- }}}

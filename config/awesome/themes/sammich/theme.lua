@@ -25,7 +25,7 @@ xcolors = xresources.get_current_theme()
 
 theme = {}
 
-theme.font          = "Noto Mono 8"
+theme.font          = "Iosevka Term 9"
 
 theme.bg_normal     = xcolors.background
 theme.bg_focus      = xcolors.color2
@@ -36,7 +36,7 @@ theme.fg_focus      = xcolors.color0
 theme.fg_urgent     = xcolors.color8
 theme.fg_minimize   = xcolors.color7
 
-theme.useless_gap = 30
+theme.useless_gap = 0
 
 theme.border_width  = 2
 theme.border_normal = theme.bg_normal
