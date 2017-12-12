@@ -7,3 +7,4 @@ xmonad/*.o
 xmonad/*-linux
 xmonad/*.hi
 xmonad/*.errors
+config/
