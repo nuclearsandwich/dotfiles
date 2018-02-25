@@ -12,7 +12,7 @@ dpi:
   y: 96.0
 
 # Display tabs using this many cells (changes require restart)
-tabspaces: 4
+tabspaces: 8
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -21,24 +21,24 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Hack # should be "Menlo" or something on macOS.
+    family: monospace # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: Hack # should be "Menlo" or something on macOS.
+    family: monospace # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: Hack # should be "Menlo" or something on macOS.
+    family: monospace # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Italic
 
   # Point size of the font
-  size: 8.0
+  size: 11.0
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
@@ -57,158 +57,66 @@ render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 custom_cursor_colors: false
 
-__colorschemes:
-    hopscotch: &hopscotch
-      primary:
-        background: '0x2d2d2d'
-        foreground: '0xeff5ef'
-      cursor:
-        background:   '0x45474a'
-        foreground:   '0xf2f0ec'
-      normal:
-        black:   '0x45474a'
-        red:     '0xff037e'
-        green:   '0x00de7f'
-        yellow:  '0xff8c0a'
-        blue:    '0x4fa7ff'
-        magenta: '0xe600e6'
-        cyan:    '0x44cced'
-        white:   '0xd3d0c8'
-      bright:
-        black:   '0x747369'
-        red:     '0xff80bb'
-        green:   '0xa6ffa6'
-        yellow:  '0xffa552'
-        blue:    '0x6699cc'
-        magenta: '0xd052df'
-        cyan:    '0xadadff'
-        white:   '0xf2f0ec'
+# Colors (Tomorrow Night Bright)
+colors:
+  # Default colors
+  primary:
+    background: '0x000000'
+    foreground: '0xeaeaea'
+  cursor:
+    cursor: '0xffffff'
+    text: '0x000000'
 
-    lightscotch: &lightscotch
-      primary:
-        background: '0xeff5ef'
-        foreground: '0x2d2d2d'
-      cursor:
-        background:   '0xf2f0ec'
-        foreground:   '0x45474a'
-      normal:
-        black:   '0x45474a'
-        red:     '0xff037e'
-        green:   '0x00de7f'
-        yellow:  '0xff8c0a'
-        blue:    '0x4fa7ff'
-        magenta: '0xe600e6'
-        cyan:    '0x44cced'
-        white:   '0xd3d0c8'
-      bright:
-        black:   '0x747369'
-        red:     '0xff80bb'
-        green:   '0xa6ffa6'
-        yellow:  '0xffa552'
-        blue:    '0x6699cc'
-        magenta: '0xd052df'
-        cyan:    '0xadadff'
-        white:   '0xf2f0ec'
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xd54e53'
+    green:   '0xb9ca4a'
+    yellow:  '0xe6c547'
+    blue:    '0x7aa6da'
+    magenta: '0xc397d8'
+    cyan:    '0x70c0ba'
+    white:   '0x424242'
 
-    lighter: &lighter
-      primary:
-        foreground: '0x4f424c'
-        background: '0xe7e9db'
-      cursor:
-        foreground: '0x4f424c'
-        background: '0xe7e9db'
-      normal:
-        black:   '0x2f1e2e'
-        red:     '0xef6155'
-        green:   '0x48b685'
-        yellow:  '0xfec418'
-        blue:    '0x06b6ef'
-        magenta: '0x815ba4'
-        cyan:    '0x5bc4bf'
-        white:   '0xa39e9b'
-      bright:
-        black:   '0x776e71'
-        red:     '0xef6155'
-        green:   '0x48b685'
-        yellow:  '0xfec418'
-        blue:    '0x06b6ef'
-        magenta: '0x815ba4'
-        cyan:    '0x5bc4bf'
-        white:   '0xe7e9db'
+  # Bright colors
+  bright:
+    black:   '0x666666'
+    red:     '0xff3334'
+    green:   '0x9ec400'
+    yellow:  '0xe7c547'
+    blue:    '0x7aa6da'
+    magenta: '0xb77ee0'
+    cyan:    '0x54ced6'
+    white:   '0x2a2a2a'
 
-    tomorrow_night: &tomorrow_night
-      primary:
-        background: '0x000000'
-        foreground: '0xeaeaea'
-      cursor:
-        background: '0xffffff'
-        foreground: '0x000000'
-      normal:
-        black:   '0x000000'
-        red:     '0xd54e53'
-        green:   '0xb9ca4a'
-        yellow:  '0xe6c547'
-        blue:    '0x7aa6da'
-        magenta: '0xc397d8'
-        cyan:    '0x70c0ba'
-        white:   '0x424242'
-      bright:
-        black:   '0x666666'
-        red:     '0xff3334'
-        green:   '0x9ec400'
-        yellow:  '0xe7c547'
-        blue:    '0x7aa6da'
-        magenta: '0xb77ee0'
-        cyan:    '0x54ced6'
-        white:   '0x2a2a2a'
-    solarized_dark: &solarized_dark
-      primary:
-        background: '0x002b36'
-        foreground: '0x839496'
-      normal:
-        black:   '0x073642'
-        red:     '0xdc322f'
-        green:   '0x859900'
-        yellow:  '0xb58900'
-        blue:    '0x268bd2'
-        magenta: '0xd33682'
-        cyan:    '0x2aa198'
-        white:   '0xeee8d5'
-      bright:
-        black:   '0x002b36'
-        red:     '0xcb4b16'
-        green:   '0x586e75'
-        yellow:  '0x657b83'
-        blue:    '0x839496'
-        magenta: '0x6c71c4'
-        cyan:    '0x93a1a1'
-        white:   '0xfdf6e3'
-    solarized_light: &solarized_light
-      primary:
-        background: '0xffffd7'
-        foreground: '0x626262'
-      # Normal colors
-      normal:
-        black:   '0x262626'
-        red:     '0xd70000'
-        green:   '0x5f8700'
-        yellow:  '0xaf8700'
-        blue:    '0x0087ff'
-        magenta: '0xaf005f'
-        cyan:    '0x00afaf'
-        white:   '0xe4e4e4'
-      # Bright colors
-      bright:
-        black:   '0x1c1c1c'
-        red:     '0xd75f00'
-        green:   '0x585858'
-        yellow:  '0x626262'
-        blue:    '0x808080'
-        magenta: '0x5f5faf'
-        cyan:    '0x8a8a8a'
-        white:   '0xffffd7'
-
-colors: *hopscotch
+# Colors (Solarized Dark)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x002b36'
+#     foreground: '0x839496'
+#
+#   # Normal colors
+#   normal:
+#     black:   '0x073642'
+#     red:     '0xdc322f'
+#     green:   '0x859900'
+#     yellow:  '0xb58900'
+#     blue:    '0x268bd2'
+#     magenta: '0xd33682'
+#     cyan:    '0x2aa198'
+#     white:   '0xeee8d5'
+#
+#   # Bright colors
+#   bright:
+#     black:   '0x002b36'
+#     red:     '0xcb4b16'
+#     green:   '0x586e75'
+#     yellow:  '0x657b83'
+#     blue:    '0x839496'
+#     magenta: '0x6c71c4'
+#     cyan:    '0x93a1a1'
+#     white:   '0xfdf6e3'
 
 # Visual Bell
 #
