@@ -57,7 +57,7 @@
 [merge]
 
 [hub]
-	protocol = https
+	protocol = ssh
 
 [credential]
 	helper = /opt/boxen/bin/boxen-git-credential
