@@ -47,6 +47,7 @@
 	cn = clone
 	l = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	ll = log --pretty=format:\"%h %ad | %s%d [%an]\" --date=short
+	f = !git-foresta | less -R
 	type = cat-file -t
 	dump = cat-file -p
 	blowup = reset --hard github/master
