@@ -32,7 +32,7 @@
 	excludesfile = ~/.gitignore
 	autocrlf = false
 	safecrlf = true
-	editor = vim
+	editor = nvim
 
 [alias]
 	co = checkout
