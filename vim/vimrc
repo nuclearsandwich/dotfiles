@@ -1,0 +1,68 @@
+if &compatible
+	set nocompatible
+endif
+
+inoremap jj <ESC>
+inoremap kk <ESC>
+inoremap jk <ESC>
+inoremap kj <ESC>
+
+packadd minpac
+call minpac#init()
+" critical
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('jeffkreeftmeijer/vim-dim')
+call minpac#add('editorconfig/editorconfig-vim')
+
+" infrastructural
+call minpac#add('w0rp/ale')
+call minpac#add('itchyny/lightline.vim')
+call minpac#add('maximbaz/lightline-ale')
+call minpac#add('mhinz/vim-grepper')
+call minpac#add('tpope/vim-obsession')
+
+" language support
+call minpac#add('pangloss/vim-javascript')
+call minpac#add('vim-perl/vim-perl6')
+call minpac#add('rodjek/vim-puppet')
+call minpac#add('rust-lang/rust.vim')
+
+" colors
+call minpac#add('dracula/vim')
+
+command! PackUpdate call minpac#update()
+command! PackClean call minpac#clean()
+
+" appearance
+set bg=dark
+colorscheme dim
+set number
+set list
+set listchars=trail:·,tab:▸\ ,
+set laststatus=2
+highlight SignColumn ctermbg=black
+
+
+" behavior
+
+"" Disable highlights pending improvements to ALE highlighting in dim.
+let g:ale_set_highlights = 0
+
+let g:lightline = { 'colorscheme': 'PaperColor' }
+
+set undofile
+if !has('nvim')
+	set undodir=~/.vim/undo
+endif
+augroup vimrc
+	autocmd BufWritePre /tmp/* setlocal noundofile
+augroup END
+filetype indent on
+let g:ale_sign_column_always=1
+
+" Filetype autocommands
+autocmd FileType perl6 set iskeyword+=-,$,@,%
+
+"mvim testing
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
