@@ -7,6 +7,9 @@ commitsubrepos = false
 [extensions]
 color =
 convert =
+mq =
+shelve =
+strip =
 
 [color]
 status.modified = cyan
@@ -28,6 +31,7 @@ diff.trailingwhitespace = white_background
 [alias]
 lg = log
 df = diff
+br = branch
 
 # For hg-git's hg gexport to create a non-bare repo.
 [git]
