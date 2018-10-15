@@ -25,7 +25,7 @@ xcolors = xresources.get_current_theme()
 
 theme = {}
 
-theme.font          = "Iosevka Term 9"
+theme.font          = "Iosevka Term 7"
 
 theme.bg_normal     = xcolors.background
 theme.bg_focus      = xcolors.color2
