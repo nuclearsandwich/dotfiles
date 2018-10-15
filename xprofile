@@ -6,7 +6,7 @@ xset +fp /usr/share/fonts/local
 xset fp rehash
 
 # Merge xresources defaults.
-~/bin/chxtheme isotope
+~/bin/chxtheme dracula
 
 # Skip most operations within KDE
 if [ "$XDG_SESSION_DESKTOP" != "KDE" ]; then
