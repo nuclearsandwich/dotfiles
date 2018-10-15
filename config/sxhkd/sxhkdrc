@@ -1,6 +1,9 @@
 super + ctrl + Escape
   pkill -USR1 -x sxhkd
 
+super + ctrl + v
+ ~/bin/demolist
+
 super + Return
  urxvt
 
