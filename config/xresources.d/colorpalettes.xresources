@@ -1,0 +1,582 @@
+#ifdef inkstained
+#define COLOR_FOREGROUND   #4a4543
+#define COLOR_BACKGROUND   #f7f7f7
+#define COLOR_CURSORCOLOR  #4a4543
+#define COLOR0       #090300
+#define COLOR1       #660000
+#define COLOR2       #005508
+#define COLOR3       #d99800
+#define COLOR4       #212c59
+#define COLOR5       #603656
+#define COLOR6       #007599
+#define COLOR7       #5c5855
+#define COLOR8       #5c5855
+#define COLOR9       #db2d20
+#define COLOR10      #01a252
+#define COLOR11      #fded02
+#define COLOR12      #01a0e4
+#define COLOR13      #a16a94
+#define COLOR14      #67d9fb
+#define COLOR15      #f7f7f7
+#endif
+
+#ifdef c3024
+#define COLOR_BACKGROUND   #f7f7f7
+#define COLOR_CURSOR #4a4543
+#define COLOR_FOREGROUND   #4a4543
+#define COLOR0       #090300
+#define COLOR1       #db2d20
+#define COLOR2       #01a252
+#define COLOR3       #fded02
+#define COLOR4       #01a0e4
+#define COLOR5       #a16a94
+#define COLOR6       #38c9f5
+#define COLOR7       #a5a2a2
+#define COLOR8       #5c5855
+#define COLOR9       #db2d20
+#define COLOR10      #01a252
+#define COLOR11      #fded02
+#define COLOR12      #01a0e4
+#define COLOR13      #a16a94
+#define COLOR14      #38c9f5
+#define COLOR15      #f7f7f7
+#endif
+
+#ifdef arbitrarylight
+#define COLOR_FOREGROUND #4f5b66
+#define COLOR_BACKGROUND #eff1f5
+#define COLOR_CURSOR #4f5b66
+#define COLOR0 #2b303b
+#define COLOR1 #65737e
+#define COLOR2 #bf616a
+#define COLOR3 #bf616a
+#define COLOR4 #a3be8c
+#define COLOR5 #a3be8c
+#define COLOR6 #ebcb8b
+#define COLOR7 #ebcb8b
+#define COLOR8 #8fa1b3
+#define COLOR9 #8fa1b3
+#define COLOR10 #b48ead
+#define COLOR11 #b48ead
+#define COLOR12 #96b5b4
+#define COLOR13 #96b5b4
+#define COLOR14 #c0c5ce
+#define COLOR15 #eff1f5
+#endif
+
+#ifdef blizzardorb
+#define COLOR_FOREGROUND #111111
+#define COLOR_BACKGROUND #fcfcfc
+#define COLOR_CURSOR #94B6CC
+#define COLOR0      #000000
+#define COLOR1      #6688AA
+#define COLOR2      #94B6CC
+#define COLOR3     #4C6E84
+#define COLOR4     #6688AA
+#define COLOR5     #94B6CC
+#define COLOR6     #4C6E84
+#define COLOR7     #87875f
+#define COLOR8      #000000
+#define COLOR9      #6688AA
+#define COLOR10     #94B6CC
+#define COLOR11    #4C6E84
+#define COLOR12     #6688AA
+#define COLOR13    #94B6CC
+#define COLOR14    #4C6E84
+#define COLOR15    #87875f
+#endif
+
+#ifdef cheesecakedark
+#define COLOR_FOREGROUND #fcfae1
+#define COLOR_BACKGROUND #404040
+#define COLOR_CURSOR #f595a7
+#define COLOR0 #404040
+#define COLOR1 #262626
+#define COLOR2 #b9454b
+#define COLOR3 #e75252
+#define COLOR4 #bd8d46
+#define COLOR5 #dea552
+#define COLOR6 #f6e497
+#define COLOR7 #d1c180
+#define COLOR8 #f595a7
+#define COLOR9 #d1a5ad
+#define COLOR10 #d28e2a
+#define COLOR11 #b47a24
+#define COLOR12 #ebcd4f
+#define COLOR13 #b9a659
+#define COLOR14 #fcfae1
+#define COLOR15 #f3f2e7
+#endif
+
+#ifdef cyber
+#define COLOR_FOREGROUND   #e0f2ec
+#define COLOR_BACKGROUND   #11292e
+#define COLOR_CURSOR  #e0f2ec
+#define COLOR0       #0e1f22
+#define COLOR8       #1c4b4e
+#define COLOR1       #a85659
+#define COLOR9       #eb8995
+#define COLOR2       #668e8c
+#define COLOR10      #82aea9
+#define COLOR3       #c3b6a4
+#define COLOR11      #e1d9ce
+#define COLOR4       #326d78
+#define COLOR12      #a7d2cd
+#define COLOR5       #433c32
+#define COLOR13      #aa9576
+#define COLOR6       #386e74
+#define COLOR14      #90c0bd
+#define COLOR7       #e0f2ec
+#define COLOR15      #f0f8f3
+#endif
+
+#ifdef dracula
+#define COLOR_FOREGROUND #F8F8F2
+#define COLOR_BACKGROUND #282A36
+#define COLOR_CURSOR #F8F8F2
+#define COLOR0  #000000
+#define COLOR1  #FF5555
+#define COLOR2  #50FA7B
+#define COLOR3  #F1FA8C
+#define COLOR4  #BD93F9
+#define COLOR5  #FF79C6
+#define COLOR6  #8BE9FD
+#define COLOR7  #BFBFBF
+#define COLOR8  #4D4D4D
+#define COLOR9  #FF6E67
+#define COLOR10 #5AF78E
+#define COLOR11 #F4F99D
+#define COLOR12 #CAA9FA
+#define COLOR13 #FF92D0
+#define COLOR14 #9AEDFE
+#define COLOR15 #E6E6E6
+#endif
+
+#ifdef hopscotchlight
+#define COLOR_FOREGROUND #2d2d2d
+#define COLOR_BACKGROUND #e5f5e5
+#define COLOR_CURSOR #2d2d2d
+
+#define COLOR0       #45474a
+#define COLOR1       #ff037e
+#define COLOR2       #00de75
+#define COLOR3       #ff8c0a
+#define COLOR4       #4db2ff
+#define COLOR5       #e600e6
+#define COLOR6       #adadff
+#define COLOR7       #d3d0c8
+#define COLOR8       #747369
+#define COLOR9       #ff037e
+#define COLOR10      #00de75
+#define COLOR11      #ff8c0a
+#define COLOR12      #4db2ff
+#define COLOR13      #d052df
+#define COLOR14      #adadff
+#define COLOR15      #f2f0ec
+#endif
+
+#ifdef hopscotch
+#define COLOR_FOREGROUND  #e5f5e5
+#define COLOR_BACKGROUND  #2d2d2d
+#define COLOR_CURSOR #e5f5e5
+#define COLOR0  #45474a
+#define COLOR1  #ff037e
+#define COLOR2  #00de7f
+#define COLOR3  #ff8c0a
+#define COLOR4  #4fa7ff
+#define COLOR5  #e600e6
+#define COLOR6  #44cced
+#define COLOR7  #d3d0c8
+#define COLOR8  #747369
+#define COLOR9  #ff80bb
+#define COLOR10 #a6ffa6
+#define COLOR11 #ffa552
+#define COLOR12 #6699cc
+#define COLOR13 #d052df
+#define COLOR14 #adadff
+#define COLOR15 #f2f0ec
+#endif
+
+#ifdef ivorydark
+#define COLOR_BACKGROUND  #2D2C28
+#define COLOR_FOREGROUND  #A4A6AB
+#define COLOR_CURSOR  #A4A6AB
+#define COLOR0      #5B5955
+#define COLOR8      #707277
+#define COLOR7      #DBDDE2
+#define COLOR15     #F7F9FF
+#define COLOR1      #C4756E
+#define COLOR9      #F6A299
+#define COLOR3      #9B8A4B
+#define COLOR11     #CAB775
+#define COLOR2      #559A6A
+#define COLOR10     #82C896
+#define COLOR6      #019BAA
+#define COLOR14     #53CAD9
+#define COLOR4      #6A8DCA
+#define COLOR12     #98BBFB
+#define COLOR5      #B577AC
+#define COLOR13     #E5A4DB
+#endif
+
+#ifdef twofirewatch
+#define COLOR_FOREGROUND #896724
+#define COLOR_BACKGROUND #282c34
+#define COLOR_CURSOR #f3efe7
+#define COLOR0 #282c34
+#define COLOR1 #e06c75
+#define COLOR2 #98c379
+#define COLOR3 #e5c07b
+#define COLOR4 #61afef
+#define COLOR5 #c678dd
+#define COLOR6 #56b6c2
+#define COLOR7 #dcdfe4
+#define COLOR8 #282c34
+#define COLOR9 #e06c75
+#define COLOR10 #98c379
+#define COLOR11 #e5c07b
+#define COLOR12 #61afef
+#define COLOR13 #c678dd
+#define COLOR14 #56b6c2
+#define COLOR15 #dcdfe4
+#endif
+
+#ifdef darkspace
+#define COLOR0 #24242e
+#define COLOR1 #5b5a77
+#define COLOR2 #767594
+#define COLOR3 #767594
+#define COLOR4 #df671f
+#define COLOR5 #ff8c4a
+#define COLOR6 #6a574c
+#define COLOR7 #eff0eb
+#define COLOR8 #6a574c
+#define COLOR9 #5b5a77
+#define COLOR10 #767594
+#define COLOR11 #767594
+#define COLOR12 #df671f
+#define COLOR13 #ff8c4a
+#define COLOR14 #6a574c
+#define COLOR15 #eff0eb
+#define COLOR_FOREGROUND COLOR15
+#define COLOR_BACKGROUND COLOR0
+#define COLOR_CURSOR COLOR1
+#endif
+
+#ifdef darksea
+#define COLOR0 #1d262f
+#define COLOR1 #495f79
+#define COLOR2 #56708f
+#define COLOR3 #7cb5f9
+#define COLOR4 #0acd93
+#define COLOR5 #52ffc8
+#define COLOR6 #8ca59d
+#define COLOR7 #eff0eb
+#define COLOR8 #8ca59d
+#define COLOR9 #495f79
+#define COLOR10 #56708f
+#define COLOR11 #7cb5f9
+#define COLOR12 #0acd93
+#define COLOR13 #52ffc8
+#define COLOR14 #8ca59d
+#define COLOR15 #eff0eb
+#define COLOR_FOREGROUND COLOR15
+#define COLOR_BACKGROUND COLOR0
+#define COLOR_CURSOR COLOR1
+#endif
+
+#ifdef darkforest
+#define COLOR0 #2a2d2a
+#define COLOR1 #535f53
+#define COLOR2 #535f53
+#define COLOR3 #b2d7b2
+#define COLOR4 #a2b445
+#define COLOR5 #e5fd70
+#define COLOR6 #919a63
+#define COLOR7 #eff0eb
+#define COLOR8 #919a63
+#define COLOR9 #535f53
+#define COLOR10 #e5fd70
+#define COLOR11 #b2d7b2
+#define COLOR12 #a2b445
+#define COLOR13 #e5fd70
+#define COLOR14 #919a63
+#define COLOR15 #eff0eb
+#define COLOR_FOREGROUND COLOR15
+#define COLOR_BACKGROUND COLOR0
+#define COLOR_CURSOR COLOR1
+#endif
+
+
+#ifdef darkseauno
+#define UNO1 #d6e9ff
+#define UNO2 #88b4e7
+#define UNO3 #5d8cc0
+#define UNO4 #586f89
+#define UNO5 #444c55
+#define DUO1 #34febb
+#define DUO2 #32ae85
+#define DUO3 #42675a
+#define WHITEBASE #eff0eb
+#define useduotone
+#endif
+
+#ifdef darkforestuno
+#define UNO1 #ddf8dd
+#define UNO2 #a9bca9
+#define UNO3 #869886
+#define UNO4 #738273
+#define UNO5 #585f58
+#define DUO1 #e7f98b
+#define DUO2 #99a659
+#define DUO3 #747a52
+#define WHITEBASE #eff0eb
+#define useduotone
+#endif
+
+#ifdef paleghosts
+! https://www.reddit.com/r/unixporn/comments/6kqhhc/colorcontest_dont_be_scared_of_the_ghosts/djo09ga/
+#define COLOR0 #0B1228
+#define COLOR1 #192D4D
+#define COLOR2 #563054
+#define COLOR3 #424C6B
+#define COLOR4 #9D5875
+#define COLOR5 #C3546B
+#define COLOR6 #4C867B
+#define COLOR7 #536D88
+#define COLOR8 #B87487
+#define COLOR9 #61A6A5
+#define COLOR10 #A09DA1
+#define COLOR11 #E39F99
+#define COLOR12 #F5CBB6
+#define COLOR13 #A5DDC7
+#define COLOR14 #E5E6CE
+#define COLOR15 #FCEDD0
+#define COLOR_BACKGROUND COLOR0
+#define COLOR_FOREGROUND COLOR15
+#define COLOR_CURSOR COLOR15
+#endif
+
+#ifdef snow
+#define UNO1 #979fa8
+#define UNO2 #bec1c4
+#define UNO3 #6ba1f4
+#define UNO4 #657c9e
+#define UNO5 #c9ccce
+#define DUO1 #d37e7e
+#define DUO2 #b55b5b
+#define DUO3 #7f2a2a
+#define WHITEBASE #eff0eb
+#define useduotonelight
+#endif
+
+#ifdef coldbruise
+! http://www.xcolors.net/dl/cold-bruise
+#define COLOR0       #3c3e3c
+#define COLOR1       #ac4c64
+#define COLOR2       #5acc77
+#define COLOR3       #ac8b4c
+#define COLOR4       #5a77cc
+#define COLOR5       #a14cac
+#define COLOR6       #5ab3cc
+#define COLOR7       #eff3f0
+#define COLOR8       #545855
+#define COLOR9       #ac4c64
+#define COLOR10      #4cac64
+#define COLOR11      #ab894b
+#define COLOR12      #4c64ac
+#define COLOR13      #a04bab
+#define COLOR14      #4b96ab
+#define COLOR15      #f2f6f3
+#define COLOR_FOREGROUND   #545855
+#define COLOR_BACKGROUND   #f0f4f5
+#define COLOR_CURSOR #545855
+#endif
+
+
+#ifdef carrot
+#define UNO1 #60442e
+#define UNO2 #e87a20
+#define UNO3 #b8589
+#define UNO4 #b49073
+#define UNO5 #7a6351
+#define DUO1 #48b143
+#define DUO2 #467d43
+#define DUO3 #2c442b
+#define WHITEBASE #eff0eb
+#define useduotonelight
+#endif
+
+#ifdef amethyst
+#define UNO1 #ebcefc
+#define UNO2 #c584eb
+#define UNO3 #ae6dd3
+#define UNO4 #945fb3
+#define UNO5 #604b6c
+#define DUO1 #a971e2
+#define DUO2 #7f3fbf
+#define DUO3 #543871
+#define WHITEBASE #eff0eb
+#define useduotone
+#endif
+
+#ifdef useduotone
+#define COLOR0 UNO5
+#define COLOR1 DUO3
+#define COLOR2 UNO4
+#define COLOR3 UNO2
+#define COLOR4 DUO2
+#define COLOR5 DUO1
+#define COLOR6 UNO1
+#define COLOR7 WHITEBASE
+#define COLOR8 UNO5
+#define COLOR9 DUO3
+#define COLOR10 UNO4
+#define COLOR11 UNO2
+#define COLOR12 DUO2
+#define COLOR13 DUO1
+#define COLOR14 UNO1
+#define COLOR15 WHITEBASE
+#define COLOR_FOREGROUND COLOR15
+#define COLOR_BACKGROUND COLOR0
+#define COLOR_CURSOR COLOR1
+#endif
+
+#ifdef useduotonelight
+#define COLOR0 UNO5
+#define COLOR1 DUO3
+#define COLOR2 UNO4
+#define COLOR3 UNO2
+#define COLOR4 DUO2
+#define COLOR5 DUO1
+#define COLOR6 UNO1
+#define COLOR7 WHITEBASE
+#define COLOR8 UNO5
+#define COLOR9 DUO3
+#define COLOR10 UNO4
+#define COLOR11 UNO2
+#define COLOR12 DUO2
+#define COLOR13 DUO1
+#define COLOR14 UNO1
+#define COLOR15 WHITEBASE
+#define COLOR_FOREGROUND COLOR0
+#define COLOR_BACKGROUND COLOR15
+#define COLOR_CURSOR COLOR1
+#endif
+
+#ifdef caticecream
+! http://icecream.kellishaver.com/palettes/y4xgvfyaed5dk41ajte9a7cz/edit
+#define COLOR0 #256b8c
+#define COLOR1 #e2adc7
+#define COLOR2 #5290bc
+#define COLOR3 #b4d5f4
+#define COLOR4 #8fabd4
+#define COLOR5 #aa78b2
+#define COLOR6 #6ecd97
+#define COLOR7 #f2eee2
+#define COLOR8 COLOR0
+#define COLOR9 COLOR1
+#define COLOR10 COLOR2
+#define COLOR11 COLOR3
+#define COLOR12 COLOR4
+#define COLOR13 COLOR5
+#define COLOR14 COLOR6
+#define COLOR15 COLOR7
+#define COLOR_FOREGROUND COLOR0
+#define COLOR_BACKGROUND COLOR15
+#define COLOR_CURS0R COLOR0
+#endif
+
+#ifdef isotope
+#define COLOR0       #000000
+#define COLOR1       #ff0000
+#define COLOR2       #33ff00
+#define COLOR3       #ff0099
+#define COLOR4       #0066ff
+#define COLOR5       #cc00ff
+#define COLOR6       #00ffff
+#define COLOR7       #d0d0d0
+#define COLOR8       #808080
+#define COLOR9       #ff0000
+#define COLOR10      #33ff00
+#define COLOR11      #ff0099
+#define COLOR12      #0066ff
+#define COLOR13      #cc00ff
+#define COLOR14      #00ffff
+#define COLOR15      #ffffff
+#define COLOR_FOREGROUND   #d0d0d0
+#define COLOR_BACKGROUND   #000000
+#define COLOR_CURSOR  #d0d0d0
+#endif
+
+#ifdef atelierlakeside
+#define COLOR_FOREGROUND   #7ea2b4
+#define COLOR_BACKGROUND   #161b1d
+#define COLOR_CURSOR #7ea2b4
+#define COLOR0       #161b1d
+#define COLOR1       #d22d72
+#define COLOR2       #568c3b
+#define COLOR3       #8a8a0f
+#define COLOR4       #257fad
+#define COLOR5       #5d5db1
+#define COLOR6       #2d8f6f
+#define COLOR7       #7ea2b4
+#define COLOR8       #5a7b8c
+#define COLOR9       #d22d72
+#define COLOR10      #568c3b
+#define COLOR11      #8a8a0f
+#define COLOR12      #257fad
+#define COLOR13      #5d5db1
+#define COLOR14      #2d8f6f
+#define COLOR15      #ebf8ff
+#endif
+
+#ifdef seoul256
+#define COLOR_FOREGROUND   #d0d0d0
+#define COLOR_BACKGROUND   #3a3a3a
+#define COLOR_CURSOR  #d0d0d0
+#define COLOR0       #3a3a3a
+#define COLOR1       #d68787
+#define COLOR2       #5f865f
+#define COLOR3       #d8af5f
+#define COLOR4       #85add4
+#define COLOR5       #d7afaf
+#define COLOR6       #87afaf
+#define COLOR7       #d0d0d0
+#define COLOR8       #626262
+#define COLOR9       #d75f87
+#define COLOR10      #87af87
+#define COLOR11      #ffd787
+#define COLOR12      #add4fb
+#define COLOR13      #ffafaf
+#define COLOR14      #87d7d7
+#define COLOR15      #e4e4e4
+#endif
+
+#ifdef pencil
+! -- Pencil -------------------------------------------------------- {{{
+!
+!   A color scheme inspired by iA Writer
+!   <https://github.com/reedes/vim-colors-pencil>
+!
+! }}}
+#define COLOR_BACKGROUND #f1f1f1
+#define COLOR_FOREGROUND #424242
+#define COLOR_CURSOR #20bbfc
+#define COLOR0 #212121
+#define COLOR1 #c30771
+#define COLOR2 #10a778
+#define COLOR3 #a89c14
+#define COLOR4 #008ec4
+#define COLOR5 #523c79
+#define COLOR6 #20a5ba
+#define COLOR7 #d9d9d9
+#define COLOR8 #424242
+#define COLOR9 #fb007a
+#define COLOR10 #5fd7af
+#define COLOR11 #f3e430
+#define COLOR12 #20bbfc
+#define COLOR13 #6855de
+#define COLOR14 #4fb8cc
+#define COLOR15 #f1f1f1
+#endif

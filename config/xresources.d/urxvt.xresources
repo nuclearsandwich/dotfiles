@@ -1,6 +1,6 @@
 urxvt.scrollBar: false
-urxvt.font: xft:Iosevka Term:size=11
-urxvt.letterSpace: -1
+urxvt.font: xft:Iosevka Sammich:size=7
+urxvt.letterSpace: 0
 urxvt.secondaryScreen: 1
 urxvt.secondaryScroll: 0
 urxvt.background.border: false

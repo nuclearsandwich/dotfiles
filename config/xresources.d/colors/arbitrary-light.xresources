@@ -1,0 +1,22 @@
+! ! arbitrary light scheme.
+#define COLOR_FOREGROUND #4f5b66
+#define COLOR_BACKGROUND #eff1f5
+#define COLOR_CURSOR #4f5b66
+#define COLOR0 #2b303b
+#define COLOR1 #65737e
+#define COLOR2 #bf616a
+#define COLOR3 #bf616a
+#define COLOR4 #a3be8c
+#define COLOR5 #a3be8c
+#define COLOR6 #ebcb8b
+#define COLOR7 #ebcb8b
+#define COLOR8 #8fa1b3
+#define COLOR9 #8fa1b3
+#define COLOR10 #b48ead
+#define COLOR11 #b48ead
+#define COLOR12 #96b5b4
+#define COLOR13 #96b5b4
+#define COLOR14 #c0c5ce
+#define COLOR15 #eff1f5
+
+

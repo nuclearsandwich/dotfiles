@@ -1,0 +1,31 @@
+!  ██      ██ ██                                    ██                    ██     
+! ░██     ░██░░                                    ░██                   ░██     
+! ░██     ░██ ██ ██████ ██████  ██████   ██████    ░██     ██████  ██████░██     
+! ░██████ ░██░██░░░░██ ░░░░██  ░░░░░░██ ░░██░░█ ██████    ██░░░░██░░██░░█░██████ 
+! ░██░░░██░██░██   ██     ██    ███████  ░██ ░ ██░░░██   ░██   ░██ ░██ ░ ░██░░░██
+! ░██  ░██░██░██  ██     ██    ██░░░░██  ░██  ░██  ░██   ░██   ░██ ░██   ░██  ░██
+! ░██████ ███░██ ██████ ██████░░████████░███  ░░██████   ░░██████ ░███   ░██████ 
+! ░░░░░  ░░░ ░░ ░░░░░░ ░░░░░░  ░░░░░░░░ ░░░    ░░░░░░     ░░░░░░  ░░░    ░░░░░   
+! 
+! █▓▒░ blizzard orb colors
+! by xero <http://xero.nu>
+
+#define COLOR_FOREGROUND #111111
+#define COLOR_BACKGROUND #fcfcfc
+#define COLOR_CURSOR #94B6CC
+#define COLOR0      #000000
+#define COLOR1      #6688AA
+#define COLOR2      #94B6CC
+#define COLOR3     #4C6E84
+#define COLOR4     #6688AA
+#define COLOR5     #94B6CC
+#define COLOR6     #4C6E84
+#define COLOR7     #87875f
+#define COLOR8      #000000
+#define COLOR9      #6688AA
+#define COLOR10     #94B6CC
+#define COLOR11    #4C6E84
+#define COLOR12     #6688AA
+#define COLOR13    #94B6CC
+#define COLOR14    #4C6E84
+#define COLOR15    #87875f
