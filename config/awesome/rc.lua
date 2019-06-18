@@ -69,7 +69,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/steven/.config/awesome/themes/sammich/theme.lua")
+beautiful.init("/home/steven/.config/awesome/themes/paperlike/theme.lua")
 
 terminal = "urxvt"
 editor = os.getenv("EDITOR") or "vim"

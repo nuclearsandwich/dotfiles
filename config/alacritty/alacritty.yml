@@ -8,8 +8,8 @@ window.dimensions:
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)
 dpi:
-  x: 96.0
-  y: 96.0
+  x: 207.0
+  y: 207.0
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
@@ -39,7 +39,7 @@ font:
     # style: Italic
 
   # Point size of the font
-  size: 7.0
+  size: 18.0
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
@@ -57,6 +57,35 @@ render_timer: false
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
 #custom_cursor_colors: false
+
+# Colors (Grayscale light)
+paperlike: &paperlike
+  # Default colors
+  primary:
+    background: '0xf7f7f7'
+    foreground: '0x464646'
+
+  # Normal colors
+  normal:
+    black:   '0x101010'
+    red:     '0x7c7c7c'
+    green:   '0x8e8e8e'
+    yellow:  '0xa0a0a0'
+    blue:    '0x686868'
+    magenta: '0x747474'
+    cyan:    '0x868686'
+    white:   '0xb9b9b9'
+
+  # Bright colors
+  bright:
+    black:   '0x525252'
+    red:     '0x7c7c7c'
+    green:   '0x8e8e8e'
+    yellow:  '0xa0a0a0'
+    blue:    '0x686868'
+    magenta: '0x747474'
+    cyan:    '0x868686'
+    white:   '0xf7f7f7'
 
 # Colors (Tomorrow Night Bright)
 tomorrownight: &tomorrownight
@@ -120,7 +149,7 @@ solarizeddark: &solarizeddark
     white:   '0xfdf6e3'
 
 colors:
-    *tomorrownight
+    *paperlike
 
 # Visual Bell
 #
