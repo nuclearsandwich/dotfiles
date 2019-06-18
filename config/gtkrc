@@ -1,8 +1,8 @@
-# created by KDE, Wed Feb 11 09:36:03 2015
+# created by KDE Plasma, Wed Oct 11 23:52:10 2017
 #
-# If you do not want KDE to override your GTK settings, select
-# Appearance -> Colors in the System Settings and disable the checkbox
-# "Apply colors to non-KDE4 applications"
+# If you do not want Plasma to override your GTK settings, select
+# Colors in the System Settings and disable the checkbox
+# "Apply colors to non-Qt applications"
 #
 #
 style "default"
@@ -36,10 +36,10 @@ class "*" style "default"
 
 style "ToolTip"
 {
-  bg[NORMAL] = { 0.937, 0.941, 0.945 }
-  base[NORMAL] = { 0.988, 0.988, 0.988 }
-  text[NORMAL] = { 0.192, 0.212, 0.231 }
-  fg[NORMAL] = { 0.192, 0.212, 0.231 }
+  bg[NORMAL] = { 0.937, 0.922, 0.906 }
+  base[NORMAL] = { 1.000, 1.000, 1.000 }
+  text[NORMAL] = { 0.000, 0.000, 0.000 }
+  fg[NORMAL] = { 0.000, 0.000, 0.000 }
 }
 
 widget "gtk-tooltip" style "ToolTip"

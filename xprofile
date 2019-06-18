@@ -22,7 +22,7 @@ if [ "$XDG_SESSION_DESKTOP" != "KDE" ]; then
 	synclient MaxTapTime=0
 	synclient VertScrollDelta=-127 # natural scrolling
 	#rescuetime & # time tracking
-	compton & # Compositing
+	#compton & # Compositing
 	#touchegg & # Multitouch
 	sxhkd -c $HOME/.config/sxhkd/sxhkdrc & # Hotkeys
 	#$HOME/bin/w3d & # CSS and JavaScript override server

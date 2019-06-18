@@ -1,5 +1,5 @@
 urxvt.scrollBar: false
-urxvt.font: xft:Iosevka Sammich:size=7
+urxvt.font: xft:Iosevka Term SS05:size=11
 urxvt.letterSpace: 0
 urxvt.secondaryScreen: 1
 urxvt.secondaryScroll: 0

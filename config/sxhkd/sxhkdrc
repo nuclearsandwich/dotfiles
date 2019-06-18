@@ -5,7 +5,7 @@ super + ctrl + v
  ~/bin/demolist
 
 super + Return
- urxvt
+ alacritty
 
 super + shift + BackSpace
  i3lock -ti $HOME/Images/giantdays-blank-surface.png

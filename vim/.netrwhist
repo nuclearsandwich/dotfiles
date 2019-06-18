@@ -1,10 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/steven/code/perfect-doors-app'
-let g:netrw_dirhist_2='/home/steven/code/saveslot-rx/db/migrate'
-let g:netrw_dirhist_3='/home/steven/.ssh'
-let g:netrw_dirhist_4='/home/steven/ops/antsle-pharos'
-let g:netrw_dirhist_5='/home/steven/code/tunnelbears'
-let g:netrw_dirhist_6='/home/steven/code/tunnelbears/babybear/src/babybear'
-let g:netrw_dirhist_7='/home/steven/code/tunnelbears/babybear/src'
-let g:netrw_dirhist_8='/home/steven/code/gitolite-admin/conf'
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/steven/live-from-here/content/2018-05-05'
+let g:netrw_dirhist_2='/home/steven/live-from-here/content/2018-05-19'
+let g:netrw_dirhist_3='/home/steven/infra/newbsa/itamae-cookbook/files'
+let g:netrw_dirhist_4='/home/steven/infra/newbsa/scraps'
+let g:netrw_dirhist_5='/home/steven/code/wren/doc/site/embedding'

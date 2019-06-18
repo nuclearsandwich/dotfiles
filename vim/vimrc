@@ -26,6 +26,7 @@ call minpac#add('pangloss/vim-javascript')
 call minpac#add('vim-perl/vim-perl6')
 call minpac#add('rodjek/vim-puppet')
 call minpac#add('rust-lang/rust.vim')
+call minpac#add('jceb/vim-orgmode')
 
 " colors
 call minpac#add('dracula/vim')
