@@ -10,7 +10,6 @@ xset fp rehash
 
 # Skip most operations within KDE
 if [ "$XDG_SESSION_DESKTOP" != "KDE" ]; then
-	echo "continuing" >> xprofile.wtf
 	# 🚫 caps lock.
 	xmodmap .capscontrol
 	#xmodmap .modswap
@@ -18,9 +17,9 @@ if [ "$XDG_SESSION_DESKTOP" != "KDE" ]; then
 	###
 
 	### Daemons
-	synclient PalmDetect=1
-	synclient MaxTapTime=0
-	synclient VertScrollDelta=-127 # natural scrolling
+	#synclient PalmDetect=1
+	#synclient MaxTapTime=0
+	#synclient VertScrollDelta=-127 # natural scrolling
 	#rescuetime & # time tracking
 	compton & # Compositing
 	#touchegg & # Multitouch
@@ -28,7 +27,7 @@ if [ "$XDG_SESSION_DESKTOP" != "KDE" ]; then
 	#$HOME/bin/w3d & # CSS and JavaScript override server
 	#autokey-gtk & # Text expansion
 	start-pulseaudio-x11 & # Audio
-	awesome-bat.fish &
+	$HOME/bin/battery-status &
 	xss-lock -- i3lock -nt &
 fi
 
