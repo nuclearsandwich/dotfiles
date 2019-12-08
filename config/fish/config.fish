@@ -8,6 +8,11 @@ if not __ssh_agent_is_started
 	__ssh_agent_start
 end
 
+if test -x $HOME/.rakudobrew/bin/rakudobrew
+	$HOME/.rakudobrew/bin/rakudobrew init Fish | source
+end
+
+
 # Use rbenv instead of chruby for meow.
 #source "$HOME/.config/fish/functions/chruby_auto.fish"
 if which rbenv > /dev/null ^ /dev/null
