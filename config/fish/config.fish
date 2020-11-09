@@ -21,3 +21,4 @@ if which direnv > /dev/null ^ /dev/null
 	eval (direnv hook fish)
 end
 
+/home/steven/.rakubrew/bin/rakubrew init Fish | source
