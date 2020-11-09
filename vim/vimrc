@@ -22,17 +22,49 @@ call minpac#add('mhinz/vim-grepper')
 call minpac#add('tpope/vim-obsession')
 
 " language support
+call minpac#add('vim-crystal/vim-crystal')
 call minpac#add('pangloss/vim-javascript')
 call minpac#add('vim-perl/vim-perl6')
+call minpac#add('vim-crystal/vim-crystal')
 call minpac#add('rodjek/vim-puppet')
 call minpac#add('rust-lang/rust.vim')
 call minpac#add('jceb/vim-orgmode')
+call minpac#add('ziglang/zig.vim')
 
 " colors
 call minpac#add('dracula/vim')
 
+if has("nvim")
+	call minpac#add('hkupty/nvimux')
+endif
+
 command! PackUpdate call minpac#update()
 command! PackClean call minpac#clean()
+
+if has("nvim")
+	lua << EOF
+	local nvimux = require("nvimux")
+	nvimux.config.set_all{
+	prefix = '<C-space>',
+	new_window = 'enew', -- Use 'term' if you want to open a new term for every new window
+	new_tab = nil, -- Defaults to new_window. Set to 'term' if you want a new term for every new tab
+	new_window_buffer = 'single',
+	quickterm_direction = 'botright',
+	quickterm_orientation = 'vertical',
+	quickterm_scope = 't', -- Use 'g' for global quickterm
+	quickterm_size = '80',
+}
+
+-- Nvimux custom bindings
+nvimux.bindings.bind_all{
+	{'s', ':NvimuxHorizontalSplit', {'n', 'v', 'i', 't'}},
+	{'v', ':NvimuxVerticalSplit', {'n', 'v', 'i', 't'}},
+}
+
+-- Required so nvimux sets the mappings correctly
+nvimux.bootstrap()
+EOF
+endif
 
 " appearance
 set bg=dark
@@ -59,6 +91,7 @@ augroup vimrc
 	autocmd BufWritePre /tmp/* setlocal noundofile
 augroup END
 filetype indent on
+syntax on
 let g:ale_sign_column_always=1
 
 " Filetype autocommands
