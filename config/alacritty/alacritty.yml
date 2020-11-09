@@ -8,11 +8,8 @@ window.dimensions:
 # The FreeType rasterizer needs to know the device DPI for best results
 # (changes require restart)
 dpi:
-  x: 96.0
-  y: 96.0
-
-# Display tabs using this many cells (changes require restart)
-tabspaces: 8
+  x: 146.86
+  y: 146.86
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -20,26 +17,27 @@ draw_bold_text_with_bright_colors: true
 # Font configuration (changes require restart)
 font:
   # The normal (roman) font face to use.
+  family: &family Hack
   normal:
-    family: Iosevka Term SS05 # should be "Menlo" or something on macOS.
+    family: *family # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: Iosevka Term SS05 # should be "Menlo" or something on macOS.
+    family: *family # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: Iosevka Term SS05
+    family: *family
     # should be "Menlo" or something on macOS.
     # Style can be specified to pick a specific face.
     # style: Italic
 
   # Point size of the font
-  size: 7.0
+  size: 10.0
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
@@ -52,11 +50,64 @@ font:
   use_thin_strokes: true
 
 # Should display the render timer
-render_timer: false
+debug.render_timer: false
 
 # Use custom cursor colors. If true, display the cursor in the cursor.foreground
 # and cursor.background colors, otherwise invert the colors of the cursor.
 #custom_cursor_colors: false
+
+atelierheath: &atelierheath
+  # Default colors
+  primary:
+    background: '0xf7f3f7'
+    foreground: '0x695d69'
+  # Normal colors
+  normal:
+    black:   '0x1b181b'
+    red:     '0xca402b'
+    green:   '0x379a37'
+    yellow:  '0xbb8a35'
+    blue:    '0x516aec'
+    magenta: '0x7b59c0'
+    cyan:    '0x159393'
+    white:   '0xab9bab'
+  # Bright colors
+  bright:
+    black:   '0x776977'
+    red:     '0xca402b'
+    green:   '0x379a37'
+    yellow:  '0xbb8a35'
+    blue:    '0x516aec'
+    magenta: '0x7b59c0'
+    cyan:    '0x159393'
+    white:   '0xf7f3f7'
+
+tempusfugit: &tempusfugit
+  primary:
+    background: '0xfff5f3'
+    foreground: '0x4d595f'
+  cursor:
+    foreground: '0xfff5f3'
+    background: '0x4d595f'
+  normal:
+    black: '0x4d595f'
+    red:     '0xc61a14'
+    green:   '0x357200'
+    yellow:  '0x825e00'
+    blue:    '0x1666b0'
+    magenta: '0xa83884'
+    cyan:    '0x007072'
+    white:   '0xf2ebe9'
+
+  bright:
+    black:   '0x7b6471'
+    red:     '0xbd401a'
+    green:   '0x447720'
+    yellow:  '0x985d00'
+    blue:    '0x485ddf'
+    magenta: '0xa438c0'
+    cyan:    '0x00786a'
+    white:   '0xfff5f3'
 
 # Colors (Tomorrow Night Bright)
 tomorrownight: &tomorrownight
@@ -67,7 +118,6 @@ tomorrownight: &tomorrownight
   cursor:
     background: '0xffffff'
     foreground: '0x000000'
-
   # Normal colors
   normal:
     black:   '0x000000'
@@ -78,7 +128,6 @@ tomorrownight: &tomorrownight
     magenta: '0xc397d8'
     cyan:    '0x70c0ba'
     white:   '0x424242'
-
   # Bright colors
   bright:
     black:   '0x666666'
@@ -96,7 +145,6 @@ solarizeddark: &solarizeddark
   primary:
     background: '0x002b36'
     foreground: '0x839496'
-
   # Normal colors
   normal:
     black:   '0x073642'
@@ -107,7 +155,6 @@ solarizeddark: &solarizeddark
     magenta: '0xd33682'
     cyan:    '0x2aa198'
     white:   '0xeee8d5'
-
   # Bright colors
   bright:
     black:   '0x002b36'
@@ -119,8 +166,61 @@ solarizeddark: &solarizeddark
     cyan:    '0x93a1a1'
     white:   '0xfdf6e3'
 
+contreighties: &contreighties
+  # Default colors
+  primary:
+    background: '0xf2f0ec'
+    foreground: '0x515151'
+  # Normal colors
+  normal:
+    black:   '0x2d2d2d'
+    red:     '0x662929'
+    green:   '0x3d663d'
+    yellow:  '0x80581d'
+    blue:    '0x0066cc'
+    magenta: '0x661466'
+    cyan:    '0x1f3333'
+    white:   '0xd3d0c8'
+  # Bright colors
+  bright:
+    black:   '0xf2f0ec'
+    red:     '0x662929'
+    green:   '0x3d663d'
+    yellow:  '0x80581d'
+    blue:    '0x0066cc'
+    magenta: '0x661f66'
+    cyan:    '0x1f3333'
+    white:   '0xf2f0ec'
+
+# Colors (PaperColor - Light)
+papercolor: &papercolor
+  primary:
+    background: '0xeeeeee'
+    foreground: '0x878787'
+  cursor:
+    text: '0xeeeeee'
+    cursor: '0x878787'
+  normal:
+    black:   '0xeeeeee'
+    red:     '0xaf0000'
+    green:   '0x008700'
+    yellow:  '0x5f8700'
+    blue:    '0x0087af'
+    magenta: '0x878787'
+    cyan:    '0x005f87'
+    white:   '0x444444'
+  bright:
+    black:   '0xbcbcbc'
+    red:     '0xd70000'
+    green:   '0xd70087'
+    yellow:  '0x8700af'
+    blue:    '0xd75f00'
+    magenta: '0xd75f00'
+    cyan:    '0x005faf'
+    white:   '0x005f87'
+
 colors:
-    *tomorrownight
+    *papercolor
 
 # Visual Bell
 #
