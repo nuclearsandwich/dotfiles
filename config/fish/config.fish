@@ -10,15 +10,18 @@ end
 
 # Use rbenv instead of chruby for meow.
 #source "$HOME/.config/fish/functions/chruby_auto.fish"
-if which rbenv > /dev/null ^ /dev/null
+if command -v rbenv > /dev/null
 	status --is-interactive; and source (rbenv init -|psub)
 end
-if which nodenv > /dev/null ^ /dev/null
+
+if command -v nodenv > /dev/null
 	status --is-interactive; and source (nodenv init -|psub)
 end
 
-if which direnv > /dev/null ^ /dev/null
+if command -v direnv > /dev/null
 	eval (direnv hook fish)
 end
 
-/home/steven/.rakubrew/bin/rakubrew init Fish | source
+if test -x $HOME/.rakubrew/bin/rakubrew
+	$HOME/.rakubrew/bin/rakubrew init Fish | source
+end
