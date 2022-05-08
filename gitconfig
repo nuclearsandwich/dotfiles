@@ -74,3 +74,5 @@
 	user = nuclearsandwich
 [init]
 	defaultBranch = latest
+[pull]
+	ff = only
