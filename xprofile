@@ -2,7 +2,7 @@
 
 ### Housekeeping
 # Load new fonts.
-xset +fp /usr/share/fonts/local
+#xset +fp /usr/share/fonts/local
 xset fp rehash
 
 # Merge xresources defaults.
@@ -13,7 +13,6 @@ if [ "$XDG_SESSION_DESKTOP" != "KDE" ]; then
 	echo "continuing" >> xprofile.wtf
 	# 🚫 caps lock.
 	xmodmap .capscontrol
-	#xmodmap .modswap
 	nitrogen --restore &
 	###
 
@@ -21,12 +20,7 @@ if [ "$XDG_SESSION_DESKTOP" != "KDE" ]; then
 	synclient PalmDetect=1
 	synclient MaxTapTime=0
 	synclient VertScrollDelta=-127 # natural scrolling
-	#rescuetime & # time tracking
-	#compton & # Compositing
-	#touchegg & # Multitouch
 	sxhkd -c $HOME/.config/sxhkd/sxhkdrc & # Hotkeys
-	#$HOME/bin/w3d & # CSS and JavaScript override server
-	#autokey-gtk & # Text expansion
 	start-pulseaudio-x11 & # Audio
 	awesome-bat.fish &
 	xss-lock -- i3lock -nt &
