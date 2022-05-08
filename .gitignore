@@ -1,10 +1,11 @@
 *.swp
 .secrets.yml
+config/
 mutt/cache
 mutt/mailboxes
 mutt/temp
-xmonad/*.o
+vim/.netrwhist
 xmonad/*-linux
-xmonad/*.hi
 xmonad/*.errors
-config/
+xmonad/*.hi
+xmonad/*.o
