@@ -1,9 +1,3 @@
-[submodule "direnv"]
-	path = direnv
-	url = git://github.com/zimbatm/direnv
-[submodule "hg-git"]
-	path = hg-git
-	url = git://github.com/schacon/hg-git
 [submodule "config/awesome/lain"]
 	path = config/awesome/lain
 	url = https://github.com/copycat-killer/lain
