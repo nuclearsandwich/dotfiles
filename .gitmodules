@@ -4,12 +4,6 @@
 [submodule "hg-git"]
 	path = hg-git
 	url = git://github.com/schacon/hg-git
-[submodule "ext/base16-builder"]
-	path = ext/base16-builder
-	url = https://github.com/chriskempson/base16-builder.git
-[submodule "ext/gruvbox"]
-	path = ext/gruvbox
-	url = https://github.com/morhetz/gruvbox-contrib
 [submodule "config/awesome/lain"]
 	path = config/awesome/lain
 	url = https://github.com/copycat-killer/lain
