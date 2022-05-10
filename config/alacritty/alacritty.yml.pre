@@ -1,0 +1,434 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator
+# Window dimensions in character columns and lines
+# (changes require restart)
+window.dimensions:
+  columns: 80
+  lines: 40
+
+# The FreeType rasterizer needs to know the device DPI for best results
+# (changes require restart)
+dpi:
+  x: 146.86
+  y: 146.86
+
+# When true, bold text is drawn using the bright variant of colors.
+draw_bold_text_with_bright_colors: true
+
+# Font configuration (changes require restart)
+font:
+  # The normal (roman) font face to use.
+  family: &family Hack
+  normal:
+    family: *family # should be "Menlo" or something on macOS.
+    # Style can be specified to pick a specific face.
+    style: Regular
+
+  # The bold font face
+  bold:
+    family: *family # should be "Menlo" or something on macOS.
+    # Style can be specified to pick a specific face.
+    style: Bold
+
+  # The italic font face
+  italic:
+    family: *family
+    # should be "Menlo" or something on macOS.
+    # Style can be specified to pick a specific face.
+    style: Italic
+
+  # Point size of the font
+  size: 10.0
+  # Offset is the extra space around each character. offset.y can be thought of
+  # as modifying the linespacing, and offset.x as modifying the letter spacing.
+  offset:
+    x: 0
+    y: 0
+
+  # OS X only: use thin stroke font rendering. Thin strokes are suitable
+  # for retina displays, but for non-retina you probably want this set to
+  # false.
+  use_thin_strokes: true
+
+# Should display the render timer
+debug.render_timer: false
+
+# Use custom cursor colors. If true, display the cursor in the cursor.foreground
+# and cursor.background colors, otherwise invert the colors of the cursor.
+#custom_cursor_colors: false
+
+__THEMES__
+
+tempusday: &tempusday
+  name: 'Tempus Day'
+  author: 'Protesilaos Stavrou (https://protesilaos.com)'
+  description: 'Light theme with warm colours (WCAG AA compliant)'
+  primary:
+    foreground: '#464340'
+    background: '#f8f2e5'
+    cursor:
+      text: '#f8f2e5'
+      cursor: '#464340'
+      selection:
+        text: '#f8f2e5'
+        background: '#464340'
+    normal:
+      black: '#464340'
+      red: '#c81000'
+      green: '#107410'
+      yellow: '#806000'
+      blue: '#385dc4'
+      magenta: '#b63052'
+      cyan: '#007070'
+      white: '#e7e3d7'
+    bright:
+      black: '#68607d'
+      red: '#b24000'
+      green: '#427040'
+      yellow: '#6f6600'
+      blue: '#0f64c4'
+      magenta: '#8050a7'
+      cyan: '#336c87'
+      white: '#f8f2e5'
+
+  atelierheath: &atelierheath
+    # Default colors
+    primary:
+      background: '0xf7f3f7'
+      foreground: '0x695d69'
+    # Normal colors
+    normal:
+      black:   '0x1b181b'
+      red:     '0xca402b'
+      green:   '0x379a37'
+      yellow:  '0xbb8a35'
+      blue:    '0x516aec'
+      magenta: '0x7b59c0'
+      cyan:    '0x159393'
+      white:   '0xab9bab'
+    # Bright colors
+    bright:
+      black:   '0x776977'
+      red:     '0xca402b'
+      green:   '0x379a37'
+      yellow:  '0xbb8a35'
+      blue:    '0x516aec'
+      magenta: '0x7b59c0'
+      cyan:    '0x159393'
+      white:   '0xf7f3f7'
+
+  tempusfugit: &tempusfugit
+    primary:
+      background: '0xfff5f3'
+      foreground: '0x4d595f'
+    cursor:
+      foreground: '0xfff5f3'
+      background: '0x4d595f'
+    normal:
+      black: '0x4d595f'
+      red:     '0xc61a14'
+      green:   '0x357200'
+      yellow:  '0x825e00'
+      blue:    '0x1666b0'
+      magenta: '0xa83884'
+      cyan:    '0x007072'
+      white:   '0xf2ebe9'
+
+    bright:
+      black:   '0x7b6471'
+      red:     '0xbd401a'
+      green:   '0x447720'
+      yellow:  '0x985d00'
+      blue:    '0x485ddf'
+      magenta: '0xa438c0'
+      cyan:    '0x00786a'
+      white:   '0xfff5f3'
+
+  # Colors (Tomorrow Night Bright)
+  tomorrownight: &tomorrownight
+    # Default colors
+    primary:
+      background: '0x000000'
+      foreground: '0xeaeaea'
+    cursor:
+      background: '0xffffff'
+      foreground: '0x000000'
+    # Normal colors
+    normal:
+      black:   '0x000000'
+      red:     '0xd54e53'
+      green:   '0xb9ca4a'
+      yellow:  '0xe6c547'
+      blue:    '0x7aa6da'
+      magenta: '0xc397d8'
+      cyan:    '0x70c0ba'
+      white:   '0x424242'
+    # Bright colors
+    bright:
+      black:   '0x666666'
+      red:     '0xff3334'
+      green:   '0x9ec400'
+      yellow:  '0xe7c547'
+      blue:    '0x7aa6da'
+      magenta: '0xb77ee0'
+      cyan:    '0x54ced6'
+      white:   '0x2a2a2a'
+
+  # Colors (Solarized Dark)
+  solarizeddark: &solarizeddark
+    # Default colors
+    primary:
+      background: '0x002b36'
+      foreground: '0x839496'
+    # Normal colors
+    normal:
+      black:   '0x073642'
+      red:     '0xdc322f'
+      green:   '0x859900'
+      yellow:  '0xb58900'
+      blue:    '0x268bd2'
+      magenta: '0xd33682'
+      cyan:    '0x2aa198'
+      white:   '0xeee8d5'
+    # Bright colors
+    bright:
+      black:   '0x002b36'
+      red:     '0xcb4b16'
+      green:   '0x586e75'
+      yellow:  '0x657b83'
+      blue:    '0x839496'
+      magenta: '0x6c71c4'
+      cyan:    '0x93a1a1'
+      white:   '0xfdf6e3'
+
+  contreighties: &contreighties
+    # Default colors
+    primary:
+      background: '0xf2f0ec'
+      foreground: '0x515151'
+    # Normal colors
+    normal:
+      black:   '0x2d2d2d'
+      red:     '0x662929'
+      green:   '0x3d663d'
+      yellow:  '0x80581d'
+      blue:    '0x0066cc'
+      magenta: '0x661466'
+      cyan:    '0x1f3333'
+      white:   '0xd3d0c8'
+    # Bright colors
+    bright:
+      black:   '0xf2f0ec'
+      red:     '0x662929'
+      green:   '0x3d663d'
+      yellow:  '0x80581d'
+      blue:    '0x0066cc'
+      magenta: '0x661f66'
+      cyan:    '0x1f3333'
+      white:   '0xf2f0ec'
+
+  # Colors (PaperColor - Light)
+  papercolor: &papercolor
+    primary:
+      background: '0xeeeeee'
+      foreground: '0x878787'
+    cursor:
+      text: '0xeeeeee'
+      cursor: '0x878787'
+    normal:
+      black:   '0xeeeeee'
+      red:     '0xaf0000'
+      green:   '0x008700'
+      yellow:  '0x5f8700'
+      blue:    '0x0087af'
+      magenta: '0x878787'
+      cyan:    '0x005f87'
+      white:   '0x444444'
+    bright:
+      black:   '0xbcbcbc'
+      red:     '0xd70000'
+      green:   '0xd70087'
+      yellow:  '0x8700af'
+      blue:    '0xd75f00'
+      magenta: '0xd75f00'
+      cyan:    '0x005faf'
+      white:   '0x005f87'
+
+
+  dracula: &dracula
+    primary:
+      background: '0x282a36'
+      foreground: '0xf8f8f2'
+    cursor:
+      text: '0x44475a'
+      cursor: '0xf8f8f2'
+    selection:
+      text: '0xf8f8f2'
+      background: '0x44475a'
+    normal:
+      black:   '0x000000'
+      red:     '0xff5555'
+      green:   '0x50fa7b'
+      yellow:  '0xf1fa8c'
+      blue:    '0xbd93f9'
+      magenta: '0xff79c6'
+      cyan:    '0x8be9fd'
+      white:   '0xbfbfbf'
+    bright:
+      black:   '0x4d4d4d'
+      red:     '0xff6e67'
+      green:   '0x5af78e'
+      yellow:  '0xf4f99d'
+      blue:    '0xcaa9fa'
+      magenta: '0xff92d0'
+      cyan:    '0x9aedfe'
+      white:   '0xe6e6e6'
+    dim:
+      black:   '0x14151b'
+      red:     '0xff2222'
+      green:   '0x1ef956'
+      yellow:  '0xebf85b'
+      blue:    '0x4d5b86'
+      magenta: '0xff46b0'
+      cyan:    '0x59dffc'
+      white:   '0xe6e6d1'
+    indexed_colors: []
+
+
+colors: __COLORSCHEME__
+
+# Visual Bell
+#
+# Any time the BEL code is received, Alacritty "rings" the visual bell. Once
+# rung, the terminal background will be set to white and transition back to the
+# default background color. You can control the rate of this transition by
+# setting the `duration` property (represented in milliseconds). You can also
+# configure the transition function by setting the `animation` property.
+#
+# Possible values for `animation`
+# `Ease`
+# `EaseOut`
+# `EaseOutSine`
+# `EaseOutQuad`
+# `EaseOutCubic`
+# `EaseOutQuart`
+# `EaseOutQuint`
+# `EaseOutExpo`
+# `EaseOutCirc`
+# `Linear`
+#
+# To completely disable the visual bell, set its duration to 0.
+#
+#visual_bell:
+#  animation: EaseOutExpo
+#  duration: 150
+
+# Key bindings
+#
+# Each binding is defined as an object with some properties. Most of the
+# properties are optional. All of the alphabetical keys should have a letter for
+# the `key` value such as `V`. Function keys are probably what you would expect
+# as well (F1, F2, ..). The number keys above the main keyboard are encoded as
+# `Key1`, `Key2`, etc. Keys on the number pad are encoded `Number1`, `Number2`,
+# etc.  These all match the glutin::VirtualKeyCode variants.
+#
+# Possible values for `mods`
+# `Command`, `Super` refer to the super/command/windows key
+# `Control` for the control key
+# `Shift` for the Shift key
+# `Alt` and `Option` refer to alt/option
+#
+# mods may be combined with a `|`. For example, requiring control and shift
+# looks like:
+#
+# mods: Control|Shift
+#
+# The parser is currently quite sensitive to whitespace and capitalization -
+# capitalization must match exactly, and piped items must not have whitespace
+# around them.
+#
+# Either an `action` or `chars` field must be present. `chars` writes the
+# specified string every time that binding is activated. These should generally
+# be escape sequences, but they can be configured to send arbitrary strings of
+# bytes. Possible values of `action` include `Paste` and `PasteSelection`.
+key_bindings:
+  - { key: V,        mods: Command, action: Paste                        }
+  - { key: C,        mods: Command, action: Copy                         }
+  - { key: Q,        mods: Command, action: Quit                         }
+  - { key: W,        mods: Command, action: Quit                         }
+  - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
+  - { key: Home,                    chars: "\x1b[1~",  mode: AppCursor   }
+  - { key: End,                     chars: "\x1b[F",   mode: ~AppCursor  }
+  - { key: End,                     chars: "\x1b[4~",  mode: AppCursor   }
+  - { key: PageUp,                  chars: "\x1b[5~"                     }
+  - { key: PageDown,                chars: "\x1b[6~"                     }
+  - { key: Left,     mods: Shift,   chars: "\x1b[1;2D"                   }
+  - { key: Left,     mods: Control, chars: "\x1b[1;5D"                   }
+  - { key: Left,     mods: Alt,     chars: "\x1b[1;3D"                   }
+  - { key: Left,                    chars: "\x1b[D",   mode: ~AppCursor  }
+  - { key: Left,                    chars: "\x1bOD",   mode: AppCursor   }
+  - { key: Right,    mods: Shift,   chars: "\x1b[1;2C"                   }
+  - { key: Right,    mods: Control, chars: "\x1b[1;5C"                   }
+  - { key: Right,    mods: Alt,     chars: "\x1b[1;3C"                   }
+  - { key: Right,                   chars: "\x1b[C",   mode: ~AppCursor  }
+  - { key: Right,                   chars: "\x1bOC",   mode: AppCursor   }
+  - { key: Up,       mods: Shift,   chars: "\x1b[1;2A"                   }
+  - { key: Up,       mods: Control, chars: "\x1b[1;5A"                   }
+  - { key: Up,       mods: Alt,     chars: "\x1b[1;3A"                   }
+  - { key: Up,                      chars: "\x1b[A",   mode: ~AppCursor  }
+  - { key: Up,                      chars: "\x1bOA",   mode: AppCursor   }
+  - { key: Down,     mods: Shift,   chars: "\x1b[1;2B"                   }
+  - { key: Down,     mods: Control, chars: "\x1b[1;5B"                   }
+  - { key: Down,     mods: Alt,     chars: "\x1b[1;3B"                   }
+  - { key: Down,                    chars: "\x1b[B",   mode: ~AppCursor  }
+  - { key: Down,                    chars: "\x1bOB",   mode: AppCursor   }
+  - { key: Tab,      mods: Shift,   chars: "\x1b[Z"                      }
+  - { key: F1,                      chars: "\x1bOP"                      }
+  - { key: F2,                      chars: "\x1bOQ"                      }
+  - { key: F3,                      chars: "\x1bOR"                      }
+  - { key: F4,                      chars: "\x1bOS"                      }
+  - { key: F5,                      chars: "\x1b[15~"                    }
+  - { key: F6,                      chars: "\x1b[17~"                    }
+  - { key: F7,                      chars: "\x1b[18~"                    }
+  - { key: F8,                      chars: "\x1b[19~"                    }
+  - { key: F9,                      chars: "\x1b[20~"                    }
+  - { key: F10,                     chars: "\x1b[21~"                    }
+  - { key: F11,                     chars: "\x1b[23~"                    }
+  - { key: F12,                     chars: "\x1b[24~"                    }
+  - { key: Back,                    chars: "\x7f"                        }
+  - { key: Delete,                  chars: "\x1b[3~",  mode: AppKeypad   }
+  - { key: Delete,                  chars: "\x1b[P",   mode: ~AppKeypad  }
+
+# Mouse bindings
+#
+# Currently doesn't support modifiers. Both the `mouse` and `action` fields must
+# be specified.
+#
+# Values for `mouse`:
+# - Middle
+# - Left
+# - Right
+# - Numeric identifier such as `5`
+#
+# Values for `action`:
+# - Paste
+# - PasteSelection
+# - Copy (TODO)
+mouse_bindings:
+  - { mouse: Middle, action: PasteSelection }
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>"
+
+# Shell
+#
+# You can set shell.program to the path of your favorite shell, e.g. /bin/fish.
+# Entries in shell.args are passed unmodified as arguments to the shell.
+#
+#shell:
+#  program: /bin/bash
+#  args:
+#    - --login

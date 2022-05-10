@@ -1,0 +1,26 @@
+creamsoda:
+  colors: &creamsoda
+    # Default colors
+    primary:
+      background: '0xfff9e8'
+      foreground: '0x2d3838'
+    # Normal colors
+    normal:
+      black:   '0x2d3838'
+      red:     '0x6f0200'
+      green:   '0x8da101'
+      yellow:  '0xdfa000'
+      blue:    '0x0882c4'
+      magenta: '0x73007b'
+      cyan:    '0x35a795'
+      white:   '0xaeaeae'
+    # Bright colors
+    bright:
+      black:   '0x2d3838'
+      red:     '0x6f0200'
+      green:   '0x8da101'
+      yellow:  '0xdfa000'
+      blue:    '0x0882c4'
+      magenta: '0x73007b'
+      cyan:    '0x35a795'
+      white:   '0xaeaeae'

@@ -1,0 +1,60 @@
+nord:
+  polar_night:
+    nord0: &nord0 "0x2e3440"
+    nord1: &nord1 "0x3b4252"
+    nord2: &nord2 "0x434c5e"
+    nord3: &nord3 "0x4c566a"
+  snow_storm:
+    nord4: &nord4 "0xd8dee9"
+    nord5: &nord5 "0xe5e9f0"
+    nord6: &nord6 "0xeceff4"
+  frost:
+    nord7: &nord7 "0x8fbcbb"
+    nord8: &nord8 "0x88c0d0"
+    nord9: &nord9 "0x81a1c1"
+    nord10: &nord10 "0x5e81ac"
+  aurora:
+    nord11: &nord11 "0xbf616a"
+    nord12: &nord12 "0xd08770"
+    nord13: &nord13 "0xebcb8b"
+    nord14: &nord14 "0xa3be8c"
+    nord15: &nord15 "0xb48ead"
+
+nord_night: &nord_night
+  primary:
+    background: *nord0
+    foreground: *nord4
+  cursor:
+    text: *nord0
+    cursor: *nord4
+  vi_mode_cursor:
+    text: *nord0
+    cursor: *nord4
+  selection:
+    text: CellForeground
+    background: *nord3
+  search:
+    matches:
+      foreground: CellBackground
+      background: *nord8
+    bar:
+      background: *nord2
+      foreground: *nord4
+  normal:
+    black: *nord1
+    red: *nord11
+    green: *nord14
+    yellow: *nord13
+    blue: *nord9
+    magenta: *nord15
+    cyan: *nord8
+    white: *nord5
+  bright:
+    black: *nord3
+    red: *nord11
+    green: *nord14
+    yellow: *nord13
+    blue: *nord9
+    magenta: *nord15
+    cyan: *nord8
+    white: *nord5

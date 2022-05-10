@@ -1,0 +1,27 @@
+#!/usr/bin/ruby
+
+require "stringio"
+require "thor"
+
+COLOR_FILES = Dir.glob("colorthemes.d/*.yml")
+
+class Genayaml < Thor
+  desc "generate COLORSCHEME", "Generate alacritty.yml for selected theme."
+  def generate(colorscheme)
+    alacritty_yml = StringIO.new
+    themes = COLOR_FILES.map{|f| File.read f}
+    prefile_lines = File.read("alacritty.yml.pre").lines.map(&:chomp)
+    prefile_lines.each do |line|
+      if line =~ /^\s*__THEMES__\s*$/
+        alacritty_yml.puts themes
+      elsif line =~ /^colors: __COLORSCHEME__\s*$/
+        alacritty_yml.puts "colors: *#{colorscheme}"
+      else
+        alacritty_yml.puts line
+      end
+    end
+    File.write("alacritty.yml", alacritty_yml.string)
+  end
+end
+
+Genayaml.start
