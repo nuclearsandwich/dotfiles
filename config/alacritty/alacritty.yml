@@ -56,9 +56,8 @@ debug.render_timer: false
 # and cursor.background colors, otherwise invert the colors of the cursor.
 #custom_cursor_colors: false
 
-schemes:
-
-  creamsoda: &creamsoda
+creamsoda:
+  colors: &creamsoda
     # Default colors
     primary:
       background: '0xfff9e8'
@@ -83,8 +82,8 @@ schemes:
       magenta: '0x73007b'
       cyan:    '0x35a795'
       white:   '0xaeaeae'
-
-  everforest_dark_hard: &everforest_dark_hard
+everforest:
+  dark_hard: &everforest_dark_hard
     primary:
       background: '#2b3339'
       foreground: '#d3c6aa'
@@ -107,7 +106,7 @@ schemes:
       cyan:    '#83c092'
       white:   '#d3c6aa'
 
-  everforest_dark_medium: &everforest_dark_medium
+  dark_medium: &everforest_dark_medium
     primary:
       background: '#2f383e'
       foreground: '#d3c6aa'
@@ -130,7 +129,7 @@ schemes:
       cyan:    '#83c092'
       white:   '#d3c6aa'
 
-  everforest_dark_soft: &everforest_dark_soft
+  dark_soft: &everforest_dark_soft
     primary:
       background: '#323d43'
       foreground: '#d3c6aa'
@@ -153,7 +152,7 @@ schemes:
       cyan:    '#83c092'
       white:   '#d3c6aa'
 
-  everforest_light_hard: &everforest_light_hard
+  light_hard: &everforest_light_hard
     primary:
       background: '#fff9e8'
       foreground: '#5c6a72'
@@ -176,7 +175,7 @@ schemes:
       cyan:    '#35a77c'
       white:   '#dfddc8'
 
-  everforest_light_medium: &everforest_light_medium
+  light_medium: &everforest_light_medium
     primary:
       background: '#fdf6e3'
       foreground: '#5c6a72'
@@ -199,7 +198,7 @@ schemes:
       cyan:    '#35a77c'
       white:   '#dfddc8'
 
-  everforest_light_soft: &everforest_light_soft
+  light_soft: &everforest_light_soft
     primary:
       background: '#f8f0dc'
       foreground: '#5c6a72'
@@ -221,6 +220,66 @@ schemes:
       magenta: '#df69ba'
       cyan:    '#35a77c'
       white:   '#dfddc8'
+nord:
+  polar_night:
+    nord0: &nord0 "0x2e3440"
+    nord1: &nord1 "0x3b4252"
+    nord2: &nord2 "0x434c5e"
+    nord3: &nord3 "0x4c566a"
+  snow_storm:
+    nord4: &nord4 "0xd8dee9"
+    nord5: &nord5 "0xe5e9f0"
+    nord6: &nord6 "0xeceff4"
+  frost:
+    nord7: &nord7 "0x8fbcbb"
+    nord8: &nord8 "0x88c0d0"
+    nord9: &nord9 "0x81a1c1"
+    nord10: &nord10 "0x5e81ac"
+  aurora:
+    nord11: &nord11 "0xbf616a"
+    nord12: &nord12 "0xd08770"
+    nord13: &nord13 "0xebcb8b"
+    nord14: &nord14 "0xa3be8c"
+    nord15: &nord15 "0xb48ead"
+
+nord_night: &nord_night
+  primary:
+    background: *nord0
+    foreground: *nord4
+  cursor:
+    text: *nord0
+    cursor: *nord4
+  vi_mode_cursor:
+    text: *nord0
+    cursor: *nord4
+  selection:
+    text: CellForeground
+    background: *nord3
+  search:
+    matches:
+      foreground: CellBackground
+      background: *nord8
+    bar:
+      background: *nord2
+      foreground: *nord4
+  normal:
+    black: *nord1
+    red: *nord11
+    green: *nord14
+    yellow: *nord13
+    blue: *nord9
+    magenta: *nord15
+    cyan: *nord8
+    white: *nord5
+  bright:
+    black: *nord3
+    red: *nord11
+    green: *nord14
+    yellow: *nord13
+    blue: *nord9
+    magenta: *nord15
+    cyan: *nord8
+    white: *nord5
 
 tempusday: &tempusday
   name: 'Tempus Day'
@@ -458,7 +517,7 @@ tempusday: &tempusday
     indexed_colors: []
 
 
-colors: *creamsoda
+colors: *nord_night
 
 # Visual Bell
 #
