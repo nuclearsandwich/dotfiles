@@ -1,3 +1,4 @@
+.cache/
 GitHub Chat/
 QtProject.conf
 RescueTime.com/
@@ -19,6 +20,7 @@ pulse/
 ranger/
 spotify/
 tox/
+yay/
 vlc/
 
 Trolltech.conf
@@ -26,4 +28,4 @@ hub
 monitors.xml
 pavucontrol.ini
 yakuakerc
-nvim
+zoomus.conf
