@@ -22,6 +22,10 @@ if command -v direnv > /dev/null
 	eval (direnv hook fish)
 end
 
+if command -v starship > /dev/null
+  starship init fish | source
+end
+
 if test -x $HOME/.rakubrew/bin/rakubrew
 	$HOME/.rakubrew/bin/rakubrew init Fish | source
 end
